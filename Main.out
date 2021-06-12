@@ -1,0 +1,29 @@
+\BOOKMARK [0][-]{section*.3}{List of Figures}{}% 1
+\BOOKMARK [0][-]{chapter.4}{Introduction }{}% 2
+\BOOKMARK [1][-]{section.5}{5G Forwarding Plane }{chapter.4}% 3
+\BOOKMARK [2][-]{subsection.6}{Radio Access Network \(RAN\) }{section.5}% 4
+\BOOKMARK [2][-]{subsection.7}{User Plane Function \(UPF\) }{section.5}% 5
+\BOOKMARK [2][-]{subsection.9}{Data Network Name \(DNN\)}{section.5}% 6
+\BOOKMARK [1][-]{section.10}{GTP Protocol}{chapter.4}% 7
+\BOOKMARK [1][-]{section.12}{Organization }{chapter.4}% 8
+\BOOKMARK [0][-]{chapter.13}{UPF Architecture}{}% 9
+\BOOKMARK [0][-]{chapter.15}{Receive Side Scaling}{}% 10
+\BOOKMARK [1][-]{section.16}{What is Receive Side Scaling or RSS? }{chapter.15}% 11
+\BOOKMARK [1][-]{section.17}{Standard RSS }{chapter.15}% 12
+\BOOKMARK [1][-]{section.19}{Alternatives }{chapter.15}% 13
+\BOOKMARK [1][-]{section.20}{Dynamic Device Personalization }{chapter.15}% 14
+\BOOKMARK [1][-]{section.22}{Limitations of Dynamic Device Personalization }{chapter.15}% 15
+\BOOKMARK [0][-]{chapter.24}{Models of Execution }{}% 16
+\BOOKMARK [1][-]{section.25}{Run-to-Completion \(RTC\) \040}{chapter.24}% 17
+\BOOKMARK [1][-]{section.27}{Pipeline }{chapter.24}% 18
+\BOOKMARK [1][-]{section.29}{Comparison }{chapter.24}% 19
+\BOOKMARK [0][-]{chapter.30}{Experiments and Results}{}% 20
+\BOOKMARK [1][-]{section.31}{Experimental Setup}{chapter.30}% 21
+\BOOKMARK [1][-]{section.40}{Experiments }{chapter.30}% 22
+\BOOKMARK [2][-]{subsection.46}{Throughput v/s. Payload Size }{section.40}% 23
+\BOOKMARK [2][-]{subsection.53}{Throughput v/s. Number of active sessions/UEs}{section.40}% 24
+\BOOKMARK [2][-]{subsection.58}{Scaling of throughput with number of cores }{section.40}% 25
+\BOOKMARK [2][-]{subsection.70}{Handling Skewed Traffic }{section.40}% 26
+\BOOKMARK [2][-]{subsection.76}{Dynamic Scaling }{section.40}% 27
+\BOOKMARK [1][-]{section.85}{Summary }{chapter.30}% 28
+\BOOKMARK [0][-]{section*.87}{Bibliography}{}% 29

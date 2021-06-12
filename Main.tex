@@ -1,0 +1,113 @@
+
+
+\documentclass[a4paper,12pt]{report}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{setspace}
+
+\setlength{\topmargin}{-13mm}
+\setlength{\headheight}{6mm}
+\setlength{\headsep}{7mm}
+\setlength{\textheight}{245mm}
+\setlength{\oddsidemargin}{10mm}
+\setlength{\textwidth}{150mm}
+\setlength{\marginparwidth}{0.5in}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength\fboxsep{1pt}
+\setlength\fboxrule{0.25pt}
+
+\usepackage[colorlinks]{hyperref}% hyperref should be the last package to be included, and perhaps there should be one line gap between entries of bibliography
+\hypersetup{
+hypertexnames=false,
+% pdftitle={Seminar Report},
+pdfauthor={Prateek Agarwal},
+%pdfkeywords={redundant, manipulator, hyper, path, planning, collision, avoidance},
+% bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks=true,
+% urlcolor=cyan,
+urlcolor=black,
+linkcolor=black,%: Color for normal internal links
+anchorcolor=black,%: Color for anchor text.
+citecolor=black,%: Color for bibliographical citations in text
+filecolor=black,%: Color for URLs which open local files
+}%
+
+\usepackage[nottoc]{tocbibind}
+
+\begin{document}
+\pagenumbering{roman}
+\fancyfoot[CO]{\thepage}
+%*******************************************************************************
+
+\input{FirstFewPages/MyTitle}		% First Inner Page
+\newpage
+% \input{FirstFewPages/dedic}		% First Inner Page
+% \newpage
+\setcounter{page}{3}
+%\addcontentsline{toc}{chapter}{Abstract}
+% \input{FirstFewPages/MyAbstract}
+% \newpage
+%\addcontentsline{toc}{chapter}{Certificate}
+% \input{FirstFewPages/MyCertificate}	
+% \newpage
+%\addcontentsline{toc}{chapter}{Acknowledgements}
+% \input{FirstFewPages/MyAcknowledgements}
+\tableofcontents
+%\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+%\addcontentsline{toc}{chapter}{List of Tables}
+% \listoftables
+\newpage
+\pagenumbering{arabic}
+\fancyhead[RO]{\thepage}
+\fancyhead[LO]{\slshape \leftmark}
+\fancyfoot[CO]{}
+\renewcommand{\headrulewidth}{0.5pt}
+%***************************************************************************
+
+\chapter{Introduction \label{backgr}}
+\input{Chap1}
+
+\chapter{UPF Architecture\label{chapterUpfArchitecture}}
+\input{Chap2}
+
+\chapter{Receive Side Scaling\label{chapterRSS}}
+\input{Chap3}
+
+\chapter{Models of Execution \label{chapterModelsofExecution}}
+\input{Chap4}
+\chapter{Experiments and Results\label{chapterExperimentsandResults}}
+\input{Chap5}
+
+% \chapter{Rte\_flow\label{flow}}
+
+% \input{Chap6}
+
+%\chapter{Frameworks using DPDK\label{vpp}}
+%\input{Chap7}
+%
+%\chapter{Conclusions\label{Con}}
+%\input{Chap8}
+% %*******************************************************************************
+
+
+
+% *******************************************************************************
+\begin{spacing}{1}
+\bibliographystyle{ieeetr}
+\bibliography{conf}
+\end{spacing}
+\end{document}
+%*******************************************************************************
+

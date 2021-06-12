@@ -1,0 +1,87 @@
+
+
+\documentclass[a4paper,12pt]{report}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{cite}
+
+
+\setlength{\topmargin}{-13mm}
+\setlength{\headheight}{6mm}
+\setlength{\headsep}{7mm}
+\setlength{\textheight}{245mm}
+\setlength{\oddsidemargin}{10mm}
+\setlength{\textwidth}{150mm}
+\setlength{\marginparwidth}{0.5in}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\pagenumbering{roman}
+\fancyfoot[CO]{\thepage}
+%*******************************************************************************
+
+\input{FirstFewPages/MyCover} 		% Outer Cover
+\newpage
+\input{FirstFewPages/MyTitle}		% First Inner Page
+\newpage
+\addcontentsline{toc}{chapter}{Abstract}
+\setcounter{page}{2}
+\input{FirstFewPages/MyAbstract}
+\newpage
+\addcontentsline{toc}{chapter}{Certificate}
+\input{FirstFewPages/MyCertificate}	
+\newpage
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\input{FirstFewPages/MyAcknowledgements}
+\tableofcontents
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\newpage
+\pagenumbering{arabic}
+\fancyhead[RO]{\thepage}
+\fancyhead[LO]{\slshape \leftmark}
+\fancyfoot[CO]{}
+\renewcommand{\headrulewidth}{0.5pt}
+%***************************************************************************
+
+\chapter{Introduction \label{intro}}
+\input{Chap1}
+
+\chapter{Literature Survey \label{LR}}
+\input{Chap2}
+
+\chapter{Path Modelling\label{path}}
+\input{Chap3}
+
+\chapter{Collision Avoidance\label{coldet}}
+\input{Chap4}
+
+\chapter{Variational Problem\label{varfom}}
+\input{Chap5}
+
+\chapter{Optimization Scheme\label{opti}}
+\input{Chap6}
+
+\chapter{Results and Comparisons\label{result}}
+\input{Chap7}
+
+\chapter{Conclusions\label{Con}}
+\input{Chap8}
+%*******************************************************************************
+\appendix
+\chapter{Sample Heading \label{AP1}}
+\input{Apnd1}
+%*******************************************************************************
+
+\bibliographystyle{IEEEtran}
+\bibliography{refer}
+\end{document}
+%*******************************************************************************

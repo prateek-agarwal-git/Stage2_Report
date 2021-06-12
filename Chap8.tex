@@ -1,0 +1,80 @@
+
+%This report is concluded by describing three software techniques for fast packet processing besides DPDK.  
+%\begin{figure}[htbp]
+%    \centering
+%    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/c8f1.png}
+%    \caption{Netslices \cite{marian2012netslices}}
+%    \label{fig1c8} 
+% \end{figure}
+%\section{Netslices \label{netslices8}}
+%
+%
+%The  packet capture libraries (\ref{softpmd3}) provide raw packets into the user space using raw sockets.
+%However the path taken by packet can traverse across different cores. This is a performance bottleneck due to slow accesses to 
+%non local memory in NUMA RAMs and cache misses in the local per core cache. This implies that raw sockets do not scale with the number of cores. 
+%
+%The key idea in Netslices\cite{marian2012netslices} is the spatial partitioning of physical resources  like CPU across different NIC queues. Figure \ref{fig1c8} shows how the resources are partitioned. A minimum of 2 cores are provided to a pair of Tx/Rx per NIC ring to match the line speeds. If the memory is NUMA-aware, local memory of the cores is implicitly reserved for handling packet.
+%
+%
+%
+% The problem of multiple memory copies - from NIC to kernel and from kernel to user space still remains.
+% The solution scales with the number of cores on the system.
+%
+% \begin{figure}[htb]
+%    \centering
+%    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/c8f2.png}
+%    \caption{Vanilla PF\_RING \cite{pfringcite}}
+%    \label{fig2c8} 
+% \end{figure}
+%\section{PF\_RING  and PF\_RING ZC\label{pfring8}}
+%PF\_RING (figure \ref{fig2c8}) is a new socket which captures packets with the help of New API for polling in Linux. The packets are polled and copied in the kernel PF\_RING buffer. The user space application then retrieves these packets by another polling mechanism between kernel and user space. PF\_RING socket preallocates memory buffers for handling packets. This removes the allocation/deallocation overhead associated with \texttt{\emph{sk\_buff}} in Linux stack (refer \ref{skbuffhandling1}). However the problem of mmultiple meory copies still remains.
+%
+%PF\_RING ZC (Zero Copy) is an enhanced library which gives the userpace process direct access to NIC inteface. The packets are copied directly into memory buffers provided by the user space applications.
+%This technique  can also scale linearly with the number of cores as the tuple (queue, application) can be independently handled (refer \cite{rizzo201210}).
+%
+%\begin{figure}[htbp]
+%    \centering
+%    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/c8f3.png}
+%    \caption{Netmap Rings \cite{rizzo2012netmap}}
+%    \label{fig3c8} 
+% \end{figure}
+%\section{netmap \label{netmap8}}
+%Netmap\cite{rizzo2012netmap} and DPDK try to solve the similar problems with Linux stack i.e. multiple memory copies, interrupt processing overhead and interrupt processing overheads and overhead associated with allocation and deallocation of buffers (section \ref{limitations1}). However, netmap solves this problem with the help of Linux kernel system calls - \emph{ioctl}, \emph{mmap}, \emph{epoll} and \emph{select} among others. But the packet processing occurs in user space.
+%DPDK, as seen earlier, does not take any kernel support for packet processing except at the initialization. 
+%
+%\subsection{Working Principles  of \emph{netmap}}
+%Netmap uses preallocated buffers. These buffers are in a shared memory region between kernel and user space. NIC rings (that stores the pointers to the data packets) are replicated in the form of netmap rings (Figure \ref{fig3c8}). These rings are used to communicate between the user space application and kernel. The actual NIC rings are protected from misbehaving applications by the kernel. This protection is the advantage of netmap over DPDK. In the case of DPDK PMDs, the NIC rings are directly mapped in user space. However different processes using the same netmap ring are not protected from each other. The solution to this problem is to use different netmap rings for different processes on different cores. This also enables parallelism in netmap.
+%
+%
+%The netmap rings store relative offsets of packets from the base addresses enabling easy translation from kernel space to user space and vice versa. Hence netmap uses zero-copy technique.
+%
+%
+%The packets of batches can be processed together by using polling system calls. This reduces interrupt processing overheads.
+%
+%
+%\section{Closure \label{closure8}}
+%
+%\begin{table}[ht]
+%   \resizebox{\textwidth}{!}{
+%   \begin{tabular}{|c|c|c|c|} 
+%    \hline
+%       & Zero-Copy & Batching & Parallelism \\ 
+%    \hline
+%    Netslices & No & Yes by Polling & Yes \\ 
+%    PF\_RING & Yes, ZC Library with direct NIC access enables zero copying. & Yes & Yes \\ 
+%    \emph{netmap} & Yes & Yes (Polling) & Multiple netmap rings can be used. \\ 
+%    DPDK & Yes& Yes & Yes \\ 
+%     
+%    \hline
+%   \end{tabular}}
+%   \caption{Comparison of Software Techniques}
+%   \label{table18}
+%   \end{table}
+%   Packet processing in all the techniques discussed here operate in user-space. All the techniques discussed above can handle speeds upto 10 Gigabits/sec  wire speeds (refer \cite{cerovic2018fast}). 
+%
+%
+%   DPDK is preferable over all the techniques and is widely used in industry for handling packet processing needs.
+%   DPDK was started by Intel, which is the leader in manufacturing of network hardware and processors. Now it is a part of the Linux foundation with support from big players in telecom industry like AT \& T, ARM, and Ericcson among others \cite{membersdpdk}.
+%   DPDK's success is attributed to the application of latest technological advances (discussed in \ref{optimizations2}). 
+%   DPDK provides the support on application level by using state-of-the-art algorithms optimized for multi-core architectures (Chapter \ref{application}).
+%

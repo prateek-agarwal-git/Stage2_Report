@@ -1,0 +1,41 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces 5G Forwarding Plane}}{2}{figure.8}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces GTP-U header \cite {gtpwiki}}}{3}{figure.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces UPF Architecture}}{4}{figure.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Standard RSS input Fields}}{7}{figure.18}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces DDP RSS input Fields}}{8}{figure.21}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Extension Header Limitation}}{9}{figure.23}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Run-to-Completion}}{10}{figure.26}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pipeline}}{11}{figure.28}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental Setup}}{13}{figure.32}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Throughput v/s Payload Size. Throughput calculation in Gbps includes header size.}}{16}{figure.51}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{16}{figure.51}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{16}{figure.51}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{16}{figure.51}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{16}{figure.51}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Throughput (in Mpps) v/s number of active UEs. }}{17}{figure.56}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{17}{figure.56}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{17}{figure.56}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Throughput v/s Number of Cores (64 Byte payload). Throughput calculation in Gbps includes header size.}}{18}{figure.63}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}{figure.63}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}{figure.63}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{18}{figure.63}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{18}{figure.63}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Throughput v/s Number of cores (IMIX payload). Throughput calculation in Gbps includes header size.}}{19}{figure.69}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{19}{figure.69}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{19}{figure.69}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{19}{figure.69}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{19}{figure.69}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Handling of skewed UE traffic in pipeline and RTC models }}{21}{figure.74}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{21}{figure.74}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{21}{figure.74}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces RTC: Figure \ref {sub@figdynamicRTC1} shows throughput and end to end latency during the whole run. Figure \ref {sub@figdynamicRTC2} shows the output during one of the core launches (the first one). }}{24}{figure.81}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{figure.81}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{figure.81}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Pipeline: Figure \ref {sub@figdynamicPipeline1} shows throughput and end to end latency during the whole run. Figure \ref {sub@figdynamicPipeline2} shows the output during one of the core launches (the first one). }}{25}{figure.84}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{25}{figure.84}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{25}{figure.84}%
