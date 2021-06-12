@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  11 MAR 2021 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  12 JUN 2021 17:15
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**Main.tex
-(./Main.tex
+**/home/prateek/Github/Stage2_Report/Main.tex
+(/home/prateek/Github/Stage2_Report/Main.tex
 LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14>
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
@@ -23,50 +23,39 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
-)
-(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count176
 \float@exts=\toks15
 \float@box=\box45
 \@float@everytoks=\toks16
 \@floatcapt=\box46
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks17
 \c@algorithm=\count177
-)
-(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@unique=\count178
 \c@ALC@line=\count179
@@ -74,10 +63,8 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@depth=\count181
 \ALC@tlm=\skip49
 \algorithmicindent=\skip50
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
-s
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@headwidth=\skip51
 \f@nch@O@elh=\skip52
 \f@nch@O@erh=\skip53
@@ -87,18 +74,15 @@ s
 \f@nch@O@erf=\skip57
 \f@nch@O@olf=\skip58
 \f@nch@O@orf=\skip59
-)
-(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 \epsfxsize=\dimen137
 \epsfysize=\dimen138
-)
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip60
 \subfigcapskip=\skip61
@@ -117,64 +101,47 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip64
 \subfig@bottom=\skip65
-)
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2019/11/07 v1.0c TeX engine tests
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen141
 \Hy@linkcounter=\count186
 \Hy@pagecounter=\count187
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count188
@@ -188,20 +155,16 @@ Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
 \c@Hy@tempcnt=\count190
-
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5159.
 \XeTeXLinkMargin=\dimen142
-
-(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count191
 \Field@Width=\dimen143
@@ -215,8 +178,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6455.
 Package hyperref Info: PDF/A mode OFF on input line 6460.
 LaTeX Info: Redefining \ref on input line 6500.
 LaTeX Info: Redefining \pageref on input line 6504.
-
-(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
 \Hy@abspage=\count192
@@ -224,32 +186,26 @@ Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 \c@Hfootnote=\count194
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
 \Fld@listcount=\count195
 \c@bookmark@seq@number=\count196
-
-(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip66
 )
 Package hyperref Info: Option `hypertexnames' set `false' on input line 44.
 Package hyperref Info: Option `colorlinks' set `true' on input line 44.
-
-(./tocbibind.sty
+ (/home/prateek/Github/Stage2_Report/tocbibind.sty
 Package: tocbibind 2003/02/04 v1.5f extra ToC listings
 
 
@@ -262,8 +218,7 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count197
 \l__pdf_internal_box=\box47
-)
-(./Main.aux)
+) (/home/prateek/Github/Stage2_Report/Main.aux)
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
@@ -297,40 +252,30 @@ LaTeX Font Info:    ... okay on input line 48.
 \everyMPtoPDFconversion=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box49
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
 Package hyperref Info: Link coloring ON on input line 48.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count270
@@ -338,339 +283,134 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 48.
 LaTeX Info: Redefining \pageref on input line 48.
 LaTeX Info: Redefining \nameref on input line 48.
-
-(./Main.out) (./Main.out)
 \@outlinefile=\write3
 \openout3 = `Main.out'.
 
- (./FirstFewPages/MyTitle.tex
-<./fig/iitblogo.png, id=120, 227.85126pt x 222.8325pt>
+ (/home/prateek/Github/Stage2_Report/FirstFewPages/MyTitle.tex
+
+/home/prateek/Github/Stage2_Report/FirstFewPages/MyTitle.tex:4: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4  {\bf{\Large{}}}\\
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./fig/iitblogo.png, id=4, 227.85126pt x 222.8325pt>
 File: ./fig/iitblogo.png Graphic file (type png)
 <use ./fig/iitblogo.png>
 Package pdftex.def Info: ./fig/iitblogo.png  used on input line 23.
 (pdftex.def)             Requested size: 106.69783pt x 104.35046pt.
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig/iitblogo.png>] (./Ma
-in.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
- [3
-
-])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig/iitblogo.png>]
 \tf@toc=\write4
 \openout4 = `Main.toc'.
 
- [4]
-(./Main.lof)
+ [3
+
+]
 \tf@lof=\write5
 \openout5 = `Main.lof'.
 
- [5
-
-] [6]
-Chapter 1.
-(./Chap1.tex [1
-
-]
-<./fig/Introduction/5GFirst.png, id=234, 963.6pt x 722.7pt>
-File: ./fig/Introduction/5GFirst.png Graphic file (type png)
-<use ./fig/Introduction/5GFirst.png>
-Package pdftex.def Info: ./fig/Introduction/5GFirst.png  used on input line 34.
-
-(pdftex.def)             Requested size: 298.75262pt x 224.05673pt.
-<./fig/Introduction/intro2.png, id=236, 1810.765pt x 736.7525pt>
-File: ./fig/Introduction/intro2.png Graphic file (type png)
-<use ./fig/Introduction/intro2.png>
-Package pdftex.def Info: ./fig/Introduction/intro2.png  used on input line 49.
-(pdftex.def)             Requested size: 298.75262pt x 121.54767pt.
- [2 <./fig/Introduction/5GFirst.png (PNG copy)>]) [3 <./fig/Introduction/intro2
-.png>]
-Chapter 2.
-(./Chap2.tex
-<./fig/Introduction/UPF2.png, id=255, 1209.51875pt x 820.06375pt>
-File: ./fig/Introduction/UPF2.png Graphic file (type png)
-<use ./fig/Introduction/UPF2.png>
-Package pdftex.def Info: ./fig/Introduction/UPF2.png  used on input line 4.
-(pdftex.def)             Requested size: 384.10959pt x 260.42366pt.
  [4
 
- <./fig/Introduction/UPF2.png>]) [5]
-Chapter 3.
-(./Chap3.tex
-<./fig/Ch3DDP/noDDPpacketHashFields.png, id=269, 1568.86125pt x 335.2525pt>
-File: ./fig/Ch3DDP/noDDPpacketHashFields.png Graphic file (type png)
-<use ./fig/Ch3DDP/noDDPpacketHashFields.png>
-Package pdftex.def Info: ./fig/Ch3DDP/noDDPpacketHashFields.png  used on input 
-line 20.
-(pdftex.def)             Requested size: 298.75262pt x 63.83675pt.
- [6
-
-] [7 <./fig/Ch3DDP/noDDPpacketHashFields.png>]
-<./fig/Ch3DDP/DDPpacketHashFields.png, id=282, 1490.56876pt x 307.1475pt>
-File: ./fig/Ch3DDP/DDPpacketHashFields.png Graphic file (type png)
-<use ./fig/Ch3DDP/DDPpacketHashFields.png>
-Package pdftex.def Info: ./fig/Ch3DDP/DDPpacketHashFields.png  used on input li
-ne 50.
-(pdftex.def)             Requested size: 298.75262pt x 61.55963pt.
- [8 <./fig/Ch3DDP/DDPPacketHashfields.png>]
-<./fig/Ch3DDP/ExtensionHeaders.png, id=291, 879.285pt x 240.9pt>
-File: ./fig/Ch3DDP/ExtensionHeaders.png Graphic file (type png)
-<use ./fig/Ch3DDP/ExtensionHeaders.png>
-Package pdftex.def Info: ./fig/Ch3DDP/ExtensionHeaders.png  used on input line 
-69.
-(pdftex.def)             Requested size: 298.75262pt x 81.84976pt.
-) [9 <./fig/Ch3DDP/ExtensionHeaders.png>]
-Chapter 4.
-(./Chap4.tex
-<./fig/ModelsofExecution/RTC.png, id=297, 513.92pt x 234.8775pt>
-File: ./fig/ModelsofExecution/RTC.png Graphic file (type png)
-<use ./fig/ModelsofExecution/RTC.png>
-Package pdftex.def Info: ./fig/ModelsofExecution/RTC.png  used on input line 7.
-
-(pdftex.def)             Requested size: 298.75262pt x 136.54083pt.
-<./fig/ModelsofExecution/Pipeline.png, id=299, 1024.82875pt x 399.4925pt>
-File: ./fig/ModelsofExecution/Pipeline.png Graphic file (type png)
-<use ./fig/ModelsofExecution/Pipeline.png>
-Package pdftex.def Info: ./fig/ModelsofExecution/Pipeline.png  used on input li
-ne 16.
-(pdftex.def)             Requested size: 298.75262pt x 116.45943pt.
- [10
-
- <./fig/ModelsofExecution/RTC.png>] [11 <./fig/ModelsofExecution/Pipeline.png>]
-) [12]
-Chapter 5.
-(./Chap5.tex
-<./fig/Results/Setup.png, id=315, 963.6pt x 722.7pt>
-File: ./fig/Results/Setup.png Graphic file (type png)
-<use ./fig/Results/Setup.png>
-Package pdftex.def Info: ./fig/Results/Setup.png  used on input line 5.
-(pdftex.def)             Requested size: 298.75262pt x 224.05673pt.
- [13
-
- <./fig/Results/Setup.png (PNG copy)>] [14]
-<./fig/Results/tptv_spayload/ULG.png, id=338, 602.25pt x 372.39125pt>
-File: ./fig/Results/tptv_spayload/ULG.png Graphic file (type png)
-<use ./fig/Results/tptv_spayload/ULG.png>
-Package pdftex.def Info: ./fig/Results/tptv_spayload/ULG.png  used on input lin
-e 55.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/tptv_spayload/ULM.png, id=339, 602.25pt x 372.39125pt>
-File: ./fig/Results/tptv_spayload/ULM.png Graphic file (type png)
-<use ./fig/Results/tptv_spayload/ULM.png>
-Package pdftex.def Info: ./fig/Results/tptv_spayload/ULM.png  used on input lin
-e 59.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/tptv_spayload/DLG.png, id=340, 602.25pt x 372.39125pt>
-File: ./fig/Results/tptv_spayload/DLG.png Graphic file (type png)
-<use ./fig/Results/tptv_spayload/DLG.png>
-Package pdftex.def Info: ./fig/Results/tptv_spayload/DLG.png  used on input lin
-e 63.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/tptv_spayload/DLM.png, id=341, 602.25pt x 372.39125pt>
-File: ./fig/Results/tptv_spayload/DLM.png Graphic file (type png)
-<use ./fig/Results/tptv_spayload/DLM.png>
-Package pdftex.def Info: ./fig/Results/tptv_spayload/DLM.png  used on input lin
-e 67.
-(pdftex.def)             Requested size: 202.0146pt x 142.26587pt.
- [15] [16 <./fig/Results/tptv_spayload/ULG.png> <./fig/Results/tptv_spayload/UL
-M.png> <./fig/Results/tptv_spayload/DLG.png> <./fig/Results/tptv_spayload/DLM.p
-ng>]
-<./fig/Results/tptv_snumues/UL.png, id=367, 602.25pt x 372.39125pt>
-File: ./fig/Results/tptv_snumues/UL.png Graphic file (type png)
-<use ./fig/Results/tptv_snumues/UL.png>
-Package pdftex.def Info: ./fig/Results/tptv_snumues/UL.png  used on input line 
-97.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/tptv_snumues/DL.png, id=368, 602.25pt x 372.39125pt>
-File: ./fig/Results/tptv_snumues/DL.png Graphic file (type png)
-<use ./fig/Results/tptv_snumues/DL.png>
-Package pdftex.def Info: ./fig/Results/tptv_snumues/DL.png  used on input line 
-101.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
- [17 <./fig/Results/tptv_snumues/UL.png> <./fig/Results/tptv_snumues/DL.png>]
-<./fig/Results/64ByteThrouhgput/ULG.png, id=383, 602.25pt x 372.39125pt>
-File: ./fig/Results/64ByteThrouhgput/ULG.png Graphic file (type png)
-<use ./fig/Results/64ByteThrouhgput/ULG.png>
-Package pdftex.def Info: ./fig/Results/64ByteThrouhgput/ULG.png  used on input 
-line 122.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/64ByteThrouhgput/ULM.png, id=384, 602.25pt x 372.39125pt>
-File: ./fig/Results/64ByteThrouhgput/ULM.png Graphic file (type png)
-<use ./fig/Results/64ByteThrouhgput/ULM.png>
-Package pdftex.def Info: ./fig/Results/64ByteThrouhgput/ULM.png  used on input 
-line 126.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/64ByteThrouhgput/DLG.png, id=385, 602.25pt x 372.39125pt>
-File: ./fig/Results/64ByteThrouhgput/DLG.png Graphic file (type png)
-<use ./fig/Results/64ByteThrouhgput/DLG.png>
-Package pdftex.def Info: ./fig/Results/64ByteThrouhgput/DLG.png  used on input 
-line 130.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/64ByteThrouhgput/DLM.png, id=386, 602.25pt x 372.39125pt>
-File: ./fig/Results/64ByteThrouhgput/DLM.png Graphic file (type png)
-<use ./fig/Results/64ByteThrouhgput/DLM.png>
-Package pdftex.def Info: ./fig/Results/64ByteThrouhgput/DLM.png  used on input 
-line 134.
-(pdftex.def)             Requested size: 202.0146pt x 142.26587pt.
-<./fig/Results/imix/ULG.png, id=387, 602.25pt x 372.39125pt>
-File: ./fig/Results/imix/ULG.png Graphic file (type png)
-<use ./fig/Results/imix/ULG.png>
-Package pdftex.def Info: ./fig/Results/imix/ULG.png  used on input line 145.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/imix/ULM.png, id=388, 602.25pt x 372.39125pt>
-File: ./fig/Results/imix/ULM.png Graphic file (type png)
-<use ./fig/Results/imix/ULM.png>
-Package pdftex.def Info: ./fig/Results/imix/ULM.png  used on input line 149.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/imix/DLG.png, id=389, 602.25pt x 372.39125pt>
-File: ./fig/Results/imix/DLG.png Graphic file (type png)
-<use ./fig/Results/imix/DLG.png>
-Package pdftex.def Info: ./fig/Results/imix/DLG.png  used on input line 153.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
-<./fig/Results/imix/DLM.png, id=390, 602.25pt x 372.39125pt>
-File: ./fig/Results/imix/DLM.png Graphic file (type png)
-<use ./fig/Results/imix/DLM.png>
-Package pdftex.def Info: ./fig/Results/imix/DLM.png  used on input line 158.
-(pdftex.def)             Requested size: 199.16583pt x 142.26587pt.
- [18 <./fig/Results/64ByteThrouhgput/ULG.png> <./fig/Results/64ByteThrouhgput/U
-LM.png> <./fig/Results/64ByteThrouhgput/DLG.png> <./fig/Results/64ByteThrouhgpu
-t/DLM.png>]
-[19 <./fig/Results/imix/ULG.png> <./fig/Results/imix/ULM.png> <./fig/Results/im
-ix/DLG.png> <./fig/Results/imix/DLM.png>]
-<./fig/Results/UERedistribution/Run-to-Completion.png, id=418, 1384.17125pt x 5
-96.2275pt>
-File: ./fig/Results/UERedistribution/Run-to-Completion.png Graphic file (type p
-ng)
-<use ./fig/Results/UERedistribution/Run-to-Completion.png>
-Package pdftex.def Info: ./fig/Results/UERedistribution/Run-to-Completion.png  
-used on input line 184.
-(pdftex.def)             Requested size: 426.79134pt x 183.83696pt.
-<./fig/Results/UERedistribution/Pipeline.png, id=419, 1369.115pt x 738.76pt>
-File: ./fig/Results/UERedistribution/Pipeline.png Graphic file (type png)
-<use ./fig/Results/UERedistribution/Pipeline.png>
-Package pdftex.def Info: ./fig/Results/UERedistribution/Pipeline.png  used on i
-nput line 188.
-(pdftex.def)             Requested size: 426.79134pt x 230.28702pt.
-
-Overfull \hbox (10.33325pt too wide) in paragraph at lines 184--189
- [][] 
- []
-
-
-Overfull \hbox (10.33325pt too wide) in paragraph at lines 184--189
- [][] 
- []
-
-[20] [21 <./fig/Results/UERedistribution/Run-to-Completion.png> <./fig/Results/
-UERedistribution/Pipeline.png>] [22]
-<./fig/Results/dynamicScaling/RTC1.png, id=453, 1350.04375pt x 647.41875pt>
-File: ./fig/Results/dynamicScaling/RTC1.png Graphic file (type png)
-<use ./fig/Results/dynamicScaling/RTC1.png>
-Package pdftex.def Info: ./fig/Results/dynamicScaling/RTC1.png  used on input l
-ine 239.
-(pdftex.def)             Requested size: 426.79134pt x 204.669pt.
-<./fig/Results/dynamicScaling/RTC2.png, id=454, 805.0075pt x 495.8525pt>
-File: ./fig/Results/dynamicScaling/RTC2.png Graphic file (type png)
-<use ./fig/Results/dynamicScaling/RTC2.png>
-Package pdftex.def Info: ./fig/Results/dynamicScaling/RTC2.png  used on input l
-ine 243.
-(pdftex.def)             Requested size: 426.79134pt x 262.88379pt.
-
-Overfull \hbox (10.33325pt too wide) in paragraph at lines 239--244
- [][] 
- []
-
-
-Overfull \hbox (10.33325pt too wide) in paragraph at lines 239--244
- [][] 
- []
-
-<./fig/Results/dynamicScaling/Pipeline1.png, id=459, 1198.4775pt x 588.1975pt>
-File: ./fig/Results/dynamicScaling/Pipeline1.png Graphic file (type png)
-<use ./fig/Results/dynamicScaling/Pipeline1.png>
-Package pdftex.def Info: ./fig/Results/dynamicScaling/Pipeline1.png  used on in
-put line 252.
-(pdftex.def)             Requested size: 426.79134pt x 209.46227pt.
-<./fig/Results/dynamicScaling/Pipeline2.png, id=460, 1092.08pt x 536.0025pt>
-File: ./fig/Results/dynamicScaling/Pipeline2.png Graphic file (type png)
-<use ./fig/Results/dynamicScaling/Pipeline2.png>
-Package pdftex.def Info: ./fig/Results/dynamicScaling/Pipeline2.png  used on in
-put line 256.
-(pdftex.def)             Requested size: 426.79134pt x 209.4736pt.
-
-Overfull \hbox (10.33325pt too wide) in paragraph at lines 252--257
- [][] 
- []
-
-
-Overfull \hbox (10.33325pt too wide) in paragraph at lines 252--257
- [][] 
- []
-
-[23] [24 <./fig/Results/dynamicScaling/RTC1.png> <./fig/Results/dynamicScaling/
-RTC2.png>] [25 <./fig/Results/dynamicScaling/Pipeline1.png> <./fig/Results/dyna
-micScaling/Pipeline2.png>]) (./Main.bbl [26]
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-[][][]$\OT1/cmtt/m/n/12 https : / / www . intel . com / content / dam / www / p
-ublic / us / en / documents /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-[][][]$\OT1/cmtt/m/n/12 https : / / builders . intel . com / docs / networkbuil
-ders /
- []
-
-
-Overfull \hbox (52.43648pt too wide) in paragraph at lines 10--11
-\OT1/cmtt/m/n/12 intel-[]ethernet-[]controller-[]700-[]series-[]gtpv1-[]dynamic
--[]device-[]personalization .
- []
-
-
-Overfull \hbox (67.05034pt too wide) in paragraph at lines 13--14
-[][][]$\OT1/cmtt/m/n/12 https : / / www . dpdk . org / blog / 2019 / 08 / 21 / 
-memory-[]in-[]dpdk-[]part-[]1-[]general-[]concepts/$[][]\OT1/cmr/m/n/12 . 
- []
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
- [27
+]
+Chapter 1.
+(/home/prateek/Github/Stage2_Report/Chap1.tex) [1
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
- (./Main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
-Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: C3A238A902F91204A23AF1C7E0FB93DC;1929.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
+Chapter 2.
+(/home/prateek/Github/Stage2_Report/Chap2.tex) [2
+
+]
+Chapter 3.
+(/home/prateek/Github/Stage2_Report/Chap3.tex [3
+
+] [4]
+
+LaTeX Warning: Reference `chap:CPDPTraffic' on page 5 undefined on input line 68.
+
+[5]) [6]
+Chapter 4.
+(/home/prateek/Github/Stage2_Report/Chap4.tex
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1.
+
+[7
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 19.
+ [8]
+Overfull \hbox (22.70421pt too wide) in paragraph at lines 48--50
+[]\OT1/cmr/bx/n/12 dataPlaneStoreTimestampCallback \OT1/cmr/m/n/12 This call-back is reg-is-tered on CORE[]RTT
+ []
+
+
+Overfull \hbox (88.04066pt too wide) in paragraph at lines 50--51
+[]\OT1/cmr/bx/n/12 controlPlaneStoreTimestampCallback \OT1/cmr/m/n/12 This call-back is reg-is-tered on CORE[]CP[]TRAFFIC
+ []
+
+) [9]
+Chapter 5.
+(/home/prateek/Github/Stage2_Report/Chap5.tex [10
+
+]) [11]
+Chapter 6.
+(/home/prateek/Github/Stage2_Report/Chap6.tex) [12
+
+]
+Chapter 7.
+(/home/prateek/Github/Stage2_Report/Chap7.tex)
+No file Main.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+[13
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
+ (/home/prateek/Github/Stage2_Report/Main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+
+
+Package rerunfilecheck Warning: File `Main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  08DBA7ECF7105DC78DC0605CBBD52F78;2056.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 6485 strings out of 481239
- 101047 string characters out of 5920377
- 360033 words of memory out of 5000000
- 21456 multiletter control sequences out of 15000+600000
- 538056 words of font info for 43 fonts, out of 8000000 for 9000
+ 6127 strings out of 481239
+ 93593 string characters out of 5920377
+ 353313 words of memory out of 5000000
+ 21202 multiletter control sequences out of 15000+600000
+ 537887 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,45p,593b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Main.pdf (32 pages, 949362 bytes).
+ 34i,11n,45p,720b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on /home/prateek/Github/Stage2_Report/Main.pdf (16 pages, 107309 bytes).
 PDF statistics:
- 560 PDF objects out of 1000 (max. 8388607)
- 453 compressed objects within 5 object streams
- 126 named destinations out of 1000 (max. 500000)
- 383 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

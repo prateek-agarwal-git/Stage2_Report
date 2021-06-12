@@ -1,36 +1,38 @@
-\contentsline {chapter}{List of Figures}{v}{section*.3}%
+\contentsline {chapter}{List of Figures}{iv}{section*.3}%
 \contentsline {chapter}{\numberline {1}Introduction }{1}{chapter.4}%
-\contentsline {section}{\numberline {1.1}5G Forwarding Plane }{1}{section.5}%
-\contentsline {subsection}{\numberline {1.1.1}Radio Access Network (RAN) }{1}{subsection.6}%
-\contentsline {subsection}{\numberline {1.1.2}User Plane Function (UPF) }{2}{subsection.7}%
-\contentsline {subsection}{\numberline {1.1.3}Data Network Name (DNN)}{2}{subsection.9}%
-\contentsline {section}{\numberline {1.2}GTP Protocol}{3}{section.10}%
-\contentsline {section}{\numberline {1.3}Organization }{3}{section.12}%
-\contentsline {chapter}{\numberline {2}UPF Architecture}{4}{chapter.13}%
-\contentsline {chapter}{\numberline {3}Receive Side Scaling}{6}{chapter.15}%
-\contentsline {section}{\numberline {3.1}What is Receive Side Scaling or RSS? }{6}{section.16}%
-\contentsline {section}{\numberline {3.2}Standard RSS }{7}{section.17}%
-\contentsline {section}{\numberline {3.3}Alternatives }{7}{section.19}%
-\contentsline {section}{\numberline {3.4}Dynamic Device Personalization }{8}{section.20}%
-\contentsline {section}{\numberline {3.5}Limitations of Dynamic Device Personalization }{9}{section.22}%
-\contentsline {chapter}{\numberline {4}Models of Execution }{10}{chapter.24}%
-\contentsline {section}{\numberline {4.1}Run-to-Completion (RTC) }{10}{section.25}%
-\contentsline {section}{\numberline {4.2}Pipeline }{11}{section.27}%
-\contentsline {section}{\numberline {4.3}Comparison }{11}{section.29}%
-\contentsline {chapter}{\numberline {5}Experiments and Results}{13}{chapter.30}%
-\contentsline {section}{\numberline {5.1}Experimental Setup}{13}{section.31}%
-\contentsline {section}{\numberline {5.2}Experiments }{14}{section.40}%
-\contentsline {subsection}{\numberline {5.2.1}Throughput v/s. Payload Size }{15}{subsection.46}%
-\contentsline {subsubsection}{Results}{15}{section*.52}%
-\contentsline {subsection}{\numberline {5.2.2}Throughput v/s. Number of active sessions/UEs}{17}{subsection.53}%
-\contentsline {subsubsection}{Results}{17}{section*.57}%
-\contentsline {subsection}{\numberline {5.2.3}Scaling of throughput with number of cores }{17}{subsection.58}%
-\contentsline {subsubsection}{Results}{18}{section*.64}%
-\contentsline {subsection}{\numberline {5.2.4}Handling Skewed Traffic }{20}{subsection.70}%
-\contentsline {subsubsection}{Experimental Setup}{20}{section*.71}%
-\contentsline {subsubsection}{Results}{20}{section*.75}%
-\contentsline {subsection}{\numberline {5.2.5}Dynamic Scaling }{22}{subsection.76}%
-\contentsline {subsubsection}{Experimental Setup}{22}{section*.77}%
-\contentsline {subsubsection}{Results}{23}{section*.78}%
-\contentsline {section}{\numberline {5.3}Summary }{23}{section.85}%
-\contentsline {chapter}{Bibliography}{27}{section*.87}%
+\contentsline {chapter}{\numberline {2}Problem Statement }{2}{chapter.5}%
+\contentsline {chapter}{\numberline {3}RAN Design}{3}{chapter.6}%
+\contentsline {section}{\numberline {3.1}Core Layout}{3}{section.7}%
+\contentsline {section}{\numberline {3.2}Control Plane Forwarding}{4}{section.8}%
+\contentsline {section}{\numberline {3.3}Modes of Operation}{4}{section.9}%
+\contentsline {subsection}{\numberline {3.3.1}Setup sessions and send data}{5}{subsection.10}%
+\contentsline {subsection}{\numberline {3.3.2}Send only control plane traffic}{5}{subsection.11}%
+\contentsline {subsection}{\numberline {3.3.3}Send Control Plane and Data Plane Traffic Simultaneously}{5}{subsection.12}%
+\contentsline {subsection}{\numberline {3.3.4}Helper Functions}{6}{subsection.13}%
+\contentsline {subsection}{\numberline {3.3.5}QoS Functions}{6}{subsection.14}%
+\contentsline {chapter}{\numberline {4}Latency Callbacks}{7}{chapter.15}%
+\contentsline {subsection}{\numberline {4.0.1}Latency Calculation Algorithms}{7}{subsection.16}%
+\contentsline {subsubsection}{Key Concept}{7}{section*.17}%
+\contentsline {subsubsection}{Storing of Timestamp}{7}{section*.18}%
+\contentsline {subsubsection}{Calculation of Latency}{8}{section*.19}%
+\contentsline {subsubsection}{Why do we need different techniques for control plane and data plane?}{9}{section*.20}%
+\contentsline {subsubsection}{Callback functions}{9}{section*.21}%
+\contentsline {chapter}{\numberline {5}Clean Code}{10}{chapter.22}%
+\contentsline {section}{\numberline {5.1}Naming of Variables}{10}{section.23}%
+\contentsline {section}{\numberline {5.2}Stale Comments}{10}{section.24}%
+\contentsline {section}{\numberline {5.3}Dead Code}{10}{section.25}%
+\contentsline {section}{\numberline {5.4}Deprecated Options}{10}{section.26}%
+\contentsline {section}{\numberline {5.5}Copied Code}{10}{section.27}%
+\contentsline {section}{\numberline {5.6}Global Variables}{11}{section.28}%
+\contentsline {subsection}{\numberline {5.6.1}Issue}{11}{subsection.29}%
+\contentsline {subsection}{\numberline {5.6.2}Resolution}{11}{subsection.30}%
+\contentsline {section}{\numberline {5.7}Directory Structure}{11}{section.31}%
+\contentsline {section}{\numberline {5.8}Dead Code}{11}{section.32}%
+\contentsline {section}{\numberline {5.9}Poor Refactoring}{11}{section.33}%
+\contentsline {section}{\numberline {5.10}Unnecessary Offloads}{11}{section.34}%
+\contentsline {section}{\numberline {5.11}Naming of Variables}{11}{section.35}%
+\contentsline {section}{\numberline {5.12}Incorrect Stuff}{11}{section.36}%
+\contentsline {section}{\numberline {5.13}Technical Improvements}{11}{section.37}%
+\contentsline {section}{\numberline {5.14}File Layout}{11}{section.38}%
+\contentsline {chapter}{\numberline {6}Data Plane + Control Plane Traffic}{12}{chapter.39}%
+\contentsline {chapter}{\numberline {7}Results}{13}{chapter.40}%

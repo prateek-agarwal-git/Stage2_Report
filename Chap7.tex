@@ -1,19 +1,4 @@
 
-%\section{Vector Packet Processor \label{vpp7}}
-%
-%The Vector packet processor (VPP)\cite{barach2018high} is a user-space framework for processing data packets. It is built over kernel-bypass software solutions- DPDK and netmap. VPP enables fast processing of packets in bulk mode.``Processing'' includes network functions e.g. - IPv4/IPv6 header processing, error detection/correction on data packets.  
-%
-%\subsection{Role of DPDK}
-%DPDK’s main concern is low-level  I.O - by-passing kernel stack and providing packets in userspace quickly. DPDK uses polling, receive-side scaling (RSS), and zero-copy techniques.  DPDK enables I/O batching by polling for packets at regular intervals or after a threshold number of packets are ready for receipt/transmission. RSS is used for dividing multiple NIC Rx/Tx queues among different cores. It enables the classification and forwarding of packets to the respective core. Finally, DPDK directly copies the packets into userspace from NIC. An extra copy from kernel space to userspace is avoided. Zero-copying requires that the processing rate by the userspace driver is faster than the packet arrival rate. The majority of packet processing occurs in user applications such as VPP.
-%\subsection{Vectorized Processing and related concepts}
-%Vectorized processing is different from the batching performed by DPDK. The DPDK batches packets to reduce interrupt overheads. Vectorized processing uses batches to reduce the number of clock cycles during computation.
-%Vectorized processing is the building block of VPP. Vectors are the fundamental primitive of VPP. Vectors are preallocated contiguous arrays, reused and are never freed. 
-%Fastclick \cite{barbette2015fast} is a software router that provides batch processing -``Compute batching''. However, it can happen only for certain functions designed for batch processing. It stores the batch in a linked list. The linked list occupies more space and is not contiguous.
-%
-%
-%\subsection{VPP Principle}
-%VPP implements the full network stack i.e. L2/L3 processing. VPP uses DPDK as an input (output) node during the receipt (transmission) of packets. VPP is designed to work with general-purpose CPUs. VPP follows a ``run-to-completion'' model - each packet is processed completely on a single core. VPP process packets in batches.
-%The input batch is received from the DPDK ring. The batch is pushed to another node of the directed graph. These batches may be further subdivided and forwarded to other nodes until the packet is completely processed.
 %\begin{figure}[htbp]
 %    \centering
 %    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/c7f1.png}
@@ -21,32 +6,7 @@
 %    \label{figure17}
 %\end{figure}
 %
-%% Figure 1. Demonstration of the VPP model. Give reference of the paper directly copied
-%In the figure \ref{figure17}, the l2-input node parses the vector and segregates packets according to the l2 protocol i.e. IPV4 or IPV6. These packets are then forwarded to respective nodes. Error is detected at each node and the packet is dropped if needed.
-%
-%\subsection{Features of VPP \label{featurevpp}}
-%
-%In the run-to-completion model, every single packet undergoes different functions sequentially. This causes a significant performance penalty because of:
-%\begin{itemize}
-%    \item I-cache misses on the loading of new instructions for every new function call.
-%\item  Function call overhead - The creation of a new activation record and reshuffling of registers occurs for every new function call.
-%\item D-cache misses: It becomes difficult to decide what portions of the packet to prefetch for computation.
-%\end{itemize}
-%\subsubsection{I-cache misses}
-%The same computation is performed over multiple packets simultaneously. The misses occur for only the first packet of the batch. The processing of the rest of the packets does not require fetching of instructions from memory. The miss-penalty is hence amortized over a batch of packets.
-%\subsubsection{Function calls}
-% A network function is called only once per entire batch, the total number of function calls for a given number of packets is reduced. Inline functions (Section 4.4) are used as code optimization.
-%\subsubsection{Data cache misses} 
-%The same operation is performed on multiple packets sequentially on a given core. The headers required for processing of further packets are known after the first packet. So data for the ${i+1}^{th}$ packet can be prefetched during the processing of the ith packet.
-%
-%\subsection{Code optimizations}
-%VPP uses multi-loop, data prefetching, branch prediction, function flattening and buffer allocation strategy for direct cache access.
-%
-%\subsubsection{Multi-loop} Loops are written for parallel processing of the same functions on N (\textgreater 1) packets simultaneously on different cores. 
-%\subsubsection{Data Prefetching} Discussed in section \ref{featurevpp} on the discussion f data cache-misses.  It can be combined with a multi-loop which keeps the CPU pipeline full. Prefetching is not possible for the first N packets and there is no packet available for prefetching during the last N packets. But this penalty is amortized over many packets.
-%
-%Figure \ref{figure27} demonstrates multiloop and prefetching with $N=2$. $P_3, P_4$ are prefetched while $P_1$ and $P_2$ are processed. 
-%
+
 %\begin{figure}[htbp]
 %    \centering
 %    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/c7f2.png}
@@ -56,32 +16,12 @@
 %
 %
 %% Figure 2. Multiloop and prefetching with N = 2. caption
-%\subsubsection{Branch Prediction}
-%
-%Branch prediction works on the principle that the majority of packets follow the same path on a conditional statement. The developers can give a hint to the compiler about the branch that will be taken most of the time. The keyword likely (unlikely) is used to give hints in the C language (Figure \ref{figure37}). The modern-day CPUs have branch predictor implemented in hardware- so many hints are unnecessary. 
-%%figure here for brach prediction
 %\begin{figure}[htbp]
 %    \centering
 %    \includegraphics[height = 0.1\textheight, keepaspectratio]{./fig/c7f3.png}
 %    \caption{Branch Prediction}
 %    \label{figure37}
 %\end{figure}
-%\subsubsection{Function flattening}
-%Most of the graph nodes in VPP are inline functions. The inline functions are placed in the calling function code and no new function calls are made. It also enables the compiler to make further optimizations.
-%
-%\subsubsection{ Direct Cache Access}
-%The modern-day computer systems prefill the packets in the L3 cache (and not main memory) on the Rx (DMA) side. This reduces the number of cycles spent in bringing the packets from memory to CPU. VPP uses a buffer-allocation strategy i.e. the number of packets, size of each buffer, etc to avoid sending packets back to main memory during the entire process.
-%
-%\section{Transport Layer Development Kit (TLDK) \label{tldk7}}
-%
-%TLDK\cite{tldkurl} is a set of C libraries that provides L4 functions - TCP and UDP processing. \subsubsection{Input Parameters}
-%\begin{itemize}
-%\item Supported hardware offloads 
-%\item  L3/L2 addresses (IP/MAC)
-%\item MTU of the links.
-%\end{itemize}
-%This helps in filling up all the relevant headers and mbuf metadata (single v/s. multisegmented (\ref{mbuf4})).
-%
 %\subsection{Features}
 %    \begin{itemize}
 %        \item TLDK implements the main DPDK concepts such as bulk-packet processing, non-blocking API, no context or mode switch, cache and memory alignment.  
@@ -97,65 +37,6 @@
 %        \caption{Packet movement in DPDK \cite{tldkimg} }
 %        \label{figure47}
 %    \end{figure}
-%% References:
-%% Leonardo Linguaglossa, Dario Rossi, Salvatore Pontarelli, Dave Barach,
-%% Damjan Marjon, Pierre Pfister. High-Speed Data Plane and Network Functions Virtualization by Vectorizing Packet Processing
-%% Tom Barbette, Cyril Soldani, and Laurent Mathy. Fast userspace packet processing.
-%% Figure 1 is taken from [1]
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% % The path planning scheme presented in this paper is implemented in C++ and tested with various workspaces, so that effective comparisons and conclusions can be made with respect to the desired properties of the path. The comparisons suggest a two-way decrease in the path length mainly due to
-% % \begin{enumerate}
-% % \item the algorithm choosing better initial and final configurations as against the imposed user defined configurations, and
-% % \item optimizing the path completely between the chosen configurations, i.e. achieving monotonic optimality.
-% % \end{enumerate}
-
-
-% % \section{2-D Workspace}
-% We present the first case study with a planar 8-DOF manipulator working in a 2-D workspace consisting of 3 obstacles as shown in Figure \ref{fig:2d}. The link lengths of the manipulator are $[8,8,7,7,6,6,6,6]$ units with base point at $(0,0,0)$. A path is planned between the Cartesian points $(40,30,0)$ and $(30,10,0)$ using the presented planner (Method I). This is one of the tasks planned in Dasgupta et al \cite{dasgupta2008vap} (Method II).
-
-
 % % \begin{figure}[p]
 % % \centering
 % % \subfigure[]{
@@ -205,13 +86,7 @@
 % % \begin{equation}
 % % \kappa(t) = \frac{\left|\left|\textbf{q}^{\prime\prime}(t) - \left(\hat{\textbf{u}}.\textbf{q}^{\prime\prime}(t)\right)\hat{\textbf{u}}\right|\right|}{\left|\left|\textbf{q}^{\prime}(t)\right|\right|^{2}},
 % % \end{equation}
-% % where $\hat{\textbf{u}}$ is the unit vector in the direction of $\textbf{q}^{\prime}(t)$ (refer \cite{dasgupta2006apm}). To establish the feasibility of the paths obtained in each case, a plot of the minimum distance $d$ between the manipulator and workspace obstacles with respect to path parameter $t$ is shown. A positive value of $d$ confirms the non-infringement at all configurations along the path. Figure \ref{fig:2d}\subref{fig:st5} shows the set of configurations obtained by the presented path planner and the path traced by the end-effector in Cartesian space. The configurations shown in bold represent the control configurations for the B-spline interpolation. 
 
-% % Figure \ref{fig:2d}\subref{2ddist} shows the variation of $d$ with the path parameter. Clearly, the value of $d$ is positive all along the path which confirms that the path is devoid of any collision. Figure \ref{fig:2d}\subref{fig:st6} shows a comparison of curvature of the path in joint space. The solid line represents the variation of $\kappa$ with path parameter $t$ for the path obtained from method I, whereas the dashed line represents the same for method II. It is clear from the plot that the path obtained from the presented planner corresponds to a smaller value of curvature in joint space and hence, lesser joint accelerations and torques. The motion of each joint obtained by using method I and II is plotted in Figure \ref{fig:2d}\subref{fig:st7} and \ref{fig:2d}\subref{fig:st8} respectively.  
- 
-% % It is clear from Figure \ref{fig:2d}\subref{fig:st7} that the path given by the presented planner is monotonically optimal. Moreover, for the path obtained by using fixed end configurations, the \emph{optimal path length} between the chosen fixed configurations (2.603 rad) is still larger than the path length obtained from the presented algorithm (1.040 rad). Hence, a part of the total decrease registered (75.55\%) in the path length is due to the choice of end configurations (37.56\%) and the rest is due to monotonic optimality of the path between those configurations (37.99\%), as depicted in Table \ref{2d}.
-
-% % \section{3-D Workspaces}
 
 % % \subsection{Staggered Obstacles}
 % % \begin{figure}[p]
@@ -239,7 +114,6 @@
 % % \caption{\subref{fig:st1} 3-D Path. \subref{stdist} Variation of minimum distance of approach between manipulator and workspace obstacles along the path. \subref{fig:st2} Joint curvature comparison. \subref{fig:st3} Joint motion using method I. \subref{fig:st4} Joint motion using method II.}
 % % \label{fig:stgrd}
 % % \end{figure}
-% % We present another case study with an 8-DOF spatial manipulator working in a 3-D workspace composed of 10 cubical boxes placed randomly in space. The path is planned between the Cartesian points $(4,-4,3)$ and $(5,0,-5)$. A similar analysis of the path obtained is given in Figure \ref{fig:stgrd}, as earlier. Figure \ref{fig:stgrd}\subref{fig:st1} shows the workspace and the path obtained. The variation of minimum distance $d$ with the path parameter $t$ is presented in Figure \ref{fig:stgrd}\subref{stdist}, which clearly shows that there is no collision between the manipulator and the workspace obstacles anywhere along the path. It is evident from Figure \ref{fig:stgrd}\subref{fig:st3} that the path given by the presented planner is monotonically optimal. A comparative analysis with respect to path length is given in Table \ref{stg}, according to which the total joint movement incurred in the path obtained from method I is 63.57\% lesser than that obtained from method II.
 % % \begin{table}[!ht]
 % % \centering
 % % \caption{Path length analysis for Staggered Obstacles} 
@@ -258,7 +132,6 @@
 % % \label{stg}
 % % \end{table}
 
-% % \subsection{Shelves}
 % % \begin{figure}[p]
 % % 	\centering
 % % 	\subfigure[]{
@@ -284,7 +157,6 @@
 % % \caption{\subref{fig:st9} 3-D Path. \subref{sheldist} Variation of minimum distance of approach between manipulator and workspace obstacles along the path. \subref{fig:st10} Joint curvature comparison. \subref{fig:st11} Joint motion using method I. \subref{fig:st12} Joint motion using method II.}
 % % \label{fig:shel}
 % % \end{figure}
-% % The next test workspace consists of an array of shelves as shown in Figure \ref{fig:shel}\subref{fig:st9}. The start and end points are chosen in such a way that a typical \emph{pick and place} operation between two shelves is simulated. Figure \ref{fig:shel}\subref{sheldist} shows the plot of minimum distance $d$ along the path. Figure \ref{fig:shel}\subref{fig:st10} clearly shows that the curvature of the joint paths obtained from method I are considerably lower than those obtained using method II. The joint paths shown in Figure \ref{fig:shel}\subref{fig:st11}-\subref{fig:st12} show that the path obtained from the presented method is monotonically optimal as against the path obtained from method II, which is highly deviated from the same. Detailed path length analysis is given in Table \ref{shel} which shows an overall decrease of 64.45\% in the path length.
 % % \begin{table}[!ht]
 % % \centering
 % % \caption{Path length analysis for Shelves}
@@ -327,7 +199,4 @@
 % % \caption{\subref{bar1} 3-D Path. \subref{bardist} Variation of minimum distance of approach between manipulator and workspace obstacles along the path. \subref{bar2} Joint motion using method I. \subref{bar3} Joint curvature plot.}
 % % \label{fig:br}
 % % \end{figure}
-% % This workspace is specially designed to test the algorithm's performance in maneuvering through highly constrained workspaces. It is a network of crossing bars making a hair-comb like structure. The 6-DOF manipulator is required to start from the point (1.2,-0.5,2.5) on one side of the structure and pass to the other side to reach the goal point (6,-5,2.5). Figure \ref{fig:br}\subref{bar1} shows the workspace and the final path that was obtained. Clearly, the manipulator navigates through the network of bars without colliding and satisfies the kinematic constraints at the two ends. Figure \ref{fig:br}\subref{bar2} show the joint motion corresponding to all joints and Figure \ref{fig:br}\subref{bar3} shows the curvature plot.
 
-% % \section{Closure}
-% % In this chapter, results obtained from the presented planner have been shown. Redundant manipulators with varying DOF's have been tested in various 2-D and 3-D workspaces to establish the efficiency of the algorithm in providing good quality paths. The results obtained have been compared with another variational based path planner given by Dasgupta et al \cite{dasgupta2008vap}. The comparisons show a substantial percentage decrease in the total joint movement due to the semi-free boundary conditions and monotonic optimality. The comparisons of curvature in joint space suggest that the paths obtained from the presented planner are considerably smoother than those obtained from the aforementioned method.
