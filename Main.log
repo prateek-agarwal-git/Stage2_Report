@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  12 JUN 2021 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  14 JUN 2021 15:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -283,75 +283,83 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 48.
 LaTeX Info: Redefining \pageref on input line 48.
 LaTeX Info: Redefining \nameref on input line 48.
+ (/home/prateek/Github/Stage2_Report/Main.out) (/home/prateek/Github/Stage2_Report/Main.out)
 \@outlinefile=\write3
 \openout3 = `Main.out'.
 
  (/home/prateek/Github/Stage2_Report/FirstFewPages/MyTitle.tex
-
-/home/prateek/Github/Stage2_Report/FirstFewPages/MyTitle.tex:4: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4  {\bf{\Large{}}}\\
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<./fig/iitblogo.png, id=4, 227.85126pt x 222.8325pt>
+<./fig/iitblogo.png, id=245, 227.85126pt x 222.8325pt>
 File: ./fig/iitblogo.png Graphic file (type png)
 <use ./fig/iitblogo.png>
-Package pdftex.def Info: ./fig/iitblogo.png  used on input line 23.
+Package pdftex.def Info: ./fig/iitblogo.png  used on input line 24.
 (pdftex.def)             Requested size: 106.69783pt x 104.35046pt.
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig/iitblogo.png>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig/iitblogo.png>] (/home/prateek/Github/Stage2_Report/Main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+ [3
+
+] [4])
 \tf@toc=\write4
 \openout4 = `Main.toc'.
 
- [3
-
-]
+ [5] (/home/prateek/Github/Stage2_Report/Main.lof)
 \tf@lof=\write5
 \openout5 = `Main.lof'.
 
- [4
+ [6
 
 ]
 Chapter 1.
-(/home/prateek/Github/Stage2_Report/Chap1.tex) [1
+(/home/prateek/Github/Stage2_Report/Chap1.tex
+
+LaTeX Warning: Reference `sec5GfwdPlane' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Reference `secGTP' on page 1 undefined on input line 3.
+
+
+LaTeX Warning: Reference `secOrganization' on page 1 undefined on input line 4.
+
+[1
 
 ]
+<./fig/Introduction/5GFirst.png, id=340, 963.6pt x 722.7pt>
+File: ./fig/Introduction/5GFirst.png Graphic file (type png)
+<use ./fig/Introduction/5GFirst.png>
+Package pdftex.def Info: ./fig/Introduction/5GFirst.png  used on input line 28.
+(pdftex.def)             Requested size: 298.75262pt x 224.05673pt.
+ [2 <./fig/Introduction/5GFirst.png (PNG copy)>]
+
+LaTeX Warning: Reference `chapterUpfArchitecture' on page 3 undefined on input line 45.
+
+
+LaTeX Warning: Reference `chapterRSS' on page 3 undefined on input line 46.
+
+
+LaTeX Warning: Reference `chapterModelsofExecution' on page 3 undefined on input line 48.
+
+
+LaTeX Warning: Reference `chapterExperimentsandResults' on page 3 undefined on input line 48.
+
+) [3]
 Chapter 2.
-(/home/prateek/Github/Stage2_Report/Chap2.tex) [2
+(/home/prateek/Github/Stage2_Report/Chap2.tex) [4
 
 ]
 Chapter 3.
-(/home/prateek/Github/Stage2_Report/Chap3.tex [3
+(/home/prateek/Github/Stage2_Report/Chap3.tex [5
 
-] [4]
-
-LaTeX Warning: Reference `chap:CPDPTraffic' on page 5 undefined on input line 68.
-
-[5]) [6]
+] [6] [7]) [8]
 Chapter 4.
-(/home/prateek/Github/Stage2_Report/Chap4.tex
+(/home/prateek/Github/Stage2_Report/Chap4.tex [9
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1.
-
-[7
-
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
- [8]
+] [10]
 Overfull \hbox (22.70421pt too wide) in paragraph at lines 48--50
 []\OT1/cmr/bx/n/12 dataPlaneStoreTimestampCallback \OT1/cmr/m/n/12 This call-back is reg-is-tered on CORE[]RTT
  []
@@ -361,56 +369,57 @@ Overfull \hbox (88.04066pt too wide) in paragraph at lines 50--51
 []\OT1/cmr/bx/n/12 controlPlaneStoreTimestampCallback \OT1/cmr/m/n/12 This call-back is reg-is-tered on CORE[]CP[]TRAFFIC
  []
 
-) [9]
+) [11]
 Chapter 5.
-(/home/prateek/Github/Stage2_Report/Chap5.tex [10
-
-]) [11]
-Chapter 6.
-(/home/prateek/Github/Stage2_Report/Chap6.tex) [12
+(/home/prateek/Github/Stage2_Report/Chap5.tex [12
 
 ]
+Overfull \hbox (26.76088pt too wide) in paragraph at lines 21--23
+[]\OT1/cmr/bx/n/12 Misleading Com-ments \OT1/cmr/m/n/12 The com-ments were not up-dated with the change/removal
+ []
+
+[13] [14] [15] [16]) [17]
+Chapter 6.
+(/home/prateek/Github/Stage2_Report/Chap6.tex [18
+
+]) [19]
 Chapter 7.
-(/home/prateek/Github/Stage2_Report/Chap7.tex)
-No file Main.bbl.
+(/home/prateek/Github/Stage2_Report/Chap7.tex) (/home/prateek/Github/Stage2_Report/Main.bbl [20
+
+]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
-[13
+ [21
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (/home/prateek/Github/Stage2_Report/Main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package rerunfilecheck Info: File `Main.out' has not changed.
+(rerunfilecheck)             Checksum: 1D62D87904CB68EB64073862045E26B3;3770.
 
-
-Package rerunfilecheck Warning: File `Main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  08DBA7ECF7105DC78DC0605CBBD52F78;2056.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 6127 strings out of 481239
- 93593 string characters out of 5920377
- 353313 words of memory out of 5000000
- 21202 multiletter control sequences out of 15000+600000
+ 6256 strings out of 481239
+ 95658 string characters out of 5920377
+ 357026 words of memory out of 5000000
+ 21284 multiletter control sequences out of 15000+600000
  537887 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,45p,720b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,45p,720b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on /home/prateek/Github/Stage2_Report/Main.pdf (16 pages, 107309 bytes).
+Output written on /home/prateek/Github/Stage2_Report/Main.pdf (26 pages, 149821 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 478 PDF objects out of 1000 (max. 8388607)
+ 436 compressed objects within 5 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 

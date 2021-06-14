@@ -1,29 +1,127 @@
 This portion of the problem statement took the maximum effort and time.
 The inherited code was never cleaned and had various issues which are discussed below.
 \section{Naming of Variables}
+\subsection{Issues}
+\begin{itemize}
+	\item \textbf{Wrong Case} camelCase should be used in all the 5GCore network functions. PascalCase is OK too. 
+	However snake\_case, snake\_camelCase were also rampantly used in the RAN code. 
+	\item \textbf{Redundancy} Having test or dpdk in the name of every function is not helpful when it is already
+	a testing/experimental setup and DPDK APIs are used. 
+\end{itemize}
+\subsection{Resolution}
+All new functions that were defined do not have these issues. The name of many past functions are also changed.
+The complete revamp is avoided as past functions might be familiar to the team by the old names.
+
 \section{Stale Comments}
-todos, wrong comments.
+\subsection{Issues}
+\begin{itemize}
+	\item \textbf{TODOs} There were many todos lying around from very long. 
+	The one who would have these TODOs on their list might have completed them on their branch 
+	or have never bothered after writing the TODOs.
+	\item \textbf{Misleading Comments} The comments were not updated with the change/removal of the lines of 
+	the code.
+\end{itemize}
+
+\subsection{Resolution}
+Whatever TODOs and misleading comments that came in my way have been erased.
 \section{Dead Code}
-if 0
+\subsection{Issue}
+\begin{itemize}
+	\item There were many functions in the code which were never called in any of the data forwarding mode.
+	      Some of them were aptly identified as beta functions and many were not.
+	\item Hundreds of lines of code was defined in the  conditional statement $if(0)$- they were never called/compiled.
+\end{itemize}
+\subsection{Resolution}
+Dead code mentioned in the issue sections is cleaned.
+
 \section{Deprecated Options}
+\subsection{Issue}
+There were 20 modes of data forwarding available. Hardly 3-4 were used for testing purposes. Many options 
+were redundant as same options were implemented using dpdk APIs and kernel based functionalities.
+\subsection{Resolution}
+The number of modes are reduced to 5. They are appropriately categorized as main data forwarding modes, helper 
+functions and QoS related modes. The code that is not based on DPDK APIs is removed for clarity.
 \section{Copied Code}
-testpmd.h
+\subsection{Issues}
+DPDK provides a lot of examples showing the usage of their API. It is quite extensive and easy to read and excerpts of 
+code can directly be used in our applications. The code should be cleaned when it is lifted from these applications.
+The declaration of functions which are never used should be removed. The variables should be named according to
+the convention that is followed in our source. The header dpdk\_ran.h had around 600-800 lines of declared functions
+which were never defined and used.
+\subsection{Resolution}
+Most of the declarations discussed here are removed. There might be some declarations in other header files which were not removed. 
+Future developers may clean whenever they come across them.
 \section{Global Variables}
 \subsection{Issue}
-Around 150 variables, data structures were declared globally in ranMain.cpp. The use of 
-global variables made the code highly coupled and made it difficult to change one procedure 
-without affecting the other. Infact some of them were declared but never used. 
-This made it also difficult to discern the scope of variable usage inside a procedure - whether is s global variable, 
+Around 150 variables, data structures were declared globally in ranMain.cpp. The use of
+global variables made the code highly coupled and made it difficult to change one procedure
+without affecting the other. Infact some of them were declared but never used.
+This made it also difficult to discern the scope of variable usage inside a procedure - whether is s global variable,
 local variable or a class member.
 \subsection{Resolution}
-
+\begin{itemize}
+	\item The unused global variables are deleted. The variables which were called in only a few functions are made
+	      local and passed as parameter.
+	\item The remaining global variables are defined in a new namespace \textbf{Global}. This helps in identifying
+	      global variables in the procedures' definitions.
+\end{itemize}
 \section{Directory Structure}
-\section{Dead Code}
-\section{Poor Refactoring}
-\section{Unnecessary Offloads}
-\section{Naming of Variables}
-\section{Incorrect Stuff} argc == 0, Y(call X one times) , X 
-\section{Technical Improvements}
-High throughput of data plane latency packets.
-\section{File Layout}
+\subsection{Issues}
+\begin{itemize}
+	\item The earlier RAN directory was not created as a different folder in 5GCore folder as other NFs. 
+It was defined inside AMF.  This was very misleading and suggested coupling between AMF and RAN when 
+there never was. It was primarily done to avoid creating a new CMakeLists and reuse the build functionality
+of AMF.
+\item All log files were generated in the parent folder itself. This makes it difficult to read, delete
+, transfer log files. 
+\end{itemize}
 
+\subsection{Resolutions}
+\begin{itemize}
+	\item A different folder DPDK\_RAN is created inside 5GCore directory.
+	\item Log files are now generated in subdirectories. Two log files are generated in each run - throughput 
+	log files and debugging information related log files.
+\end{itemize}
+\section{Poor Refactoring}
+
+\subsection{Issues}
+\begin{itemize}
+	\item The main function had a switch statement for different modes of operation. This switch statement was approximately 2000 lines long.
+	\item The DRY principle was violated multiple times. If all modes require setting of time duration of the run, it is better to
+	define a procedure asking for time rather than repeating it 20 times.
+	\item The files were unusually long. The ranMain.cpp and dpdk\_ran.cpp were more than 10k,  8k lines of code respectively.
+	The file in which main routine is defined should be small enough for readers of the code to grasp.
+\end{itemize}	
+\subsection{Resolutions}
+The code was extensively refactored. Differnt procedures were defined for each of the switch statement option.
+Different modes were refactored to make them shorter and easy to understand. 
+ranMain.cpp is bifuracted into ranMain.cpp and ran.cpp (for lack of a better name). The header ranMain.h is defined for
+inclusion into both the translation units.
+Further refactoring can be done of the data forwarding procedures if required. It will be a good exercise in 
+understanding of the code.
+
+\section{Unnecessary Offloads}
+\subsection{Issues}
+As some sections of the code were directly copied from dpdk applications, there were 
+some offloads which are unrelated to our application - VLAN, QINQ and MACSEC offloads.
+The entire code in dpdk\_ran.cpp was infested with these offloads. These offloads were present with IP
+and UDP checksum related offloads which were used by our application.
+\subsection{Resolution}
+These lines of code were removed from the dpdk\_ran.cpp . However if the surgeon is not an expert,
+one may remove healthy and important part with tumors as well. Thankfully, it was possible here 
+to reinstall the healthy part back. This took enormous amounts of time and it was a good learning experience
+for future.
+
+\section{Technical Improvements}
+\subsection{Issues}
+\begin{itemize}
+	\item High throughput of data plane latency packets. 100 Mbps of data plane latency packets were sent for measuring the 
+	end to end latency besides the load. Law of large number comes into play much before that and high latency packet throughput 
+	causes unnecessary callback overhead.
+	\item The statements like \textbf{if (argc == 0)}, for loop running once, calling an internal function of the
+	dpdk API when external call. 
+\end{itemize}
+
+\subsection{Resolution}
+The mentioned throughput was reduced to 0.4 Mbps. This can be further reduced if required.
+The incorrect statements that I came across were removed.

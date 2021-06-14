@@ -22,7 +22,7 @@ NUMA- node 1 with starting core 12 is currently used by the RAN.
 Using this layout, a maximum of 7 cores are available for the data forwarding on the same numa node.
 To increase this number, the functions running on CORE\_MISC and CORE\_STAT can be run parallely on the same core. Although 7 cores have been found sufficient till now to saturate 40 Gig line with 64 byte packets.
 
-\section{Control Plane Forwarding}
+\section{Forwarding of Control Plane Messages}
 In a 5G-conforming RAN, the session related messages are sent by SMF to UPF.
 This RAN-emulator's primary role is that of a load generator. Session related messages - session establishment, modification and release messages are directly sent by RAN to the UPF.
 There are however some functions defined before the start of the load testing mode in the main function that interacts with AMF and to SMF through AMF. These are not removed as they act as a stub for interaction with AMF. They can be deleted after rigorous testing.

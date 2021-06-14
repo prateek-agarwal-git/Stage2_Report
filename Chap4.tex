@@ -1,5 +1,5 @@
-\subsection{Latency Calculation Algorithms}
-\subsubsection{Key Concept}
+\section{Latency Calculation Algorithms}
+\subsection{Key Concept}
 When packets are transmitted from RAN, the timestamp when the packet is forwarded is stored for the outgoing packet. When the response for the packet arrives at the receiving side of RAN, the difference in time values of the current time and the stored timestamp  is calculated and then reported in the log file.
 \subsubsection{Storing of Timestamp}
 \begin{itemize}
@@ -25,7 +25,7 @@ When packets are transmitted from RAN, the timestamp when the packet is forwarde
 
 	      A callback function is registered on  the transmit queue corresponding to CORE\_CP\_TRAFFIC which stores the timestamp in the hashmap.
 \end{itemize}
-\subsubsection{Calculation of Latency}
+\subsection{Calculation of Latency}
 A single callback function is registered on the CORE\_RX\_POLL which  receives the incoming packet.
 \begin{itemize}
 	\item \textbf{Data Plane} The same outgoing packet is reflected by the DNN packet and stored timestamp is retrieved from the hashmap and the difference is the end to end latency of each packet.
@@ -33,7 +33,7 @@ A single callback function is registered on the CORE\_RX\_POLL which  receives t
 	      The response packets have message type and either session IDs in their payload. For
 	      modification and deletion  responses, the session ids have a difference of 3000.  Using these information, the index in \textbf{TSArray} can be calculated and the corresponding timestamp can be retrieved.
 \end{itemize}
-\subsubsection{Why do we need different techniques for control plane and data plane?}
+\subsection{Why do we need different techniques for control plane and data plane?}
 \begin{itemize}
 	\item \textbf{Why can't we use packet identifier for control plane packets?}
 	      Both types of packets are received on the same rx queue/core. So, only the packet identifier in ip header is not enough to differentiate control plane and data plane packets. And you will need deep packet inspection to differentiate among the two packets.
@@ -42,7 +42,7 @@ A single callback function is registered on the CORE\_RX\_POLL which  receives t
 	      Data plane latency was implemented earlier when the packet id field was unused. Control plane latency calculation is done later.
 \end{itemize}
 
-\subsubsection{Callback functions}
+\section{Callback functions}
 Call back functions are registered on receive and transmit queues for latency calculation.
 \begin{itemize}
 	\item \textbf{dataPlaneStoreTimestampCallback}

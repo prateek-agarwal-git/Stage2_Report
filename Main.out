@@ -1,33 +1,60 @@
 \BOOKMARK [0][-]{section*.3}{List of Figures}{}% 1
 \BOOKMARK [0][-]{chapter.4}{Introduction }{}% 2
-\BOOKMARK [0][-]{chapter.5}{Problem Statement }{}% 3
-\BOOKMARK [0][-]{chapter.6}{RAN Design}{}% 4
-\BOOKMARK [1][-]{section.7}{Core Layout}{chapter.6}% 5
-\BOOKMARK [1][-]{section.8}{Control Plane Forwarding}{chapter.6}% 6
-\BOOKMARK [1][-]{section.9}{Modes of Operation}{chapter.6}% 7
-\BOOKMARK [2][-]{subsection.10}{Setup sessions and send data}{section.9}% 8
-\BOOKMARK [2][-]{subsection.11}{Send only control plane traffic}{section.9}% 9
-\BOOKMARK [2][-]{subsection.12}{Send Control Plane and Data Plane Traffic Simultaneously}{section.9}% 10
-\BOOKMARK [2][-]{subsection.13}{Helper Functions}{section.9}% 11
-\BOOKMARK [2][-]{subsection.14}{QoS Functions}{section.9}% 12
-\BOOKMARK [0][-]{chapter.15}{Latency Callbacks}{}% 13
-\BOOKMARK [1][-]{subsection.16}{Latency Calculation Algorithms}{chapter.15}% 14
-\BOOKMARK [0][-]{chapter.22}{Clean Code}{}% 15
-\BOOKMARK [1][-]{section.23}{Naming of Variables}{chapter.22}% 16
-\BOOKMARK [1][-]{section.24}{Stale Comments}{chapter.22}% 17
-\BOOKMARK [1][-]{section.25}{Dead Code}{chapter.22}% 18
-\BOOKMARK [1][-]{section.26}{Deprecated Options}{chapter.22}% 19
-\BOOKMARK [1][-]{section.27}{Copied Code}{chapter.22}% 20
-\BOOKMARK [1][-]{section.28}{Global Variables}{chapter.22}% 21
-\BOOKMARK [2][-]{subsection.29}{Issue}{section.28}% 22
-\BOOKMARK [2][-]{subsection.30}{Resolution}{section.28}% 23
-\BOOKMARK [1][-]{section.31}{Directory Structure}{chapter.22}% 24
-\BOOKMARK [1][-]{section.32}{Dead Code}{chapter.22}% 25
-\BOOKMARK [1][-]{section.33}{Poor Refactoring}{chapter.22}% 26
-\BOOKMARK [1][-]{section.34}{Unnecessary Offloads}{chapter.22}% 27
-\BOOKMARK [1][-]{section.35}{Naming of Variables}{chapter.22}% 28
-\BOOKMARK [1][-]{section.36}{Incorrect Stuff}{chapter.22}% 29
-\BOOKMARK [1][-]{section.37}{Technical Improvements}{chapter.22}% 30
-\BOOKMARK [1][-]{section.38}{File Layout}{chapter.22}% 31
-\BOOKMARK [0][-]{chapter.39}{Data Plane + Control Plane Traffic}{}% 32
-\BOOKMARK [0][-]{chapter.40}{Results}{}% 33
+\BOOKMARK [1][-]{section.5}{5G Forwarding Plane }{chapter.4}% 3
+\BOOKMARK [2][-]{subsection.6}{Radio Access Network \(RAN\) }{section.5}% 4
+\BOOKMARK [2][-]{subsection.7}{User Plane Function \(UPF\) }{section.5}% 5
+\BOOKMARK [2][-]{subsection.9}{Data Network Name \(DNN\) }{section.5}% 6
+\BOOKMARK [1][-]{section.10}{PFCP Protocol}{chapter.4}% 7
+\BOOKMARK [1][-]{section.11}{Organization }{chapter.4}% 8
+\BOOKMARK [0][-]{chapter.12}{Problem Statement }{}% 9
+\BOOKMARK [0][-]{chapter.13}{RAN Design}{}% 10
+\BOOKMARK [1][-]{section.14}{Core Layout}{chapter.13}% 11
+\BOOKMARK [1][-]{section.15}{Forwarding of Control Plane Messages}{chapter.13}% 12
+\BOOKMARK [1][-]{section.16}{Modes of Operation}{chapter.13}% 13
+\BOOKMARK [2][-]{subsection.17}{Setup sessions and send data}{section.16}% 14
+\BOOKMARK [2][-]{subsection.18}{Send only control plane traffic}{section.16}% 15
+\BOOKMARK [2][-]{subsection.19}{Send Control Plane and Data Plane Traffic Simultaneously}{section.16}% 16
+\BOOKMARK [2][-]{subsection.20}{Helper Functions}{section.16}% 17
+\BOOKMARK [2][-]{subsection.21}{QoS Functions}{section.16}% 18
+\BOOKMARK [0][-]{chapter.22}{Control Plane Latency}{}% 19
+\BOOKMARK [1][-]{section.23}{Latency Calculation Algorithms}{chapter.22}% 20
+\BOOKMARK [2][-]{subsection.24}{Key Concept}{section.23}% 21
+\BOOKMARK [2][-]{subsection.26}{Calculation of Latency}{section.23}% 22
+\BOOKMARK [2][-]{subsection.27}{Why do we need different techniques for control plane and data plane?}{section.23}% 23
+\BOOKMARK [1][-]{section.28}{Callback functions}{chapter.22}% 24
+\BOOKMARK [0][-]{chapter.29}{Clean Code}{}% 25
+\BOOKMARK [1][-]{section.30}{Naming of Variables}{chapter.29}% 26
+\BOOKMARK [2][-]{subsection.31}{Issues}{section.30}% 27
+\BOOKMARK [2][-]{subsection.32}{Resolution}{section.30}% 28
+\BOOKMARK [1][-]{section.33}{Stale Comments}{chapter.29}% 29
+\BOOKMARK [2][-]{subsection.34}{Issues}{section.33}% 30
+\BOOKMARK [2][-]{subsection.35}{Resolution}{section.33}% 31
+\BOOKMARK [1][-]{section.36}{Dead Code}{chapter.29}% 32
+\BOOKMARK [2][-]{subsection.37}{Issue}{section.36}% 33
+\BOOKMARK [2][-]{subsection.38}{Resolution}{section.36}% 34
+\BOOKMARK [1][-]{section.39}{Deprecated Options}{chapter.29}% 35
+\BOOKMARK [2][-]{subsection.40}{Issue}{section.39}% 36
+\BOOKMARK [2][-]{subsection.41}{Resolution}{section.39}% 37
+\BOOKMARK [1][-]{section.42}{Copied Code}{chapter.29}% 38
+\BOOKMARK [2][-]{subsection.43}{Issues}{section.42}% 39
+\BOOKMARK [2][-]{subsection.44}{Resolution}{section.42}% 40
+\BOOKMARK [1][-]{section.45}{Global Variables}{chapter.29}% 41
+\BOOKMARK [2][-]{subsection.46}{Issue}{section.45}% 42
+\BOOKMARK [2][-]{subsection.47}{Resolution}{section.45}% 43
+\BOOKMARK [1][-]{section.48}{Directory Structure}{chapter.29}% 44
+\BOOKMARK [2][-]{subsection.49}{Issues}{section.48}% 45
+\BOOKMARK [2][-]{subsection.50}{Resolutions}{section.48}% 46
+\BOOKMARK [1][-]{section.51}{Poor Refactoring}{chapter.29}% 47
+\BOOKMARK [2][-]{subsection.52}{Issues}{section.51}% 48
+\BOOKMARK [2][-]{subsection.53}{Resolutions}{section.51}% 49
+\BOOKMARK [1][-]{section.54}{Unnecessary Offloads}{chapter.29}% 50
+\BOOKMARK [2][-]{subsection.55}{Issues}{section.54}% 51
+\BOOKMARK [2][-]{subsection.56}{Resolution}{section.54}% 52
+\BOOKMARK [1][-]{section.57}{Technical Improvements}{chapter.29}% 53
+\BOOKMARK [2][-]{subsection.58}{Issues}{section.57}% 54
+\BOOKMARK [2][-]{subsection.59}{Resolution}{section.57}% 55
+\BOOKMARK [0][-]{chapter.60}{Data Plane + Control Plane Traffic}{}% 56
+\BOOKMARK [1][-]{section.61}{Algorithm}{chapter.60}% 57
+\BOOKMARK [1][-]{section.62}{Issues}{chapter.60}% 58
+\BOOKMARK [0][-]{chapter.63}{Results}{}% 59
+\BOOKMARK [0][-]{section*.65}{Bibliography}{}% 60
