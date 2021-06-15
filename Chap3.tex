@@ -7,7 +7,12 @@ kept off for reducing the non deterministic behavior attributed to contention of
 and getting repeatable results.
 
 NUMA- node 1 with starting core 12 is currently used by the RAN.
-
+ \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth, keepaspectratio]{./fig/Introduction/RANArchitecture.png}
+    \caption{RAN Architecture}
+    \label{fig:RAN}
+\end{figure}
 
 \begin{itemize}
 	\item \textbf{CORE\_RX\_POLL}: Receives all the incoming packets from UPF. These includes the latency packets or data packets in the downlink direction.
@@ -25,16 +30,12 @@ To increase this number, the functions running on CORE\_MISC and CORE\_STAT can 
 \section{Forwarding of Control Plane Messages}
 In a 5G-conforming RAN, the session related messages are sent by SMF to UPF.
 This RAN-emulator's primary role is that of a load generator. Session related messages - session establishment, modification and release messages are directly sent by RAN to the UPF.
-There are however some functions defined before the start of the load testing mode in the main function that interacts with AMF and to SMF through AMF. These are not removed as they act as a stub for interaction with AMF. They can be deleted after rigorous testing.
 
-The session establishment, modification and release packets have a standard format of the header as well as the
-payload. These packets are defined as static arrays in the source file dpdk\_ran.cpp - pfcpSessionEstablishmentRequestPacket, pfcpSessionModificationRequestPacket and pfcpSessionReleaseRequestPacket.
-Before sending these packets, the fields pertaining to a particular session are modified in these packets.
-These fields include source IP, tunnel end point identifier (teid) and session ids.
-There are counter variables defined in the dpdk class which maintain the next session related fields.
-Examples include nextUEIPEstablishment, nextTEIdEstablishment etc. These counters are updated after packet is sent.
-Only one control plane packet is sent at a time i.e. batch size is one.
-
+The reasons for making this approximation of behavior is 
+\begin{itemize}
+	\item All the network functions besides UPF and DNN run on the same physical machine in our setup (define this in results). So the approximation is not way off the mark. 
+	\item It is possible to increase the load substantially using DPDK APIs that are used by RAN.
+\end{itemize}
 
 
 

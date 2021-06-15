@@ -163,6 +163,9 @@ INPUT /home/prateek/Github/Stage2_Report/Chap2.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap2.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap3.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap3.tex
+INPUT /home/prateek/Github/Stage2_Report/./fig/Introduction/RANArchitecture.png
+INPUT ./fig/Introduction/RANArchitecture.png
+INPUT ./fig/Introduction/RANArchitecture.png
 INPUT /home/prateek/Github/Stage2_Report/Chap4.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap4.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap5.tex

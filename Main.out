@@ -9,52 +9,52 @@
 \BOOKMARK [0][-]{chapter.13}{Problem Statement }{}% 9
 \BOOKMARK [0][-]{chapter.14}{RAN Design}{}% 10
 \BOOKMARK [1][-]{section.15}{Core Layout}{chapter.14}% 11
-\BOOKMARK [1][-]{section.16}{Forwarding of Control Plane Messages}{chapter.14}% 12
-\BOOKMARK [1][-]{section.17}{Modes of Operation}{chapter.14}% 13
-\BOOKMARK [2][-]{subsection.18}{Setup sessions and send data}{section.17}% 14
-\BOOKMARK [2][-]{subsection.19}{Send only control plane traffic}{section.17}% 15
-\BOOKMARK [2][-]{subsection.20}{Send Control Plane and Data Plane Traffic Simultaneously}{section.17}% 16
-\BOOKMARK [2][-]{subsection.21}{Helper Functions}{section.17}% 17
-\BOOKMARK [2][-]{subsection.22}{QoS Functions}{section.17}% 18
-\BOOKMARK [0][-]{chapter.23}{Control Plane Latency}{}% 19
-\BOOKMARK [1][-]{section.24}{Latency Calculation Algorithms}{chapter.23}% 20
-\BOOKMARK [2][-]{subsection.25}{Key Concept}{section.24}% 21
-\BOOKMARK [2][-]{subsection.27}{Calculation of Latency}{section.24}% 22
-\BOOKMARK [2][-]{subsection.28}{Why do we need different techniques for control plane and data plane?}{section.24}% 23
-\BOOKMARK [1][-]{section.29}{Callback functions}{chapter.23}% 24
-\BOOKMARK [0][-]{chapter.30}{Clean Code}{}% 25
-\BOOKMARK [1][-]{section.31}{Naming of Variables}{chapter.30}% 26
-\BOOKMARK [2][-]{subsection.32}{Issues}{section.31}% 27
-\BOOKMARK [2][-]{subsection.33}{Resolution}{section.31}% 28
-\BOOKMARK [1][-]{section.34}{Stale Comments}{chapter.30}% 29
-\BOOKMARK [2][-]{subsection.35}{Issues}{section.34}% 30
-\BOOKMARK [2][-]{subsection.36}{Resolution}{section.34}% 31
-\BOOKMARK [1][-]{section.37}{Dead Code}{chapter.30}% 32
-\BOOKMARK [2][-]{subsection.38}{Issue}{section.37}% 33
-\BOOKMARK [2][-]{subsection.39}{Resolution}{section.37}% 34
-\BOOKMARK [1][-]{section.40}{Deprecated Options}{chapter.30}% 35
-\BOOKMARK [2][-]{subsection.41}{Issue}{section.40}% 36
-\BOOKMARK [2][-]{subsection.42}{Resolution}{section.40}% 37
-\BOOKMARK [1][-]{section.43}{Copied Code}{chapter.30}% 38
-\BOOKMARK [2][-]{subsection.44}{Issues}{section.43}% 39
-\BOOKMARK [2][-]{subsection.45}{Resolution}{section.43}% 40
-\BOOKMARK [1][-]{section.46}{Global Variables}{chapter.30}% 41
-\BOOKMARK [2][-]{subsection.47}{Issue}{section.46}% 42
-\BOOKMARK [2][-]{subsection.48}{Resolution}{section.46}% 43
-\BOOKMARK [1][-]{section.49}{Directory Structure}{chapter.30}% 44
-\BOOKMARK [2][-]{subsection.50}{Issues}{section.49}% 45
-\BOOKMARK [2][-]{subsection.51}{Resolution}{section.49}% 46
-\BOOKMARK [1][-]{section.52}{Poor Refactoring}{chapter.30}% 47
-\BOOKMARK [2][-]{subsection.53}{Issues}{section.52}% 48
-\BOOKMARK [2][-]{subsection.54}{Resolution}{section.52}% 49
-\BOOKMARK [1][-]{section.55}{Unnecessary Offloads}{chapter.30}% 50
-\BOOKMARK [2][-]{subsection.56}{Issues}{section.55}% 51
-\BOOKMARK [2][-]{subsection.57}{Resolution}{section.55}% 52
-\BOOKMARK [1][-]{section.58}{Technical Improvements}{chapter.30}% 53
-\BOOKMARK [2][-]{subsection.59}{Issues}{section.58}% 54
-\BOOKMARK [2][-]{subsection.60}{Resolution}{section.58}% 55
-\BOOKMARK [0][-]{chapter.61}{Data Plane + Control Plane Traffic}{}% 56
-\BOOKMARK [1][-]{section.62}{Algorithm}{chapter.61}% 57
-\BOOKMARK [1][-]{section.63}{Issues}{chapter.61}% 58
-\BOOKMARK [0][-]{chapter.64}{Results}{}% 59
-\BOOKMARK [0][-]{section*.66}{Bibliography}{}% 60
+\BOOKMARK [1][-]{section.17}{Forwarding of Control Plane Messages}{chapter.14}% 12
+\BOOKMARK [1][-]{section.18}{Modes of Operation}{chapter.14}% 13
+\BOOKMARK [2][-]{subsection.19}{Setup sessions and send data}{section.18}% 14
+\BOOKMARK [2][-]{subsection.20}{Send only control plane traffic}{section.18}% 15
+\BOOKMARK [2][-]{subsection.21}{Send Control Plane and Data Plane Traffic Simultaneously}{section.18}% 16
+\BOOKMARK [2][-]{subsection.22}{Helper Functions}{section.18}% 17
+\BOOKMARK [2][-]{subsection.23}{QoS Functions}{section.18}% 18
+\BOOKMARK [0][-]{chapter.24}{Control Plane Latency}{}% 19
+\BOOKMARK [1][-]{section.25}{Latency Calculation Algorithms}{chapter.24}% 20
+\BOOKMARK [2][-]{subsection.26}{Key Concept}{section.25}% 21
+\BOOKMARK [2][-]{subsection.28}{Calculation of Latency}{section.25}% 22
+\BOOKMARK [2][-]{subsection.29}{Why do we need different techniques for control plane and data plane?}{section.25}% 23
+\BOOKMARK [1][-]{section.30}{Callback functions}{chapter.24}% 24
+\BOOKMARK [0][-]{chapter.31}{Clean Code}{}% 25
+\BOOKMARK [1][-]{section.32}{Naming of Variables}{chapter.31}% 26
+\BOOKMARK [2][-]{subsection.33}{Issues}{section.32}% 27
+\BOOKMARK [2][-]{subsection.34}{Resolution}{section.32}% 28
+\BOOKMARK [1][-]{section.35}{Stale Comments}{chapter.31}% 29
+\BOOKMARK [2][-]{subsection.36}{Issues}{section.35}% 30
+\BOOKMARK [2][-]{subsection.37}{Resolution}{section.35}% 31
+\BOOKMARK [1][-]{section.38}{Dead Code}{chapter.31}% 32
+\BOOKMARK [2][-]{subsection.39}{Issue}{section.38}% 33
+\BOOKMARK [2][-]{subsection.40}{Resolution}{section.38}% 34
+\BOOKMARK [1][-]{section.41}{Deprecated Options}{chapter.31}% 35
+\BOOKMARK [2][-]{subsection.42}{Issue}{section.41}% 36
+\BOOKMARK [2][-]{subsection.43}{Resolution}{section.41}% 37
+\BOOKMARK [1][-]{section.44}{Copied Code}{chapter.31}% 38
+\BOOKMARK [2][-]{subsection.45}{Issues}{section.44}% 39
+\BOOKMARK [2][-]{subsection.46}{Resolution}{section.44}% 40
+\BOOKMARK [1][-]{section.47}{Global Variables}{chapter.31}% 41
+\BOOKMARK [2][-]{subsection.48}{Issue}{section.47}% 42
+\BOOKMARK [2][-]{subsection.49}{Resolution}{section.47}% 43
+\BOOKMARK [1][-]{section.50}{Directory Structure}{chapter.31}% 44
+\BOOKMARK [2][-]{subsection.51}{Issues}{section.50}% 45
+\BOOKMARK [2][-]{subsection.52}{Resolution}{section.50}% 46
+\BOOKMARK [1][-]{section.53}{Poor Refactoring}{chapter.31}% 47
+\BOOKMARK [2][-]{subsection.54}{Issues}{section.53}% 48
+\BOOKMARK [2][-]{subsection.55}{Resolution}{section.53}% 49
+\BOOKMARK [1][-]{section.56}{Unnecessary Offloads}{chapter.31}% 50
+\BOOKMARK [2][-]{subsection.57}{Issues}{section.56}% 51
+\BOOKMARK [2][-]{subsection.58}{Resolution}{section.56}% 52
+\BOOKMARK [1][-]{section.59}{Technical Improvements}{chapter.31}% 53
+\BOOKMARK [2][-]{subsection.60}{Issues}{section.59}% 54
+\BOOKMARK [2][-]{subsection.61}{Resolution}{section.59}% 55
+\BOOKMARK [0][-]{chapter.62}{Data Plane + Control Plane Traffic}{}% 56
+\BOOKMARK [1][-]{section.63}{Algorithm}{chapter.62}% 57
+\BOOKMARK [1][-]{section.64}{Issues}{chapter.62}% 58
+\BOOKMARK [0][-]{chapter.65}{Results}{}% 59
+\BOOKMARK [0][-]{section*.67}{Bibliography}{}% 60
