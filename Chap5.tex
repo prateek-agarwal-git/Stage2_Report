@@ -76,7 +76,7 @@ of AMF.
 , transfer log files. 
 \end{itemize}
 
-\subsection{Resolutions}
+\subsection{Resolution}
 \begin{itemize}
 	\item A different folder DPDK\_RAN is created inside 5GCore directory.
 	\item Log files are now generated in subdirectories. Two log files are generated in each run - throughput 
@@ -92,7 +92,7 @@ of AMF.
 	\item The files were unusually long. The ranMain.cpp and dpdk\_ran.cpp were more than 10k,  8k lines of code respectively.
 	The file in which main routine is defined should be small enough for readers of the code to grasp.
 \end{itemize}	
-\subsection{Resolutions}
+\subsection{Resolution}
 The code was extensively refactored. Differnt procedures were defined for each of the switch statement option.
 Different modes were refactored to make them shorter and easy to understand. 
 ranMain.cpp is bifuracted into ranMain.cpp and ran.cpp (for lack of a better name). The header ranMain.h is defined for

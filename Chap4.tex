@@ -45,11 +45,18 @@ A single callback function is registered on the CORE\_RX\_POLL which  receives t
 \section{Callback functions}
 Call back functions are registered on receive and transmit queues for latency calculation.
 \begin{itemize}
-	\item \textbf{dataPlaneStoreTimestampCallback}
-	      This callback is registered on CORE\_RTT for storing the timestamp of outgoing  data plane latency packets.
-	\item \textbf{controlPlaneStoreTimestampCallback} This callback is registered on CORE\_CP\_TRAFFIC for storing the timestamp of outgoing control plane packets.
-	\item \textbf{calculateLatencyCallback} This callback is registered on CORE\_RX\_POLL for inspecting the incoming packets.
-	      These packets are either response packets to control plane packets or the data plane packets reflected back by DNN. The difference in the current time and the timestamp stored during the tx callbacks gives the latency values.
+	\item \textbf{CPStoreTimestampCallback}
+	      Registered on CORE\_CP\_TRAFFIC for storing the timestamp of outgoing control plane packets.
+	\item \textbf{DPStoreTimestampCallback}
+	      Registered on CORE\_RTT for storing the timestamp of outgoing  data plane latency packets.
+
+	\item \textbf{CPLatencyCallback}
+	      Registered on CORE\_RX\_POLL for inspecting responses to control plane
+	      requests. The difference in the current time and the  timestamp stored during the
+	      tx callbacks gives the latency values.
+	\item \textbf{DPLatencyCallback}
+	      Also registered on CORE\_RX\_POLL for inspecting the mirrored data plane
+	      latency packets.
 \end{itemize}
 %Run-to-Completion and Pipeline are two models of execution for packet processing and forwarding at User Plane Function.
 %Comparison of these models in the different use cases/scenarios is one of the major objectives of our work. This chapter will explain these models of execution.
