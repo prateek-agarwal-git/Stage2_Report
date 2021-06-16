@@ -22,6 +22,7 @@ ax.xaxis.tick_top()
 ax.tick_params(labeltop=False)  # don't put tick labels at the top
 ax2.xaxis.tick_bottom()
 
+plt.suptitle('Offloaded Control Plane')
 # This looks pretty good, and was fairly painless, but you can get that
 # cut-out diagonal lines look with just a bit more work. The important
 # thing to know here is that in axes coordinates, which are always

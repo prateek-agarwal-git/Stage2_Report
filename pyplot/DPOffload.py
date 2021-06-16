@@ -20,6 +20,7 @@ plt.plot(xpts, ypts, marker='o')
 plt.ylim(0,5000)  # outliers only
 plt.xlim(100, 700)  # most of the data
 
+plt.title('Offloaded Data Plane')
 # ax.set_xscale('log')
 # ax2.set_xscale('log')
 # hide the spines between ax and ax2

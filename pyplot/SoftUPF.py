@@ -13,7 +13,7 @@ xpts = np.array([5543.133333, 5116.99, 4751.906667, 4158.106667, 3326.173333, 27
 #ax2.plot(pts)
 
 plt.plot(xpts, ypts, marker='o')
-
+plt.title('Software UPF')
 plt.ylim(0,2000) 
 plt.xlim(1200, 6000)
 
