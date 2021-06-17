@@ -41,7 +41,7 @@ were redundant as same options were implemented using dpdk APIs and kernel based
 \subsection{Resolution}
 The number of modes are reduced to 5. They are appropriately categorized as main data forwarding modes, helper 
 functions and QoS related modes. The code that is not based on DPDK APIs is removed for clarity.
-\section{Copied Code}
+\section{Reused Code}
 \subsection{Issues}
 DPDK provides a lot of examples showing the usage of their API. It is quite extensive and easy to read and excerpts of 
 code can directly be used in our applications. The code should be cleaned when it is lifted from these applications.
@@ -87,7 +87,7 @@ of AMF.
 \subsection{Issues}
 \begin{itemize}
 	\item The main function had a switch statement for different modes of operation. This switch statement was approximately 2000 lines long.
-	\item The DRY principle was violated multiple times. If all modes require setting of time duration of the run, it is better to
+	\item The DRY (Don't Repeat Yourself) principle was violated multiple times. If all modes require setting of time duration of the run, it is better to
 	define a procedure asking for time rather than repeating it 20 times.
 	\item The files were unusually long. The ranMain.cpp and dpdk\_ran.cpp were more than 10k,  8k lines of code respectively.
 	The file in which main routine is defined should be small enough for readers of the code to grasp.
@@ -116,9 +116,10 @@ for future.
 \subsection{Issues}
 \begin{itemize}
 	\item High throughput of data plane latency packets. 100 Mbps of data plane latency packets were sent for measuring the 
-	end to end latency besides the load. Law of large number comes into play much before that and high latency packet throughput 
-	causes unnecessary callback overhead.
-	\item The statements like \textbf{if (argc == 0)}, for loop running once, calling an internal function of the
+	end to end latency besides the load. Law of large numbers kicks in for much smaller values and high latency packet throughput 
+	causes unnecessary callback overhead. This can further help in moving different functions running on different cores to a single core. 
+	This increases the number of cores available for data forwarding.
+	\item The statements like \textbf{if (argc == 0)}, for loop running once, comparison of floating point number with equality ($==$), calling an internal function of the
 	dpdk API when external call. 
 \end{itemize}
 

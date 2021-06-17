@@ -1,0 +1,65 @@
+\contentsline {chapter}{List of Figures}{vi}{section*.3}%
+\contentsline {chapter}{\numberline {1}Introduction }{1}{chapter.4}%
+\contentsline {section}{\numberline {1.1}5G Forwarding Plane }{1}{section.5}%
+\contentsline {subsection}{\numberline {1.1.1}Radio Access Network (RAN) }{1}{subsection.6}%
+\contentsline {subsection}{\numberline {1.1.2}User Plane Function (UPF) }{2}{subsection.7}%
+\contentsline {subsection}{\numberline {1.1.3}Data Network Name (DNN) }{2}{subsection.9}%
+\contentsline {section}{\numberline {1.2}PFCP Protocol}{3}{section.10}%
+\contentsline {section}{\numberline {1.3}Organization }{4}{section.12}%
+\contentsline {chapter}{\numberline {2}Problem Statement }{5}{chapter.13}%
+\contentsline {chapter}{\numberline {3}RAN Design}{6}{chapter.14}%
+\contentsline {section}{\numberline {3.1}Core Layout}{6}{section.15}%
+\contentsline {section}{\numberline {3.2}Forwarding of Control Plane Messages}{7}{section.17}%
+\contentsline {section}{\numberline {3.3}Modes of Operation}{8}{section.18}%
+\contentsline {subsection}{\numberline {3.3.1}Setup sessions and send data}{8}{subsection.19}%
+\contentsline {subsection}{\numberline {3.3.2}Send only control plane traffic}{8}{subsection.20}%
+\contentsline {subsection}{\numberline {3.3.3}Send Control Plane and Data Plane Traffic Simultaneously}{9}{subsection.21}%
+\contentsline {subsection}{\numberline {3.3.4}Helper Functions}{9}{subsection.22}%
+\contentsline {subsection}{\numberline {3.3.5}QoS Functions}{9}{subsection.23}%
+\contentsline {chapter}{\numberline {4}Control Plane Latency}{10}{chapter.24}%
+\contentsline {section}{\numberline {4.1}Latency Calculation Algorithms}{10}{section.25}%
+\contentsline {subsection}{\numberline {4.1.1}Key Concept}{10}{subsection.26}%
+\contentsline {subsubsection}{Storing of Timestamp}{10}{section*.27}%
+\contentsline {subsection}{\numberline {4.1.2}Calculation of Latency}{11}{subsection.28}%
+\contentsline {subsection}{\numberline {4.1.3}Why do we need different techniques for control plane and data plane?}{12}{subsection.29}%
+\contentsline {section}{\numberline {4.2}Callback functions}{12}{section.30}%
+\contentsline {chapter}{\numberline {5}Data Plane + Control Plane Traffic}{13}{chapter.31}%
+\contentsline {section}{\numberline {5.1}Algorithm}{13}{section.32}%
+\contentsline {section}{\numberline {5.2}Issues}{14}{section.33}%
+\contentsline {chapter}{\numberline {6}Clean Code}{15}{chapter.34}%
+\contentsline {section}{\numberline {6.1}Naming of Variables}{15}{section.35}%
+\contentsline {subsection}{\numberline {6.1.1}Issues}{15}{subsection.36}%
+\contentsline {subsection}{\numberline {6.1.2}Resolution}{15}{subsection.37}%
+\contentsline {section}{\numberline {6.2}Stale Comments}{16}{section.38}%
+\contentsline {subsection}{\numberline {6.2.1}Issues}{16}{subsection.39}%
+\contentsline {subsection}{\numberline {6.2.2}Resolution}{16}{subsection.40}%
+\contentsline {section}{\numberline {6.3}Dead Code}{16}{section.41}%
+\contentsline {subsection}{\numberline {6.3.1}Issue}{16}{subsection.42}%
+\contentsline {subsection}{\numberline {6.3.2}Resolution}{16}{subsection.43}%
+\contentsline {section}{\numberline {6.4}Deprecated Options}{16}{section.44}%
+\contentsline {subsection}{\numberline {6.4.1}Issue}{16}{subsection.45}%
+\contentsline {subsection}{\numberline {6.4.2}Resolution}{17}{subsection.46}%
+\contentsline {section}{\numberline {6.5}Reused Code}{17}{section.47}%
+\contentsline {subsection}{\numberline {6.5.1}Issues}{17}{subsection.48}%
+\contentsline {subsection}{\numberline {6.5.2}Resolution}{17}{subsection.49}%
+\contentsline {section}{\numberline {6.6}Global Variables}{17}{section.50}%
+\contentsline {subsection}{\numberline {6.6.1}Issue}{17}{subsection.51}%
+\contentsline {subsection}{\numberline {6.6.2}Resolution}{18}{subsection.52}%
+\contentsline {section}{\numberline {6.7}Directory Structure}{18}{section.53}%
+\contentsline {subsection}{\numberline {6.7.1}Issues}{18}{subsection.54}%
+\contentsline {subsection}{\numberline {6.7.2}Resolution}{18}{subsection.55}%
+\contentsline {section}{\numberline {6.8}Poor Refactoring}{18}{section.56}%
+\contentsline {subsection}{\numberline {6.8.1}Issues}{18}{subsection.57}%
+\contentsline {subsection}{\numberline {6.8.2}Resolution}{19}{subsection.58}%
+\contentsline {section}{\numberline {6.9}Unnecessary Offloads}{19}{section.59}%
+\contentsline {subsection}{\numberline {6.9.1}Issues}{19}{subsection.60}%
+\contentsline {subsection}{\numberline {6.9.2}Resolution}{19}{subsection.61}%
+\contentsline {section}{\numberline {6.10}Technical Improvements}{20}{section.62}%
+\contentsline {subsection}{\numberline {6.10.1}Issues}{20}{subsection.63}%
+\contentsline {subsection}{\numberline {6.10.2}Resolution}{20}{subsection.64}%
+\contentsline {chapter}{\numberline {7}Results}{21}{chapter.65}%
+\contentsline {section}{\numberline {7.1}Experimental Setup}{21}{section.66}%
+\contentsline {section}{\numberline {7.2}UPF}{22}{section.75}%
+\contentsline {section}{\numberline {7.3}Results}{23}{section.77}%
+\contentsline {subsection}{\numberline {7.3.1}Control Plane Performance}{23}{subsection.78}%
+\contentsline {chapter}{Bibliography}{26}{section*.83}%
