@@ -1,14 +1,20 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces 5G Forwarding Plane}}{2}{figure.8}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces PFCP Session Messages}}{3}{figure.11}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces RAN Architecture}}{6}{figure.16}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces RAN Architecture}}{6}{figure.15}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Experimental Setup}}{21}{figure.67}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Control Plane Performance for Software UPF}}{24}{figure.79}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Control Plane Performance for Offloaded Data Plane}}{24}{figure.80}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Control Plane Performance for Offloaded Control Plane}}{25}{figure.81}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces 5G Forwarding Plane}}{11}{figure.29}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces PFCP Session Messages}}{12}{figure.32}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces RAN Architecture}}{15}{figure.37}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Experimental Setup}}{30}{figure.88}%
+\contentsline {figure}{\numberline {12.2}{\ignorespaces Control Plane Performance for Software UPF}}{33}{figure.100}%
+\contentsline {figure}{\numberline {12.3}{\ignorespaces Control Plane Performance for Offloaded Data Plane}}{33}{figure.101}%
+\contentsline {figure}{\numberline {12.4}{\ignorespaces Control Plane Performance for Offloaded Control Plane}}{34}{figure.102}%
