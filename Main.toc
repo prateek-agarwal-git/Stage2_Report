@@ -1,60 +1,63 @@
-\contentsline {chapter}{List of Figures}{iv}{section*.3}%
+\contentsline {chapter}{List of Figures}{vi}{section*.3}%
 \contentsline {chapter}{\numberline {1}Introduction }{1}{chapter.4}%
-\contentsline {section}{\numberline {1.1}Problem Statement}{2}{section.5}%
-\contentsline {section}{\numberline {1.2}Major Contributions}{2}{section.6}%
-\contentsline {chapter}{\numberline {2}Background }{3}{chapter.7}%
-\contentsline {section}{\numberline {2.1}PFCP Protocol}{3}{section.9}%
-\contentsline {section}{\numberline {2.2}GTP Protocol}{4}{section.11}%
-\contentsline {chapter}{\numberline {3}Stage 1 Summary}{6}{chapter.13}%
-\contentsline {chapter}{\numberline {4}RAN Design and Implementation}{7}{chapter.14}%
-\contentsline {section}{\numberline {4.1}Design Objectives }{7}{section.15}%
-\contentsline {section}{\numberline {4.2}Prior Work}{8}{section.16}%
-\contentsline {subsection}{\numberline {4.2.1}Kernel-Based RAN}{8}{subsection.17}%
-\contentsline {subsection}{\numberline {4.2.2}DPDK-based RAN}{8}{subsection.18}%
-\contentsline {section}{\numberline {4.3}RAN Architecture}{8}{section.19}%
-\contentsline {subsection}{\numberline {4.3.1}Threading Model}{8}{subsection.20}%
-\contentsline {subsection}{\numberline {4.3.2}Core Layout}{9}{subsection.21}%
-\contentsline {section}{\numberline {4.4}Latency Calculation Mechanisms}{10}{section.23}%
-\contentsline {subsection}{\numberline {4.4.1}Key Idea }{10}{subsection.24}%
-\contentsline {subsection}{\numberline {4.4.2}Defintion of Control Plane Latency}{10}{subsection.25}%
-\contentsline {subsection}{\numberline {4.4.3}Implementation Issues}{11}{subsection.26}%
-\contentsline {subsection}{\numberline {4.4.4}Details}{11}{subsection.29}%
-\contentsline {section}{\numberline {4.5}Control Plane + Data Plane Traffic}{12}{section.30}%
-\contentsline {subsection}{\numberline {4.5.1}Issues}{12}{subsection.31}%
-\contentsline {chapter}{\numberline {5}Evaluation}{14}{chapter.32}%
-\contentsline {section}{\numberline {5.1}Experimental Setup}{14}{section.33}%
-\contentsline {section}{\numberline {5.2}UPF}{15}{section.42}%
-\contentsline {section}{\numberline {5.3}Results}{16}{section.44}%
-\contentsline {subsection}{\numberline {5.3.1}Control Plane Performance}{16}{subsection.45}%
-\contentsline {chapter}{\numberline {6}Introduction }{19}{chapter.49}%
-\contentsline {chapter}{\numberline {7}Clean Code}{20}{chapter.50}%
-\contentsline {section}{\numberline {7.1}Naming of Variables}{20}{section.51}%
-\contentsline {subsection}{\numberline {7.1.1}Issues}{20}{subsection.52}%
-\contentsline {subsection}{\numberline {7.1.2}Resolution}{20}{subsection.53}%
-\contentsline {section}{\numberline {7.2}Stale Comments}{21}{section.54}%
-\contentsline {subsection}{\numberline {7.2.1}Issues}{21}{subsection.55}%
-\contentsline {subsection}{\numberline {7.2.2}Resolution}{21}{subsection.56}%
-\contentsline {section}{\numberline {7.3}Dead Code}{21}{section.57}%
-\contentsline {subsection}{\numberline {7.3.1}Issue}{21}{subsection.58}%
-\contentsline {subsection}{\numberline {7.3.2}Resolution}{21}{subsection.59}%
-\contentsline {section}{\numberline {7.4}Deprecated Options}{21}{section.60}%
-\contentsline {subsection}{\numberline {7.4.1}Issue}{21}{subsection.61}%
-\contentsline {subsection}{\numberline {7.4.2}Resolution}{22}{subsection.62}%
-\contentsline {section}{\numberline {7.5}Reused Code}{22}{section.63}%
-\contentsline {subsection}{\numberline {7.5.1}Issues}{22}{subsection.64}%
-\contentsline {subsection}{\numberline {7.5.2}Resolution}{22}{subsection.65}%
-\contentsline {section}{\numberline {7.6}Global Variables}{22}{section.66}%
-\contentsline {subsection}{\numberline {7.6.1}Issue}{22}{subsection.67}%
-\contentsline {subsection}{\numberline {7.6.2}Resolution}{23}{subsection.68}%
-\contentsline {section}{\numberline {7.7}Directory Structure}{23}{section.69}%
-\contentsline {subsection}{\numberline {7.7.1}Issues}{23}{subsection.70}%
-\contentsline {subsection}{\numberline {7.7.2}Resolution}{23}{subsection.71}%
-\contentsline {section}{\numberline {7.8}Poor Refactoring}{23}{section.72}%
-\contentsline {subsection}{\numberline {7.8.1}Issues}{23}{subsection.73}%
-\contentsline {subsection}{\numberline {7.8.2}Resolution}{24}{subsection.74}%
-\contentsline {section}{\numberline {7.9}Unnecessary Offloads}{24}{section.75}%
-\contentsline {subsection}{\numberline {7.9.1}Issues}{24}{subsection.76}%
-\contentsline {subsection}{\numberline {7.9.2}Resolution}{24}{subsection.77}%
-\contentsline {section}{\numberline {7.10}Technical Improvements}{25}{section.78}%
-\contentsline {subsection}{\numberline {7.10.1}Issues}{25}{subsection.79}%
-\contentsline {subsection}{\numberline {7.10.2}Resolution}{25}{subsection.80}%
+\contentsline {section}{\numberline {1.1}5G Data Plane }{1}{section.5}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.6}%
+\contentsline {section}{\numberline {1.3}Major Contributions}{2}{section.7}%
+\contentsline {chapter}{\numberline {2}Background }{4}{chapter.8}%
+\contentsline {section}{\numberline {2.1}Interaction of Network Functions}{4}{section.9}%
+\contentsline {section}{\numberline {2.2}PFCP Protocol}{5}{section.20}%
+\contentsline {section}{\numberline {2.3}GTP Protocol}{6}{section.22}%
+\contentsline {chapter}{\numberline {3}Stage 1 Summary}{8}{chapter.24}%
+\contentsline {chapter}{\numberline {4}RAN Design and Implementation}{9}{chapter.25}%
+\contentsline {section}{\numberline {4.1}Design Objectives }{9}{section.26}%
+\contentsline {section}{\numberline {4.2}Prior Work}{10}{section.27}%
+\contentsline {subsection}{\numberline {4.2.1}Kernel-Based RAN}{10}{subsection.28}%
+\contentsline {subsection}{\numberline {4.2.2}DPDK-based RAN}{10}{subsection.29}%
+\contentsline {section}{\numberline {4.3}RAN Architecture}{10}{section.30}%
+\contentsline {subsection}{\numberline {4.3.1}Threading Model}{10}{subsection.31}%
+\contentsline {subsection}{\numberline {4.3.2}Core Layout}{11}{subsection.32}%
+\contentsline {section}{\numberline {4.4}Latency Calculation Mechanisms}{12}{section.34}%
+\contentsline {subsection}{\numberline {4.4.1}Key Idea }{12}{subsection.35}%
+\contentsline {subsection}{\numberline {4.4.2}Defintion of Control Plane Latency}{12}{subsection.36}%
+\contentsline {subsection}{\numberline {4.4.3}Implementation Issues}{13}{subsection.37}%
+\contentsline {subsection}{\numberline {4.4.4}Details}{13}{subsection.40}%
+\contentsline {section}{\numberline {4.5}Control Plane + Data Plane Traffic}{14}{section.41}%
+\contentsline {subsection}{\numberline {4.5.1}Issues}{14}{subsection.42}%
+\contentsline {chapter}{\numberline {5}Evaluation}{16}{chapter.43}%
+\contentsline {section}{\numberline {5.1}Experimental Setup}{16}{section.44}%
+\contentsline {section}{\numberline {5.2}UPF}{17}{section.53}%
+\contentsline {section}{\numberline {5.3}Results}{18}{section.55}%
+\contentsline {subsection}{\numberline {5.3.1}Control Plane Performance}{18}{subsection.56}%
+\contentsline {chapter}{\numberline {6}Introduction }{21}{chapter.60}%
+\contentsline {chapter}{\numberline {7}Clean Code}{22}{chapter.61}%
+\contentsline {section}{\numberline {7.1}Naming of Variables}{22}{section.62}%
+\contentsline {subsection}{\numberline {7.1.1}Issues}{22}{subsection.63}%
+\contentsline {subsection}{\numberline {7.1.2}Resolution}{22}{subsection.64}%
+\contentsline {section}{\numberline {7.2}Stale Comments}{23}{section.65}%
+\contentsline {subsection}{\numberline {7.2.1}Issues}{23}{subsection.66}%
+\contentsline {subsection}{\numberline {7.2.2}Resolution}{23}{subsection.67}%
+\contentsline {section}{\numberline {7.3}Dead Code}{23}{section.68}%
+\contentsline {subsection}{\numberline {7.3.1}Issue}{23}{subsection.69}%
+\contentsline {subsection}{\numberline {7.3.2}Resolution}{23}{subsection.70}%
+\contentsline {section}{\numberline {7.4}Deprecated Options}{23}{section.71}%
+\contentsline {subsection}{\numberline {7.4.1}Issue}{23}{subsection.72}%
+\contentsline {subsection}{\numberline {7.4.2}Resolution}{24}{subsection.73}%
+\contentsline {section}{\numberline {7.5}Reused Code}{24}{section.74}%
+\contentsline {subsection}{\numberline {7.5.1}Issues}{24}{subsection.75}%
+\contentsline {subsection}{\numberline {7.5.2}Resolution}{24}{subsection.76}%
+\contentsline {section}{\numberline {7.6}Global Variables}{24}{section.77}%
+\contentsline {subsection}{\numberline {7.6.1}Issue}{24}{subsection.78}%
+\contentsline {subsection}{\numberline {7.6.2}Resolution}{25}{subsection.79}%
+\contentsline {section}{\numberline {7.7}Directory Structure}{25}{section.80}%
+\contentsline {subsection}{\numberline {7.7.1}Issues}{25}{subsection.81}%
+\contentsline {subsection}{\numberline {7.7.2}Resolution}{25}{subsection.82}%
+\contentsline {section}{\numberline {7.8}Poor Refactoring}{25}{section.83}%
+\contentsline {subsection}{\numberline {7.8.1}Issues}{25}{subsection.84}%
+\contentsline {subsection}{\numberline {7.8.2}Resolution}{26}{subsection.85}%
+\contentsline {section}{\numberline {7.9}Unnecessary Offloads}{26}{section.86}%
+\contentsline {subsection}{\numberline {7.9.1}Issues}{26}{subsection.87}%
+\contentsline {subsection}{\numberline {7.9.2}Resolution}{26}{subsection.88}%
+\contentsline {section}{\numberline {7.10}Technical Improvements}{27}{section.89}%
+\contentsline {subsection}{\numberline {7.10.1}Issues}{27}{subsection.90}%
+\contentsline {subsection}{\numberline {7.10.2}Resolution}{27}{subsection.91}%
+\contentsline {chapter}{Bibliography}{28}{section*.93}%

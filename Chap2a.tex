@@ -1,4 +1,24 @@
-A 5G network hash RAN with user equipments and 
+\section{Interaction of Network Functions}
+The network functions in the data plane - RAN, UPF and DNN are defined in section \ref{sec:5GDataPlane}.
+
+Following steps describe the interaction between various network functions during a session-
+\begin{enumerate}
+	\item UE interacts with the Access and Mobility function (AMF) to request for intitiation of a new session.
+	\item AMF authenticates the UE and forwards the request to Session Management Function (SMF).
+	\item On receiving the request from AMF and after getting the UE details from other NFs (UDR etc.),
+	SMF initiates an session establishment procedure to User Plane Function. PFCP protocol (\ref{sec:PFCP}) is used for the interaction between 
+	UPF and SMF.
+	\item Once the session related details are received and stored at the UPF, a confirmation is sent to the 
+	UE signalling the permission to forward data packets. 
+	\item Data packets are sent by the UE through RAN to the UPF. 
+	\item GTP-U (\ref{sec:GTP}) - a tunneling based protocol is used between RAN and UPF. GTP header has an identifier to map data plane packets 
+	to a particular session. 
+	\item UPF de-encapsulates the GTP packet and based on the stored session 
+	related information provides various services like QoS, forwarding to a DNN etc. 
+	\item The downlink packets are received by the UPF from the data newtork (DNN) and performs GTP encapsulation before forwarding them to the RAN/UE.  	
+	\item Once the required data is forwarded, UE sends session termination request to AMF which forwards it to the SMF. SMF sends session release request to the UPF. The UPF deletes the session related information  at itself. 
+\end{enumerate}
+ 
 \begin{figure}[htbp]
 	\centering
        \includegraphics[width=0.7\textwidth]{fig/5g_arch.eps}
@@ -42,13 +62,13 @@ There are three kinds of messages sent from SMF to the UPF in PFCP session relat
 	 may remove this session's related information.
 \end{itemize}
 UPF gives response to each of the three messages. 
-\section {GTP Protocol\label{secGTP}}
+\section {GTP Protocol\label{sec:GTP}}
 The raw packets meant for communicating outside the netowrk are encapsulated with GTP  application level 
 header. GTP runs over UDP/IP stack. This GTP header  (shown in \ref{figGTPheader})contains various fields for regulating the
  session parameters. The relevant fields are
  \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/Introduction/intro2.png}
+    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/gtp.png}
     \caption{GTP-U header \cite{gtpwiki}}
     \label{figGTPheader}
 \end{figure}
