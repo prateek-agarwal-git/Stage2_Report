@@ -1,0 +1,42 @@
+\vspace{-8pt}
+\subsection{Packet steering offload}
+\label{sub:steerOffload}
+
+In our next design (Figure~\ref{fig:all_designs}b), the steering of UE traffic to cores happens not in software but within the NIC itself. This design relies on advanced NICs that allow RSS based on inner IP headers. For example, Intel NICs support the Dynamic Device Personalization~\cite{ddpGuide} feature on 40Gbps+ NICs,  which enables parsing of the GTP header and inner TCP/IP header fields for hash computation. Because the input to the hash function now contains the UE's IP address and GTP tunnel identifier, the packets of a UE are redirected to the same receive queue and CPU core via RSS. The multiple worker threads of the DPDK-based software UPF are assigned dedicated hardware receive queues and directly receive traffic from their corresponding queues. The worker threads then process the received packets in a run-to-completion model. The control plane traffic is redirected to (and processed on) dedicated cores as before. This design represents the simplest possible offload that can be done to programmable hardware, and is used by state-of-the-art UPFs~\cite{astri, intel_wp, mavenir, metaswitch}. 
+
+Offloading packet steering to hardware provides higher throughput and lower latency, due to minimal inter-core communication in software and faster hash computation in hardware. However, this design is also less flexible as we have lesser control on assigning UEs to cores. For example, the DPDK i40e poll mode driver~\cite{i40eDriver} does not support dynamic load balancing by remapping queues to cores based on load. Further, dynamic scaling is also complicated by the fact that one needs to stop and reconfigure the port in order to change the number of receive queues.
+
+%The advantages that the RTC offers above the pipeline design is higher throughput and lower latency. The higher throughput and lower latency is due to minimal inter-core communication and faster hash computation in the hardware.
+%%
+%The major limitation is the rigidity and inflexibilty. It is not possible to steer
+%flows from one heavily loaded core to a relatively idle core as the only way to
+%redirect flows is hash computation in hardware. Pipeline offers this flexibility
+%as redirection is in software. DPDK i40e poll mode driver does not offer dynamic load balancing \cite{i40eDriver} by remapping queues to the cores based on the load characteristics of  different cores.
+%It is also not possible to scale the number of worker cores with the increasing load without stopping and reconfiguring the port.
+
+%The packets in the uplink direction from RAN to the DNN (the Internet) are GTP encapsulated packets \cite{5g29060} The hash of the GTP header and the inner IP is computed in hardware and the packets are directed to the corresponding queue. Each core draws packets from a specific mapped queue.
+%Receive side scaling (RSS) is used for the packet redirection.
+%A standard RSS hash computation occurs on the outer packet fields . These fields are
+%identical for a given RAN-UPF pair and the packet redirection is not successful with the standard RSS.
+%Packet redirection in the hardware requires parsing of inner packet fields for getting the required entropy in hash computation. Intel has provided dynamic device personalization \cite{ddpGuide}
+%feature on 40Gbps+ NICs which enables parsing of GTP header and inner
+%packet fields for hash computation.
+%This input contains tunnel endpoint ID, inner UE IP etc. which is unique for a given flow.
+%Each flow is mapped independently and stays pinned to a specific core.
+%
+%The packets in the downlink direction are not encapsulated and have sufficient entropy in the headers for uniform distribution among the cores.
+%
+%
+%Each data plane core after receiving the packet processes it completely and independently of other cores before forwarding it further.
+%The control plane packets and other packets which are not in data plane are sent to
+%the first registered queue due to failed parsing. Sending these packets to the control plane core
+% is the only inter-core communication overhead.
+%
+%
+%The advantages that the RTC offers above the pipeline design is higher throughput and lower latency. The higher throughput and lower latency is due to minimal inter-core communication and faster hash computation in the hardware.
+%
+%The major limitation is the rigidity and inflexibilty. It is not possible to steer
+%flows from one heavily loaded core to a relatively idle core as the only way to
+%redirect flows is hash computation in hardware. Pipeline offers this flexibility
+%as redirection is in software. DPDK i40e poll mode driver does not offer dynamic load balancing \cite{i40eDriver} by remapping queues to the cores based on the load characteristics of  different cores.
+%It is also not possible to scale the number of worker cores with the increasing load without stopping and reconfiguring the port.

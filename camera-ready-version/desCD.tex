@@ -1,0 +1,156 @@
+\vspace{-12pt}
+% \vspace{-2mm}
+\subsection{Dataplane offload}
+\label{sub:dpOffload}
+
+% Our next design (Figure~\ref{fig:all_designs}c) offloads the complete dataplane processing of the UPF to a programmable hardware-based NIC or switch that can intercept packets destined to the software UPF. Without loss of generality, we assume that the dataplane is offloaded to a programmable NIC. Our implementation is based on offload to the Agilio CX 2x10GbE smartNIC~\cite{netronome} and spans 657 lines of P4 code.  In this design, the on-NIC programmable parser extracts 5G header fields from incoming packets. The control plane PFCP messages are directed to the software UPF and processed by the control plane worker thread. \textcolor{blue}{After processing the PFCP messages, the worker thread communicates with the NIC firmware via a controller which calls a thrift API~\cite{} to install/update session related forwarding rules in the match-action tables of the programmable NIC. Our initial UPF controller based on Netronome's Python library was not scalable so we implemented a C++ based librar } The incoming dataplane packets are matched against these rules for suitable forwarding. Note that the number of concurrent active user sessions that can be supported by such a system is inherently limited by the amount of memory available to store forwarding rules in the hardware; our current prototype can store the forwarding state of only 10K users but higher-end programmable hardware~\cite{tofino} can do more.
+% and spans 657 lines of P4 code.
+% The worker-to-NIC communication is managed by the controller which calls a thrift API~\cite{thrift-api} using a wrapper library.  Our initial controller ($\sim 385$ lines of Python code) utilized the Netronome's Python library and was not scalable. We implemented a scalable C++ based library and a controller that spanned $\sim 720$ lines of code. 
+ 
+Our next design (Figure~\ref{fig:all_designs}c) offloads the complete dataplane processing of the UPF to a programmable hardware-based NIC or switch that can intercept packets destined to the software UPF. Without loss of generality, we assume that the dataplane is offloaded to a programmable NIC; our current implementation uses the Agilio CX 2x10GbE smartNIC~\cite{netronome}. In this design, the on-NIC programmable parser extracts 5G header fields from incoming packets. The control plane PFCP messages are directed to the software UPF and processed by the control plane worker thread. After processing the PFCP messages, the worker thread communicates with the NIC firmware to install/update session forwarding rules in the match-action tables. The worker-NIC communication happens via our custom C++ library that invokes the NIC's Thrift API~\cite{thrift-api} to install hardware rules. The incoming dataplane packets are matched against these rules for suitable forwarding. Note that the number of concurrent active user sessions that can be supported by such a system is inherently limited by the amount of memory available to store forwarding rules in the hardware; our current prototype can store the forwarding state of only 10K users but higher-end programmable hardware~\cite{tofino} can do more.
+
+Prior work has also proposed similar designs that offload GTP-based forwarding to programmable hardware~\cite{mobile_5G_hw1, mobile_5G_hw2, mavenir, kaloom_wp}, but does not provide much detail on how rate limiting for QoS is handled in the offloaded design. In our design, all traffic that is within the QoS-prescribed rate limit is forwarded directly from hardware, and traffic that cannot be transmitted immediately is sent to the userspace for buffering. Our implementation presently supports enforcement of session-wide AMBR (aggregate maximum bit rate), which requires us to rate limit the aggregate traffic of a user's data session (across all flows) to a maximum value and queue up the traffic that exceeds this limit. 
+%We defer the implementation of other QoS features like Guaranteed Bit Rate (GBR) to future work. 
+%Preceding section [\ref{sub:pipelineDesign}] implements purly software based UPF on DPDK. RSS support on suitable NIC distributes incoming packets between CPU cores and further reduces the CPU overhead. However, processing dataplane packets on userspace increases costs in terms of CPU consumption and introduces additional round trip latency. This motivated existing works, as well as us, to implement 5G UPF functionalities on network dataplane. Fig. \ref{fig:all_designs}c shows our dataplane aided UPF design, where we selectively offloaded the 5G userplane features such as data plane packet header extractions, rule matching, GTP en/decapsulation and flow bitrate verification [DP-1 to 4 in Fig. \ref{fig:all_designs}c]. We further demonstrated the pros and challenges of transiently queuing oversubscribed packets on NIC shown in Fig. \ref{fig:all_designs}d.
+%
+%\subsubsection{5G data plane packet handling on NIC}
+%We programmed a Netronome nfp-4000 NIC in P4. The on-NIC packet parser was programmed to be 5G aware, which extracts predefined 5G control and data plane headers, e.g. GTP header, from incoming packets and allows packet processing based on 5G standards. The NIC forwards control plane packets to userspace without any further processing, which are processed at the DPDK based software UPF at userplane. We integrated a network controller (XXX line of python code) with the software UPF, which communicates with the NIC firmware to install session related rules into the match-action tables of the programmable NIC. Although it's possible to have multiple rules with different priority for a single session, we restricted one rule per session for simplicity.
+%The match-action table matches incoming dataplane packets against the session rules and the matched packets are forward to the 5G processing pipeline, whereas the unauthorised dataplane packets are dropped.
+%
+%\subsubsection{GTP en/decapsulation on NIC}
+%P4 programmable NICs can alter custom packet headers in network dataplane, which allows addition/removal of suitable 5G headers. Our work offloaded GTP en/decapsulation of down/uplink packets on programmable NIC by suitably modifying GTP, UDP and IP headers in network dataplane at line rate.
+%\subsubsection{Bit Rate verification and handover oversubscribed flows to userspace}
+One key challenge we had to overcome in this implementation was to identify the packets that exceeded a session's rate limit. Our initial implementation started with using P4 register arrays (stateful memory available for packet processing in programmable hardware) to track incoming rates of various sessions. Because these hardware registers can be accessed concurrently by multiple packets across different stages of the packet processing pipeline, we must use mutual exclusion in accessing and updating these registers. Unfortunately, we found that updating P4 registers under mutual exclusion significantly impacted the performance of our UPF (dropping to 350 Mbps from the linerate of 10Gbps). To overcome this limitation, we moved to using the P4 meter primitive~\cite{p4nfpmeter, p4bmv2meter} to identify packets exceeding the rate limit. P4 meter is implemented as a device specific extern, that sets the ``color'' of a packet in its metadata to different values based on whether the session's rate exceeds a pre-defined rate limit. While there was no slowdown due to P4 meters, we found that the hardware dataplane can no longer compute the time that a packet needs to be buffered for correctly, because the meter interface does not expose any rate calculations beyond the color. Therefore, once a session exceeds its rate limit, we forward all subsequent packets of that session to userspace, and let the software handle the session's dataplane processing.
+
+%We also verified that simpler benchmarking code obtained with our programmable NIC~\cite{p4wire} suffered a similar slowdown when updating registers under mutual exclusion. 
+%5G QoS enforcement requires evaluating the rate of all incoming data packets from all sessions. If not done on NIC, verifying flow bit rate will require shuttling packets back and fro to userspace, which will introduce transfer latency and is expected to overthrow many offload benefits. So, unlike previous works (\textbf{Ref ???. Pending.}), we offloaded the flow bit rate verification on programmable NIC. P4 programmable dataplane give us the following two design choices:
+
+%\textbf{Ingress timestamp based rate verification: } Most P4 programmable NICs insert ingress timestamp as a metadata accessible at dataplane as in case of our Netronome nfp-4000 NICs. We processed the perpacker ingress timestamp using a rate checking algorithm to accurately calculate queuing duration of individual packets. Following simplified algorithm works on a strict assumption of fixed packet size.\\
+%
+%\begin{algorithm}[h]
+%	\small
+%	%\label{algo:dataplae_rate_limit}
+%	% Label not working here
+%	\SetAlgoLined
+%	\textbf{TS\_Reg, FLAG\_th} = P4 register array with per session index, set by control plane, initialized to 0. The former stores an effective timestamp of $n^{th}$ packet. Later indicates whether a flow should be throttled or not. \textbf{Requires mutual exclusion}\;
+%	\textbf{TS\_curr, TS\_last} = Per packet metadata, holding ingress timestamp of the current and packet respectively\;
+%	\textbf{D} = Minimum inter packet arrival gap for a given rate\;
+%	\textbf{DELAY\_max} = Maximum allowed queuing delay\; 
+%	
+%	TS\_last $\gets$ TS\_Reg \;
+%	
+%	\eIf{FLAG\_th == 0}{
+%		// We are forwarding the flow now\\
+%		\eIf{ TS\_last + D >= TS\_curr}{
+%			// This are packets from oversubscribed flow \\
+%			\eIf{(TS\_last + D - TS\_curr) >= DELAY\_max}{
+%				// Max queuing delay is reached. Drop packets\\
+%				DROP \;
+%				FLAG\_th = 1 \;
+%			} {
+%				// Packets are over rate but DELAY\_max not reached\\
+%				QUEUE for (TS\_last + D -TS\_curr) time \;
+%				WRITE TS\_reg <- TS\_last + D \;
+%			}
+%		} {
+%			// Packets under rate limit\\
+%			FORWARD \;
+%			TS\_reg = TS\_curr \;
+%		}
+%	} {
+%		// We already encountered DELAY\_max. Let's drop packets till user space queue cleans up\\
+%		\eIf{TS\_last + D >= TS\_curr}{ 
+%			DROP \;
+%		} {
+%			FLAG\_th = 0 \;
+%			FORWARD \;
+%		}
+%	}
+%	\caption{Ingress timestamp based incoming flow rate verification algorithm}
+%\end{algorithm}
+%
+%% Algorithm manually labelled as algorithm 1
+%% THIS PORTION NEEDS SERIOUS LANGUAGE CHANGE.
+%Algo. 1 precisely calculates queuing delay for every packet and forward the fraction of oversubscribed flows having higher rate to userspace queuing application, along with an additional packet header containing the delay duration. This minimizes the userspace packet transfer overhead by forwarding only higher rate packets from oversubscribed flows.
+
+%Unfortunately, the algorithm requires P4 registers with mutual exclusion which seriously slowed down the entire packet processing pipeline in our Netronome nfp-4000 NIC. We achieved an overall throughput of 350 Mbps on our 10 Gbps NIC with Algo. 1. We assure the slowdown due to mutually exclusive P4 registers on simple p4wire \cite{p4wire} code from Netronome, which resulted to \~1.5 Gbps throughput with 64B packet payload on our NIC, which is capable to handle 8.6 Gbps throughput otherwise in similar condition. We found no such slowdown effect from ordinary (non mutually exclusive) P4 registers.
+%
+%\textbf{Rate verification using P4 meter:}
+%P4 language has the provision of meter, usually implemented as a device specific extern, to color packets based on pre-configured rate. P4 portable switch architecture (psa) \cite{p4psa} supports a two rate three color meter in it's software implementation bmv2 \cite{p4bmv2,p4bmv2meter}. For two given rates R1 and R2, bmv2 meter sets a custom packet metadata as green (0), yellow (1), red (2) if incoming rate <= R1, > R1 but < R2, >= R2. Netronome nfp-4000 NICs also provide a similar meter function with Green and Red color only \cite{p4nfpmeter}. Although P4 meters doesn't cause any slowdown, unlike Algo. 1 P4 meters doesn't expose the rate of incoming packets and prevents calculation of per packet queuing delay at network dataplane. To overcome this, our implementation hands oversubscribed flows to user space, for rest of the session.
+
+% NOTE: Abhik: IMPORTANT: Algo 1 and 2 follows different styles of variable names. Please suggest which one is better. I'll replace them accordingly.
+
+%\begin{algorithm}[h]
+%	\small
+%	\SetAlgoLined
+%	\textbf{isOversubscribed} = P4 register array with per session indexing. Initialized to zero. \textbf{Doesn't require mutual exclusion}\;
+%	\textbf{packetColor} = Perpacket metadata. Holds the packet color set by P4 meter\;
+%	
+%	packetColor $\gets$ executeMeter() \;
+%	
+%	\eIf{isOversubscribed == 0}{
+%		\If{packetColor != 0}{
+%			isOversubscribed $\gets$ packetColor \;
+%		}
+%		FORWARD to DNN
+%	}{
+%		Send to userspace queuing application
+%	}
+%	\caption{P4 meter based rate checking.}
+%\end{algorithm}
+%
+%Merits of Algo.2 lies in the fact that the P4 register \textit{isOversubscribed} doesn't require mutual exclusion to detect a session as oversubscribed. Only red colored packets from oversubscribed flows writes to the register all of which have same packet color. However, it requires handing over oversubscribed flows to userspace for the rest of the session duration, even if a particular flow becomes undersubscribed subsequently. Although this may adversely affect the round trip latency and processing cost, we opted for Alog. 2, considering the number of oversubscribed flow will be low in a real world 5G situation.
+
+%\subsubsection{Limited queuing of oversubscribed flows in on NIC buffer}
+%Queuing packets in dataplane faces following major challenges:
+%\begin{itemize}
+%	\item On-chip memory is scare (usually a few tens of MBs)
+%	\item Packets can't be made to wait for a certain time
+%	\item New packets can't be generated without cloning an incoming packet.
+%\end{itemize}
+%
+%We implemented a best case on-NIC queuing mechanism \textbf{for a single oversubscribed flow of fixed packet size} (Fig. \ref{fig:all_designs}d) using P4 meter based rate verification and Algo. 3. Following are the obstacle Algo. 3 needs to handle for limited NIC support:
+%
+%\begin{itemize}
+%	\item Algo. 3 parses the packet payload as a custom header to queue them in P4 registers of predefined size. This restricts the algorithm to fixed size packets.
+%	\item P4 (version 14) doesn't support modulation or division operation. We set the queue size (N) in 2's multiple to implement them easily using shift operation.
+%	\item The algorithm requires mutually exclusive registers. However, unlike Algo. 1, Algo. 3 processes oversubscribed flows only, which minimizes the slowdown.
+%	\item Unlike two rate three colour P4 meter in bmv2, Netronome nfp-4000 provides a one rate two colour meter. This limits the Algo. 3's ability of very accurate rate enforcement while releasing packets from the queue. Algo. 3 may release packets from the queue resulting in a rate higher than maximum allowed bit rate. However, considering the queue size is small the maximum allowed rate is fairly mentained.
+%\end{itemize}
+%
+%\begin{algorithm}[h]
+%	\small
+%	\SetAlgoLined
+%	% NOTE: ??? variable packetColour is already mentioned in Algo. 2. Do we need to define it again here
+%	\textbf{qBuff} = A bunch of P4 register (mutually exclusive) arrays of \textbf{N} size (= 2$^{m}$,\textit{m} is an integer) each behaves as a circular queue and buffers a specific packet header \; 
+%	\textbf{qStart, qEnd} = P4 register (mutually exclusive). Marks start and end of circular queue, initialized to 1 and 0 respectively\;
+%	\textbf{qEmpty, qFull} = Perpacket metadata to track the circular queue is empty or full.
+%	
+%	packetcolor $\gets$ executeMeter() \;
+%	
+%	\eIf{isOversubscribed == 0}{
+%		\If{packetColor != 0}{
+%			isOversubscribed $\gets$ packetColor \;
+%		}
+%		Forward to DNN
+%	}{
+%		\If{qEnd == (qStart + 1) \% N}{qEmpty $\gets$ 1}
+%		\If{qEnd == qStart}{qFull $\gets$ 1}
+%		\eIf{packerColor == 0}{
+%			\If{qEmpty != 1}{
+%				Clone the packet \;
+%				Dequeue a packet. Fill it into the clone\;
+%				Forward the clone into DNN \;
+%				qEnd $\gets$ (qEnd + 1) \% N \; 
+%			}
+%			Forward the incoming packet\;
+%		}{
+%			\If{qFull != 1}{
+%				Put the packet into buffer \;
+%				qStart $\gets$ (qStart + 1) \% N \;
+%			}
+%			Drop the packet \;
+%		}		
+%	}
+%	\caption{On-NIC queuing algorithm}
+%\end{algorithm}

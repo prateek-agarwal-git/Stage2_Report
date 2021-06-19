@@ -1,0 +1,376 @@
+\begin{thebibliography}{61}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[dop(2013)]{doppler}
+Cisco highlights next big switch., 2013.
+\newblock URL
+  \url{https://www.biztechafrica.com/article/cisco-announces-next-big-switch/5448/}.
+
+\bibitem[cav(2015)]{cavium}
+Cavium {X}pliant ethernet switch product line., 2015.
+\newblock URL \url{https://people.ucsc.edu/~warner/Bufs/Xpliant-cavium.pdf}.
+
+\bibitem[sta(2016)]{stats-ericsson}
+Ericsson {M}obility {R}eport, 2016.
+\newblock URL \url{http://mb.cision.com/Main/15448/2245189/661253.pdf}.
+
+\bibitem[5g-(2017)]{5g-uldl}
+Minimum requirements related to technical performance for {IMT}-2020 radio
+  interface(s), 2017.
+\newblock URL
+  \url{https://www.itu.int/dms_pub/itu-r/opb/rep/R-REP-M.2410-2017-PDF-E.pdf}.
+
+\bibitem[5g2(2017{\natexlab{a}})]{5g23501}
+3gpp ref \#:23.501. 2017. {S}ystem architecture for the 5{G} {S}ystem (5{GS}),
+  2017{\natexlab{a}}.
+\newblock URL \url{https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/}.
+
+\bibitem[5g2(2017{\natexlab{b}})]{5g29244}
+3gpp ref \#: 29.244. 2017. {S}ystem architecture for the 5{G} {S}ystem (5gs),
+  2017{\natexlab{b}}.
+\newblock URL \url{https://www.3gpp.org/ftp/Specs/archive/29_series/29.244/}.
+
+\bibitem[alt(2019)]{altera}
+Altera., 2019.
+\newblock URL \url{https://www.mouser.in/manufacturer/altera/}.
+
+\bibitem[ezc(2019)]{ezchip}
+Ezchip., 2019.
+\newblock URL \url{https://www.radisys.com/partners/ez-chip}.
+
+\bibitem[kal(2019)]{kaloom_wp}
+The {K}aloom 5{G} {U}ser {P}lane {F}unction ({UPF}), 2019.
+\newblock URL
+  \url{https://www.mbuzzeurope.com/wp-content/uploads/2020/02/Product-Brief-Kaloom-5G-UPF-v1.0.pdf}.
+
+\bibitem[met(2019)]{metaswitch}
+Lighting {U}p the 5{G} {C}ore with a {H}igh-{S}peed {U}ser {P}lane on {I}ntel
+  {A}rchitecture., 2019.
+\newblock URL
+  \url{https://builders.intel.com/docs/networkbuilders/lighting-up-the-5g-core-with-a-high-speed-user-plane-on-intel-architecture.pdf}.
+
+\bibitem[xil(2019)]{xilinx}
+Xilinx., 2019.
+\newblock URL \url{https://www.xilinx.com/}.
+
+\bibitem[ast(2020)]{astri}
+5{G} {U}ser {P}lane {F}unction ({UPF}) - performance with {ASTRI}., 2020.
+\newblock URL
+  \url{https://networkbuilders.intel.com/solutionslibrary/5g-user-plane-function-upf-performance-with-astri-solution-brief}.
+
+\bibitem[i40(2020)]{i40eDriver}
+I40{E} {P}oll {M}ode {D}river, 2020.
+\newblock URL \url{https://doc.dpdk.org/guides/nics/i40e.html}.
+
+\bibitem[imi(2020)]{imixLink}
+Internet {M}ix ({IMIX}) {T}raffic, 2020.
+\newblock URL \url{https://en.wikipedia.org/wiki/Internet_Mix}.
+
+\bibitem[mav(2020)]{mavenir}
+Optimizing {UPF} performance using {S}mart{NIC} offload., 2020.
+\newblock URL
+  \url{https://mavenir.com/wp-content/uploads/2020/11/Mavenir_UPF_Solution_Brief.pdf}.
+
+\bibitem[40G(2021)]{40G-nic-cost}
+Intel {XL}710-{BM}2 {D}ual-{P}ort 40{G} {QSFP}+ {PCI}e 3.0 x8, {E}thernet
+  {N}etwork {I}nterface {C}ard, 2021.
+\newblock URL \url{https://www.fs.com/products/75604.html}.
+
+\bibitem[5g-(2021{\natexlab{a}})]{5g-testbed}
+5{G} testbed at {IIT} {B}ombay, 2021{\natexlab{a}}.
+\newblock URL \url{https://www.cse.iitb.ac.in/~5gtestbed/}.
+
+\bibitem[5g-(2021{\natexlab{b}})]{5g-testbed-in}
+5{G} testbed, {D}o{T}, {G}ovt. of {I}ndia., 2021{\natexlab{b}}.
+\newblock URL \url{https://5gtestbed.in/}.
+
+\bibitem[dpd(2021)]{dpdk_overview}
+{DPDK} {O}verview., 2021.
+\newblock URL \url{https://doc.dpdk.org/guides/prog_guide/overview.html}.
+
+\bibitem[net(2021)]{netronome-cost}
+Cost of {A}gilio {CX} {S}mart{NIC}s, 2021.
+\newblock URL
+  \url{https://colfaxdirect.com/store/pc/showsearchresults.asp?IDBrand=38&iPageSize=50}.
+
+\bibitem[thr(2021)]{thrift-api}
+Apache {T}hrift - {H}ome, 2021.
+\newblock URL \url{https://thrift.apache.org/}.
+
+\bibitem[tof(2021)]{tofino-2}
+Edgecore {N}etworks {AS}9516-32{D} ({T}ofino-2), 2021.
+\newblock URL
+  \url{https://stordirect.com/shop/switches/400g-switches/edgecore-networks-as9516-32d/}.
+
+\bibitem[xeo(2021)]{xeon-processor}
+Intel {X}eon {E}5-2670 {V}3 {D}odeca-core (12 core) 2.30 {G}hz {P}rocessor,
+  2021.
+\newblock URL
+  \url{https://www.amazon.com/Intel-Xeon-E5-2670-Dodeca-core-Processor/dp/B00NFA7ILQ#HLCXComparisonWidget_feature_div}.
+
+\bibitem[Aghdai et~al.(2018)]{mobile_5G_hw2}
+Ashkan Aghdai et~al.
+\newblock Transparent {E}dge {G}ateway for {M}obile {N}etworks.
+\newblock In \emph{IEEE 26th International Conference on Network Protocols
+  (ICNP)}, 2018.
+
+\bibitem[Bosshart et~al.(2014)Bosshart, Daly, Gibb, Izzard, McKeown, Rexford,
+  Schlesinger, Talayco, Vahdat, Varghese, and Walker]{p4}
+Pat Bosshart, Dan Daly, Glen Gibb, Martin Izzard, Nick McKeown, Jennifer
+  Rexford, Cole Schlesinger, Dan Talayco, Amin Vahdat, George Varghese, and
+  David Walker.
+\newblock P4: {P}rogramming {P}rotocol-independent {P}acket {P}rocessors.
+\newblock \emph{SIGCOMM Computer Communication Review}, 44, 2014.
+
+\bibitem[Cascone and Chau(2018)]{mobile_5G_hw1}
+Carmelo Cascone and Uyen Chau.
+\newblock Offloading {VNF}s to programmable switches using {P}4.
+\newblock In \emph{ONS North America}, 2018.
+
+\bibitem[Cidon et~al.(2017)Cidon, Choi, Katti, and McKeown]{appswitch}
+Eyal Cidon, Sean Choi, Sachin Katti, and Nick McKeown.
+\newblock App{S}witch: {A}pplication-layer {L}oad {B}alancing {W}ithin a
+  {S}oftware {S}witch.
+\newblock In \emph{Proceedings of the Asia-Pacific Workshop on Networking
+  (APNet)}, 2017.
+
+\bibitem[Costa(2020)]{p4bmv2meter}
+Edgar Costa.
+\newblock {P}4 {M}eter {A}pplication, 2020.
+\newblock URL
+  \url{https://github.com/nsg-ethz/p4-learning/tree/master/examples/meter}.
+
+\bibitem[Dang et~al.(2015)Dang, Sciascia, Canini, Pedone, and
+  Soul{\'e}]{netpaxos}
+Huynh~Tu Dang, Daniele Sciascia, Marco Canini, Fernando Pedone, and Robert
+  Soul{\'e}.
+\newblock Net{P}axos: {C}onsensus at {N}etwork {S}peed.
+\newblock In \emph{Proceedings of the the Symposium on SDN Research (SOSR)},
+  2015.
+
+\bibitem[Dang et~al.(2018)]{in-mem-consensus}
+Huynh~Tu Dang et~al.
+\newblock Consensus for {N}on-{V}olatile {M}ain {M}emory.
+\newblock In \emph{IEEE 26th International Conference on Network Protocols
+  (ICNP)}, 2018.
+
+\bibitem[Giesen et~al.(2018)Giesen, Shi, Sonchack, Chelluri, Prabhu, Sultana,
+  Kant, McAuley, Poylisher, DeHon, et~al.]{wharf}
+Hans Giesen, Lei Shi, John Sonchack, Anirudh Chelluri, Nishanth Prabhu, Nik
+  Sultana, Latha Kant, Anthony~J McAuley, Alexander Poylisher, Andr{\'e} DeHon,
+  et~al.
+\newblock In-network computing to the rescue of faulty links.
+\newblock In \emph{Proceedings of the 2018 Morning Workshop on In-Network
+  Computing (NetCompute)}, 2018.
+
+\bibitem[Harrison et~al.(2018)Harrison, Cai, Gupta, and
+  Rexford]{network-heavy-hitter}
+Rob Harrison, Qizhe Cai, Arpit Gupta, and Jennifer Rexford.
+\newblock Network-wide heavy hitter detection with commodity switches.
+\newblock In \emph{Proceedings of the Symposium on SDN Research (SOSR)}, 2018.
+
+\bibitem[Harrison et~al.(2020)Harrison, Feibish, Gupta, Teixeira,
+  Muthukrishnan, and Rexford]{carpe}
+Rob Harrison, Shir~Landau Feibish, Arpit Gupta, Ross Teixeira, S~Muthukrishnan,
+  and Jennifer Rexford.
+\newblock Carpe {E}lephants: {S}eize the {G}lobal {H}eavy {H}itters.
+\newblock In \emph{Proceedings of the Workshop on Secure Programmable Network
+  Infrastructure (SPIN)}, 2020.
+
+\bibitem[Hattachi(2015)]{ngmn}
+R.~E. Hattachi.
+\newblock Next {G}eneration {M}obile {N}etworks, {NGMN}, 2015.
+\newblock URL
+  \url{https://www.ngmn.org/wp-content/uploads/NGMN_5G_White_Paper_V1_0.pdf}.
+
+\bibitem[Holma and Toskala(2012)]{4g-uldl}
+Harri Holma and Antti Toskala.
+\newblock {LTE} {A}dvanced: 3{GPP} {S}olution for {IMT}-{A}dvanced, 2012.
+\newblock URL
+  \url{https://www.oreilly.com/library/view/lte-advanced-3gpp/9781118399422/c01anchor-3.html}.
+
+\bibitem[Holterbach et~al.(2019)Holterbach, Molero, Apostolaki, Dainotti,
+  Vissicchio, and Vanbever]{blink}
+Thomas Holterbach, Edgar~Costa Molero, Maria Apostolaki, Alberto Dainotti,
+  Stefano Vissicchio, and Laurent Vanbever.
+\newblock Blink: {F}ast {C}onnectivity {R}ecovery {E}ntirely in the {D}ata
+  {P}lane.
+\newblock In \emph{16th {USENIX} Symposium on Networked Systems Design and
+  Implementation (NSDI)}, 2019.
+
+\bibitem[Jin et~al.(2017)Jin, Li, Zhang, Soul{\'e}, Lee, Foster, Kim, and
+  Stoica]{netcache}
+Xin Jin, Xiaozhou Li, Haoyu Zhang, Robert Soul{\'e}, Jeongkeun Lee, Nate
+  Foster, Changhoon Kim, and Ion Stoica.
+\newblock Net{C}ache: {B}alancing {K}ey-{V}alue {S}tores with {F}ast
+  {I}n-{N}etwork {C}aching.
+\newblock In \emph{Proceedings of the Symposium on Operating Systems Principles
+  (SOSP)}, 2017.
+
+\bibitem[Joubert(2017)]{p4nfpmeter}
+Jaco Joubert.
+\newblock {P}4 {L}oadbalancer and {M}etering, 2017.
+\newblock URL \url{https://github.com/open-nfpsw/p4_basic_lb_metering_nic}.
+
+\bibitem[Katta et~al.(2016)Katta, Hira, Kim, Sivaraman, and Rexford]{hula}
+Naga Katta, Mukesh Hira, Changhoon Kim, Anirudh Sivaraman, and Jennifer
+  Rexford.
+\newblock {HULA}: {S}calable {L}oad {B}alancing {U}sing {P}rogrammable {D}ata
+  {P}lanes.
+\newblock In \emph{Proceedings of the the Symposium on SDN Research (SOSR)},
+  2016.
+
+\bibitem[Kim et~al.(2015)Kim, Sivaraman, Katta, Bas, Dixit, and Wobker]{int}
+Changhoon Kim, Anirudh Sivaraman, Naga Katta, Antonin Bas, Advait Dixit, and
+  Lawrence~J Wobker.
+\newblock In-band network telemetry via programmable dataplanes.
+\newblock In \emph{ACM Special Interest Group on Data Communication (SIGCOMM)},
+  2015.
+
+\bibitem[Kim(2017)]{5g-stats}
+Dr. Kim.
+\newblock 5{G} stats, 2017.
+\newblock URL \url{https://techneconomyblog.com/tag/economics/}.
+
+\bibitem[Lee et~al.(2018)Lee, Park, Hiremath, Mangan, and Lynch]{intel_wp}
+DongJin Lee, JongHan Park, Chetan Hiremath, John Mangan, and Michael Lynch.
+\newblock Towards achieving high performance in 5{G} mobile packet core's user
+  plane function., 2018.
+\newblock URL
+  \url{https://builders.intel.com/docs/networkbuilders/towards-achieving-high-performance-in-5g-mobile-packet-cores-user-plane-function.pdf}.
+
+\bibitem[Li et~al.(2017)Li, Ruan, Xiao, Lu, Xiong, Putnam, Chen, and
+  Zhang]{kvdirect}
+Bojie Li, Zhenyuan Ruan, Wencong Xiao, Yuanwei Lu, Yongqiang Xiong, Andrew
+  Putnam, Enhong Chen, and Lintao Zhang.
+\newblock {KV}-{D}irect: {H}igh-{P}erformance {I}n-{M}emory {K}ey-{V}alue
+  {S}tore with {P}rogrammable {NIC}.
+\newblock In \emph{Proceedings of the Symposium on Operating Systems Principles
+  (SOSP)}, 2017.
+
+\bibitem[Miao et~al.(2017)Miao, Zeng, Kim, Lee, and Yu]{silkroad}
+Rui Miao, Hongyi Zeng, Changhoon Kim, Jeongkeun Lee, and Minlan Yu.
+\newblock Silk{R}oad: {M}aking {S}tateful {L}ayer-4 {L}oad {B}alancing {F}ast
+  and {C}heap {U}sing {S}witching {ASIC}s.
+\newblock In \emph{Proceedings of the the ACM Special Interest Group on Data
+  Communication (SIGCOMM)}, 2017.
+
+\bibitem[Moon et~al.(2020)Moon, Lee, Jamshed, and Park]{acceltcp}
+YoungGyoun Moon, SeungEon Lee, Muhammad~Asim Jamshed, and KyoungSoo Park.
+\newblock Accel{TCP}: {A}ccelerating {N}etwork {A}pplications with {S}tateful
+  {TCP} {O}ffloading.
+\newblock In \emph{17th USENIX Symposium on Networked Systems Design and
+  Implementation (NSDI)}, 2020.
+
+\bibitem[networks(2018)]{tofino}
+Barefoot networks.
+\newblock {N}ovi{W}are 400.5 for {B}arefoot {T}ofino chipset, 2018.
+\newblock URL
+  \url{https://noviflow.com/wp-content/uploads/NoviWare-Tofino-Datasheet.pdf}.
+
+\bibitem[Nowoswiat(2013)]{stats-2}
+David Nowoswiat.
+\newblock Managing {LTE} {C}ore {N}etwork {S}ignaling {T}raffic, 2013.
+\newblock URL
+  \url{https://www.nokia.com/en\_int/blog/managing-lte-core-network-signaling-traffic}.
+
+\bibitem[Ozdag(2019)]{flexpipe}
+Recep Ozdag.
+\newblock Intel {E}thernet {S}witch {FM}6000 {S}eries - {S}oftware {D}efined
+  {N}etworking, 2019.
+\newblock URL
+  \url{https://people.ucsc.edu/~warner/Bufs/ethernet-switch-fm6000-sdn-paper.pdf}.
+
+\bibitem[Robin~Giller(2018)]{ddpGuide}
+Brian~Johnson Robin~Giller, Andrey~Chilikin.
+\newblock Intel® {E}thernet {C}ontroller 700 series {GTP}v1 - {D}ynamic
+  {D}evice {P}ersonalization, 2018.
+\newblock URL
+  \url{https://builders.intel.com/docs/networkbuilders/intel-ethernet-controller-700-series-gtpv1-dynamic-device-personalization.pdf/}.
+
+\bibitem[Saeed et~al.(2017)Saeed, Dukkipati, Valancius, The~Lam, Contavalli,
+  and Vahdat]{carousel}
+Ahmed Saeed, Nandita Dukkipati, Vytautas Valancius, Vinh The~Lam, Carlo
+  Contavalli, and Amin Vahdat.
+\newblock Carousel: Scalable traffic shaping at end hosts.
+\newblock In \emph{Proceedings of the Conference of the ACM Special Interest
+  Group on Data Communication (SIGCOMM)}, 2017.
+
+\bibitem[Sapio et~al.(2020)Sapio, Canini, Ho, Nelson, Kalnis, Kim,
+  Krishnamurthy, Moshref, Ports, and Richtárik]{switchml}
+Amedeo Sapio, Marco Canini, Chen-Yu Ho, Jacob Nelson, Panos Kalnis, Changhoon
+  Kim, Arvind Krishnamurthy, Masoud Moshref, Dan R.~K. Ports, and Peter
+  Richtárik.
+\newblock Scaling {D}istributed {M}achine {L}earning with {I}n-{N}etwork
+  {A}ggregation, 2020.
+
+\bibitem[Shah et~al.(2020)Shah, Kumar, Vutukuru, and Kulkarni]{turboEPC}
+Rinku Shah, Vikas Kumar, Mythili Vutukuru, and Purushottam Kulkarni.
+\newblock Turbo{EPC}: {L}everaging {D}ataplane {P}rogrammability to
+  {A}ccelerate the {M}obile {P}acket {C}ore.
+\newblock In \emph{Proceedings of the Symposium on SDN Research (SOSR)}, 2020.
+
+\bibitem[Sivaraman et~al.(2017)Sivaraman, Narayana, Rottenstreich,
+  Muthukrishnan, and Rexford]{hashpipe}
+Vibhaalakshmi Sivaraman, Srinivas Narayana, Ori Rottenstreich,
+  S.~Muthukrishnan, and Jennifer Rexford.
+\newblock {H}eavy-{H}itter {D}etection {E}ntirely in the {D}ata {P}lane.
+\newblock In \emph{Proceedings of the the Symposium on SDN Research (SOSR)},
+  2017.
+
+\bibitem[So{\'o}s et~al.(2019)So{\'o}s, Janky, and Varga]{5g-iot-chk}
+G{\'a}bor So{\'o}s, Ferenc~N{\'a}ndor Janky, and P{\'a}l Varga.
+\newblock Distinguishing 5{G} {I}o{T} {U}se-{C}ases through {A}nalyzing
+  {S}ignaling {T}raffic {C}haracteristics.
+\newblock In \emph{2019 42nd International Conference on Telecommunications and
+  Signal Processing (TSP)}, 2019.
+
+\bibitem[systems(2018)]{netronome-cx-4000}
+Netronome systems.
+\newblock {A}gilio {CX} {S}mart{NIC}s, 2018.
+\newblock URL \url{https://www.netronome.com/products/agilio-cx/}.
+
+\bibitem[systems(2020{\natexlab{a}})]{netronome}
+Netronome systems.
+\newblock Agilio {CX} 2x10{G}b{E} {S}mart{NIC}, 2020{\natexlab{a}}.
+\newblock URL
+  \url{https://www.netronome.com/media/documents/PB_Agilio_CX_2x10GbE-7-20.pdf}.
+
+\bibitem[systems(2020{\natexlab{b}})]{netronome-25G}
+Netronome systems.
+\newblock {A}gilio {CX} 2x25{G}b{E} {S}mart{NIC}, 2020{\natexlab{b}}.
+\newblock URL
+  \url{https://colfaxdirect.com/store/pc/viewPrd.asp?idproduct=3144&idcategory=0}.
+
+\bibitem[systems(2020{\natexlab{c}})]{netronome-40G}
+Netronome systems.
+\newblock Agilio {CX} 2x40{G}b{E} {S}mart{NIC}, 2020{\natexlab{c}}.
+\newblock URL
+  \url{https://colfaxdirect.com/store/pc/viewPrd.asp?idproduct=2871}.
+
+\bibitem[Tabbane(2016)]{stats-1}
+Sami Tabbane.
+\newblock Core network and transmission dimensioning, 2016.
+\newblock URL
+  \url{https://www.itu.int/en/ITU-D/Regional-Presence/AsiaPacific/SiteAssets/Pages/Events/2016/Aug-WBB-Iran/Wirelessbroadband/core\%20network\%20dimensioning.pdf}.
+
+\bibitem[Viviano et~al.(2017)Viviano, Coulter, Schonning, MacMichael, and
+  Latimer]{rss}
+Amy Viviano, David Coulter, Nick Schonning, Duncan MacMichael, and Bill
+  Latimer.
+\newblock Receive {S}ide {S}caling ({RSS}), 2017.
+\newblock URL
+  \url{https://docs.microsoft.com/en-us/windows-hardware/drivers/network/introduction-to-receive-side-scaling}.
+
+\bibitem[Xiong and Zilberman(2019)]{dream}
+Zhaoqi Xiong and Noa Zilberman.
+\newblock Do {S}witches {D}ream of {M}achine {L}earning? {T}oward
+  {I}n-{N}etwork {C}lassification.
+\newblock In \emph{Proceedings of the 18th ACM Workshop on Hot Topics in
+  Networks (HotNets)}, 2019.
+
+\end{thebibliography}

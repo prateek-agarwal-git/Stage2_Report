@@ -1,0 +1,36 @@
+% \subsection{Offload computations to programmable hardware}
+%\vspace{-20pt}
+
+\noindent {\bf Programmable dataplanes.}
+Programmable dataplanes allow networking hardware to be easily programmed to perform complex functions, via code written in a high-level language like P4~\cite{p4}. Packet processing pipeline specifications written in P4 can be compiled to a variety of programmable dataplanes, e.g., programmable hardware ASICs \cite{flexpipe, doppler, cavium, tofino}, NPUs \cite{netronome, ezchip}, and FPGAs \cite{xilinx, altera}. The programmable hardware platforms have several limitations put in place, in order to ensure linerate processing. They have limited expressiveness in terms of the supported instruction set and programming constructs, and lack dynamic data-structures. The packets cannot stall during the switch pipeline processing---they have to be either forwarded or dropped. The amount of on-board memory on such hardware is limited ($\sim$few tens of MBs). Despite these limitations, researchers have observed substantial performance benefits by offloading applications to programmable hardware, via creative solutions that address the hardware limitations~\cite{int, hashpipe, network-heavy-hitter, carpe, appswitch, hula, silkroad, netpaxos, in-mem-consensus, netcache, kvdirect, acceltcp, switchml, dream,   blink, wharf}.
+%to accelerate software applications, by offloading a part of the application logic to programmable switches or NICs. Some of the popular applications that leverage programmable hardware for performance acceleration include in-band network telemetry~\cite{int}, heavy-hitter flow detection~\cite{hashpipe, network-heavy-hitter, carpe}, stateful load balancers~\cite{appswitch, hula, silkroad}, consensus algorithms~\cite{netpaxos, in-mem-consensus}, key-value caching~\cite{netcache, kvdirect}, TCP processing offload~\cite{acceltcp}, machine learning~\cite{switchml, dream} and network link-failure detection~\cite{blink, wharf}.
+
+
+
+%The programmable hardware platforms have several limitations put in place, in order to ensure linerate processing. They have limited expressiveness in terms of the supported instruction set (no multiplication, division, logarithm or polynomial support) and programming constructs (no loops or recursion support), and lack dynamic data-structures. The packets cannot stall during the switch pipeline processing---they have to be either forwarded or dropped. The amount of on-board memory supported on such hardware is limited ($\sim$few tens of MBs). 
+%Despite these limitations, researchers have observed substantial performance benefits by offloading their applications to programmable hardware, via creative solutions that address the hardware limitations. 
+% 
+% \noindent {\textbf{General in-network compute.}}
+% The availability of high-level programming language and compilers for the target hardware acts as a catalyst to attract programmers to explore in-network computing. 
+%\vspace{-5pt}
+
+\noindent {\bf State-of-the-art UPFs.} Most production grade UPFs are built over kernel-bypass techniques like DPDK to achieve high dataplane throughput in software. Metaswitch \cite{metaswitch} uses a specialized processing engine (CNAP) in the software itself to achieve high throughput. Some UPFs also use programmable hardware or specialized processing engines to offload some part of the UPF processing to hardware. Few proposals~\cite{astri, mobile_5G_hw1, mobile_5G_hw2, mavenir} offload the GTP encap/decap based forwarding to hardware, while some~\cite{intel_wp} offload packet steering to cores via deep packet inspection (DPI) of the inner IP header. Kaloom~\cite{kaloom_wp} offloads a subset of QoS processing (bit rate policing) along with GTP processing to the programmable hardware. Our work explores more offload based designs than those considered in prior work, and systematically analyzes the costs and benefits of the offloads. TurboEPC~\cite{turboEPC} offloads the subset of 4G core signaling messages to the programmable hardware, while our work explores the signaling message offload problem in the context of 5G which has a different architecture. 
+
+%\noindent The telecom community, academia and industry, are working towards designing systems that benefit from in-network compute for the 5G mobile packet core and its applications. 
+%
+%% SK Telecom \cite{intel_wp} uses a SmartNIC to redirect packets to different cores based on Deep Packet Inspection (DPI). 
+%Kaloom~\cite{kaloom_wp} offloads the subset of QoS processing (bit rate policing) along with GTP processing to the programmable hardware. 
+%TurboEPC~\cite{turboEPC} offloads the subset of 4G LTE-EPC signaling messages to the programmable hardware. 
+%Our goal is to offload the standard compliant 5G UPF dataplane and signaling procedures to provide an accelerated, low cost, and a low power solution.
+
+% % \noindent  {\textbf{In-network compute for telecom applications.}}
+% EDIT HERE: 5G RAN acceleration\\
+% 4G/5G offload examples: RSS, GTP, control-plane (TurboEPC)\\
+% Few proposals~\cite{mobile_5G_hw1, mobile_5G_hw2} offload the GTP header encapsulation and decapsulation processing to the data plane edge switch of the mobile packet core. \\
+% 
+% Our goal is to offload the data plane as well as the control plane procedures of the 5G UPF and provide an accelerated, low cost, low power solution.
+
+
+
+
+

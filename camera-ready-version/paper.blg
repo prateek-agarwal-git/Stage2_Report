@@ -1,0 +1,148 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/MacPorts 2020.54632_2)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper.aux
+The style file: plainnat.bst
+Database file #1: reference.bib
+Warning--entry type for "kaloom_wp" isn't style-file defined
+--line 9 of file reference.bib
+Warning--entry type for "4g-uldl" isn't style-file defined
+--line 16 of file reference.bib
+Warning--entry type for "5g-uldl" isn't style-file defined
+--line 23 of file reference.bib
+Warning--entry type for "flexpipe" isn't style-file defined
+--line 30 of file reference.bib
+Warning--entry type for "doppler" isn't style-file defined
+--line 37 of file reference.bib
+Warning--entry type for "cavium" isn't style-file defined
+--line 44 of file reference.bib
+Warning--entry type for "xilinx" isn't style-file defined
+--line 51 of file reference.bib
+Warning--entry type for "ezchip" isn't style-file defined
+--line 58 of file reference.bib
+Warning--entry type for "altera" isn't style-file defined
+--line 65 of file reference.bib
+Warning--entry type for "netronome" isn't style-file defined
+--line 79 of file reference.bib
+Warning--entry type for "netronome-cost" isn't style-file defined
+--line 86 of file reference.bib
+Warning--entry type for "netronome-cx-4000" isn't style-file defined
+--line 93 of file reference.bib
+Warning--entry type for "netronome-25G" isn't style-file defined
+--line 100 of file reference.bib
+Warning--entry type for "netronome-40G" isn't style-file defined
+--line 107 of file reference.bib
+Warning--entry type for "tofino-2" isn't style-file defined
+--line 121 of file reference.bib
+Warning--entry type for "xeon-processor" isn't style-file defined
+--line 128 of file reference.bib
+Warning--entry type for "40G-nic-cost" isn't style-file defined
+--line 135 of file reference.bib
+Warning--entry type for "tofino" isn't style-file defined
+--line 142 of file reference.bib
+Warning--entry type for "p4nfpmeter" isn't style-file defined
+--line 149 of file reference.bib
+Warning--entry type for "p4bmv2meter" isn't style-file defined
+--line 177 of file reference.bib
+Warning--entry type for "ddpGuide" isn't style-file defined
+--line 347 of file reference.bib
+Warning--entry type for "imixLink" isn't style-file defined
+--line 353 of file reference.bib
+Warning--entry type for "rss" isn't style-file defined
+--line 366 of file reference.bib
+Warning--entry type for "i40eDriver" isn't style-file defined
+--line 373 of file reference.bib
+Warning--entry type for "dpdk_overview" isn't style-file defined
+--line 387 of file reference.bib
+Warning--entry type for "5g23501" isn't style-file defined
+--line 393 of file reference.bib
+Warning--entry type for "5g29244" isn't style-file defined
+--line 400 of file reference.bib
+Warning--entry type for "intel_wp" isn't style-file defined
+--line 414 of file reference.bib
+Warning--entry type for "metaswitch" isn't style-file defined
+--line 421 of file reference.bib
+Warning--entry type for "mavenir" isn't style-file defined
+--line 428 of file reference.bib
+Warning--entry type for "astri" isn't style-file defined
+--line 435 of file reference.bib
+Warning--entry type for "stats-1" isn't style-file defined
+--line 449 of file reference.bib
+Warning--entry type for "stats-2" isn't style-file defined
+--line 456 of file reference.bib
+Warning--entry type for "stats-ericsson" isn't style-file defined
+--line 463 of file reference.bib
+Warning--entry type for "5g-stats" isn't style-file defined
+--line 470 of file reference.bib
+Warning--entry type for "ngmn" isn't style-file defined
+--line 491 of file reference.bib
+Warning--entry type for "5g-testbed" isn't style-file defined
+--line 498 of file reference.bib
+Warning--entry type for "5g-testbed-in" isn't style-file defined
+--line 505 of file reference.bib
+Warning--entry type for "thrift-api" isn't style-file defined
+--line 512 of file reference.bib
+Warning--to sort, need author or key in stats-ericsson
+Warning--to sort, need author or key in netronome-cost
+Warning--to sort, need author or key in xeon-processor
+Warning--to sort, need author or key in 40G-nic-cost
+Warning--to sort, need author or key in tofino-2
+Warning--to sort, need author or key in dpdk_overview
+Warning--to sort, need author or key in astri
+Warning--to sort, need author or key in mavenir
+Warning--to sort, need author or key in metaswitch
+Warning--to sort, need author or key in kaloom_wp
+Warning--to sort, need author or key in 5g23501
+Warning--to sort, need author or key in 5g29244
+Warning--to sort, need author or key in doppler
+Warning--to sort, need author or key in cavium
+Warning--to sort, need author or key in ezchip
+Warning--to sort, need author or key in xilinx
+Warning--to sort, need author or key in altera
+Warning--to sort, need author or key in 5g-testbed
+Warning--to sort, need author or key in 5g-testbed-in
+Warning--to sort, need author or key in i40eDriver
+Warning--to sort, need author or key in thrift-api
+Warning--to sort, need author or key in imixLink
+Warning--to sort, need author or key in 5g-uldl
+You've used 61 entries,
+            2773 wiz_defined-function locations,
+            824 strings with 15147 characters,
+and the built_in function-call counts, 23128 in all, are:
+= -- 1908
+> -- 1381
+< -- 18
++ -- 497
+- -- 432
+* -- 1751
+:= -- 3215
+add.period$ -- 159
+call.type$ -- 61
+change.case$ -- 324
+chr.to.int$ -- 57
+cite$ -- 168
+duplicate$ -- 1099
+empty$ -- 2200
+format.name$ -- 478
+if$ -- 5022
+int.to.chr$ -- 5
+int.to.str$ -- 1
+missing$ -- 21
+newline$ -- 289
+num.names$ -- 152
+pop$ -- 954
+preamble$ -- 1
+purify$ -- 263
+quote$ -- 0
+skip$ -- 939
+stack$ -- 0
+substring$ -- 145
+swap$ -- 88
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 671
+warning$ -- 23
+while$ -- 114
+width$ -- 0
+write$ -- 692
+(There were 62 warnings)

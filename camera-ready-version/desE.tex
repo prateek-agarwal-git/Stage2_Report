@@ -1,0 +1,44 @@
+% \vspace{-3mm}
+\vspace{-8pt}
+\subsection{Control plane offload} 
+\label{cp-offload}
+% Key points to expand:
+% \begin{itemize}
+%  \item Need (end of prev design/start of this design): Offload of dataplane functions to the hardware not enough. Control plane processing in software results in high latencies for initiating data traffic. Also, control plane traffic is increasing exponentially with the 5G applications
+% We have a design to implement variable header depth/layers using recirculation strategy but have not implemented in the current evaluation.
+%  \item Procedures involved in control plane processing: (1) Parsing PFCP packet with recursive headers that carry session/flow related information such as the session identifier, QoS information for the flow, tunnel identifers for GTP tunneling. (2) Installing rules to the data plane hardware for data plane processing offload.
+%  \item Challenges: (1) PFCP packet parsing: Variable parse tree depth (2) Memory to store state for millions of users (3) Install and update the forwarding rules within the data plane at line-rate
+%  \item Solution choices? What we choose? What is yet to be addressed?
+% \end{itemize}
+
+In the dataplane offload design (Figure~\ref{fig:all_designs}c), signaling messages that configure the dataplane are still handled in userspace. As a result, a workload with a large number of signaling messages may slow down the hardware dataplane, due to a bottleneck at the software that configures hardware rules. To overcome this limitation, we implement a UPF design which offloads signaling message processing also to programmable hardware (Figure~\ref{fig:all_designs}d). %Our control plane offload implementation spans 500 lines of P4 code that run on our Agilio CX 2x10GbE smartNIC~\cite{netronome}. 
+In this design, we move away from storing forwarding/QoS rules of a session in match-action tables (which need to be updated via the controller running in userspace), and store them instead in P4 register arrays. The register data structure supports update operations to register array state within the dataplane pipeline at linerate, but cannot perform key-based lookup. When a control plane PFCP message for a particular session arrives, we map the 64-bit session identifier to a 24-bit index into the register array. We can then access or manipulate the corresponding session state directly from within the dataplane, without requiring the intervention of the userspace controller. Since our index calculation is (currently) not collision-free, we store additional state in the register array to validate if we are accessing the correct session. In case of a collision or session mismatch, the control plane message is forwarded to the userspace for processing. We also make a few simplifying assumptions when parsing PFCP messages in our current implementation. For example, we assume a PFCP header with fixed structure that fits within the hardware memory, whereas in practice, the PFCP header comprises of a variable length component that consists of recursive PDR, FAR, and QER (\S\ref{sec:bg}) headers.  We defer the comprehensive handling of complex PFCP messages to future work.
+
+%Note that the control plane processing in software with or without offload is substantial ($\sim$ XXX ms), which results in high latencies for data traffic initiation. A 5G traffic characterization study~\cite{5g-iot-chk} for IoT applications shows that certain use-cases such as massive broadband and critical IoT generate large amount of control plane traffic per user (or device) and require strict latency SLAs. The 5G specification requirement is to support connection density up to 150K connections $/km^2$ which adds to the increased control plane processing demand. 
+
+%We can store the session forwarding/QoS state on the programmable hardware's {\em table} data structure for stateful packet processing.
+%Control plane processing requires updates to the session state. The table data structure updates in hardware are performed by the control plane that runs in user-space (slow path processing), resulting in higher control plane processing latency. 
+%
+%The {\em register-array} data structure supports update operations to register-array state within the data plane pipeline at line-rate, but cannot perform key-based lookup. 
+%We design a simple hash function to index into the register-array data structure to access or manipulate the corresponding session state within the data plane. Since the hash function is not collision-free, we store additional state in the register array to validate if we are accessing the correct session. In case of a collision, the control plane message is forwarded to the user-space for processing. 
+
+%As discussed in~\S\ref{sub:5g_arch}, the UPF control plane is responsible for processing session establishment, session modification, and session deletion request procedures. The processing of these control plane procedures involves
+%(1) parsing PFCP messages received from SMF which carry session related information such as the session identifier, user IP address, QoS information for the flow, tunnel identifers for GTP tunneling, (2) generation of PFCP response messages, (3) store user's session state, and (4) install rules over the programmable hardware to support data plane forwarding and QoS enforcement for any given session. We encounter the following challenges with the UPF control plane offload design.
+% 
+% \noindent {\textbf{Challenges.}}
+
+%\noindent {\textbf{PFCP header parsing.}} 
+%The PFCP header comprise of a variable length component that consists of recursive PDR, FAR, and QER (\S\ref{sub:5g_arch}) headers. The parsing of such packets would require deep packet processing pipelines, which may not be supported by the programmable hardware. The PFCP header size could be large and may not fit into the memory reserved for packet headers within the programmable hardware.
+%
+%We assume PFCP header with fixed structure that fits within the hardware memory. 
+%
+%\noindent {\textbf{Slow state updates.}}
+
+%\noindent {\textbf{Limited memory to store UE's session state.}}
+%We need to store the state for 10s of millions of sessions, but the programmable hardware has limited memory (19MB for Netronome CX-4000 smartNIC~\cite{netronome}). 
+%
+%There is a limit on the number of user sessions supported on one programmable hardware switch, but we can further scale using multiple hardware switches or use hardware that has more on-board memory.
+%
+%\noindent {\textbf{Implementation.}}
+%Our current implementation uses Agilio CX 10bE smartNIC~\cite{netronome} for UPF control plane processing offload. The packet processing pipeline for control plane procedures is implemented using P4 language. The hash function uses the 64-bit session identifier as input and provides a 24-bit value. This function simply selects the subset of the session identifier bits. 
+%The session state stored in the register arrays includes the session identifier, UE's IP address, the uplink/downlink tunnel identifiers for GTP processing. We also populate the register array structure with forwarding and QoS state that can be used for data plane GTP-based forwarding. Our current implementation can store the UPF control plane processing state for {\em 16M} users and spanned around {\em 500}  lines of code.

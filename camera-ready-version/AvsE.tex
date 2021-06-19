@@ -1,0 +1,25 @@
+% \subsection{Control Plane Offload}
+\noindent  {\textbf{Control Plane Offload.}} Next, we compare the control plane performance of three designs: the pure software UPF (\S\ref{sub:swUPF}), the design that offloads only the dataplane forwarding to programmable hardware but processes control plane packets in userspace (\S\ref{sub:dpOffload}), and our preliminary implementation of a UPF that offloads even control plane processing to programmable hardware (\S\ref{cp-offload}). Table~\ref{tab:perf-cp-offload} shows the average rate of processing signaling messages, and the processing latency, for all three designs. We observe that only offloading dataplane processing to hardware has a significant adverse impact on control plane performance, because the performance is limited by the overheads of control plane message processing in software and the subsequent communication with NIC firmware. Therefore, the design that offloads only dataplane processing has 86\% lower control plane throughput and 15$\times$ higher control plane latency, as compared to the pure software UPF. However, the UPF that offloads control plane processing has 402$\times$ higher throughput  as compared to the pure software design, and $3K\times$ higher throughput as compared to the dataplane offload design. It also has 77\% latency reduction compared to the pure software design, and  98\% latency reduction compared to the dataplane offload design. This result points to the conclusion that offloading GTP-based dataplane processing alone to programmable hardware is likely to cause additional performance concerns for signaling message processing, especially for future 5G networks that expect to have frequent signaling with IoT devices. {\em A comprehensive programmable dataplane accelerated UPF must offload signaling message processing to hardware as well, in addition to offloading dataplane processing.}
+
+% $18636\times$ 
+
+% \begin{table}[t]
+% \begin{scriptsize}
+% \begin{center}
+% \def\arraystretch{1.5}%  1 is the default, change whatever you need
+% \begin{tabular}{|p{2.4cm}|p{1.1cm}|p{2cm}|p{1.2cm}|}\hline 
+% % {\bf{Performance metric}} & {\bf{DPDK-based software UPF}} & {\bf{Dataplane offload}} & {\bf{Control plane offload}} \\ \hline 
+% {\bf{Performance metric}} & {\bf{SoftUPF}} & {\bf{DPOffload}} & {\bf{CPOffload}} \\ \hline 
+% {\bf{Throughput}} & 5.1K  & 666  & 2.05M  \\ \hline
+% {\bf{Latency}} & 113$\mu s$  & 893 $\mu$s & 26$\mu s$ \\ \hline
+% % {\bf{Performance per USD}} & 88  & 1 & 4.6K  \\ \hline
+% % {\bf{Performance per Watt}} & 40  & 1 & 41K \\ \hline
+% \end{tabular}
+% \setlength{\abovecaptionskip}{-8pt}
+% \setlength{\belowcaptionskip}{8pt}
+% \caption{Control plane performance.} 
+% \vspace{-4mm}
+% \label{tab:perf-cp-offload}
+% \end{center}
+% \end{scriptsize}
+% \end{table}

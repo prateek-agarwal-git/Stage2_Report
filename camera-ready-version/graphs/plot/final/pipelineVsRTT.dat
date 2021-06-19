@@ -1,0 +1,5 @@
+#Payload-size(B) Pipeline-UL(Mpps) Pipeline-DL(Mpps) Pipeline-lat(us)avg Pipeline-lat(us)min Pipeline-lat(us)max  RTC-UL(Mpps) RTC-DL(Mpps) RTC-lat(us)avg RTC-lat(us)min RTC-lat(us)max Pipeline-UL-DL(Mpps) RTC-UL-DL(Mpps)
+64B 1.61 3.17 185.72 180.88 189.64 2.51 4.94 116.43 114.76 128.42 4.78 7.45 
+IMIX 1.54 3.06 175.74 170.83 224.76 2.40 4.77 110 106.61 150.26 4.6 7.17
+1400B 1.13 2.26 189.21 186.17 217.48 1.13 2.26 187.01 183.85 201.8 3.39 3.39
+#839B 1.56 3.11 197.93 184.53 205.08 1.98 3.95 144.66 142.05 155.86 4.67 5.93

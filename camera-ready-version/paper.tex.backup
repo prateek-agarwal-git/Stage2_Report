@@ -1,0 +1,216 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage[ruled,vlined]{algorithm2e} % Abhik: For writing queuing algorithm
+% \hypersetup{draft} % Abhik: Debug only. Should NOT be enabled
+\usepackage{subfig}
+\usepackage{multirow}
+%%%%% To handle overflow of long URL references
+\usepackage{url}
+\usepackage[normalem]{ulem} % For strikethrough
+\def\UrlBreaks{\do\/\do-}
+%%%%%%%
+
+% Copyright
+% \renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference info
+% \setcopyright{none}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\acmYear{2021}\copyrightyear{2021}
+\setcopyright{acmcopyright}
+\acmConference[APNet '21]{Asia-Pacific Workshop on Networking}{June 24-25, 2021}{Shenzhen, China}
+\acmBooktitle{Asia-Pacific Workshop on Networking (APNet '21), June 24-25, 2021, Shenzhen, China}
+\acmPrice{15.00}
+\acmDOI{XXX}
+\acmISBN{XXX}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+\settopmatter{printacmref=true, printccs=true, printfolios=true}
+
+% DOI
+% \acmDOI{}
+
+% ISBN
+% \acmISBN{}
+
+%Conference
+%\acmConference[Submitted for review to SIGCOMM]{}
+%\acmYear{2018}
+%\copyrightyear{}
+
+%% {} with no args suppresses printing of the price
+% \acmPrice{}
+
+
+\begin{document}
+\title[Leveraging Programmable Dataplanes for a High Performance 5G UPF]{Leveraging Programmable Dataplanes for a High Performance 5G User Plane Function}
+
+%\titlenote{Produces the permission block, and copyright information}
+%\subtitle{Extended Abstract}
+
+% % \author{Paper \# XXX, XXX pages}
+% \author{Abhik Bose, Diptyaroop Maji, Prateek Agarwal, Nilesh Unhale, Rinku Shah, Mythili Vutukuru}
+% % \thanks{Student authors with equal contribution.}
+% % \footnotemark[1]
+% \affiliation{%
+%   \institution{Department of Computer Science \& Engineering\\
+%   Indian Institute of Technology Bombay}
+% }
+% \email{{abhik, diptyaroop, prateekag, nileshunhale, rinku, mythili}@cse.iitb.ac.in}
+
+\author{Abhik Bose, Diptyaroop Maji} 
+\author{Prateek Agarwal, Nilesh Unhale, Rinku Shah, Mythili Vutukuru}
+% \thanks{Student authors with equal contribution.}
+% \footnotemark[1]
+\affiliation{%
+  \institution{Department of Computer Science \& Engineering\\
+  Indian Institute of Technology Bombay}
+}
+\email{{abhik, diptyaroop, prateekag, nileshunhale, rinku, mythili}@cse.iitb.ac.in}
+
+
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{Abhik Bose, et al.}
+% \author{Firstname Lastname}
+% \authornote{Note}
+% \orcid{1234-5678-9012}
+% \affiliation{%
+%   \institution{Affiliation}
+%   \streetaddress{Address}
+%   \city{City} 
+%   \state{State} 
+%   \postcode{Zipcode}
+% }
+% \email{email@domain.com}
+
+% The default list of authors is too long for headers}
+% \renewcommand{\shortauthors}{X.et al.}
+
+\begin{abstract}
+   % \blindtext
+   \input{abstract}
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10003033.10003099.10003103</concept_id>
+       <concept_desc>Networks~In-network processing</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003033.10003099.10003102</concept_id>
+       <concept_desc>Networks~Programmable networks</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003033.10003079.10011672</concept_id>
+       <concept_desc>Networks~Network performance analysis</concept_desc>
+       <concept_significance>300</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003033.10003106.10003113</concept_id>
+       <concept_desc>Networks~Mobile networks</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Networks~In-network processing}
+\ccsdesc[500]{Networks~Programmable networks}
+\ccsdesc[300]{Networks~Network performance analysis}
+\ccsdesc[500]{Networks~Mobile networks}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{5G core, cellular networks, programmable networks, in-network compute, DPDK}
+
+\maketitle
+
+\section{Introduction} \label{sec:intro}
+% \footnote{Student authors with equal contribution.}
+\input{intro}
+
+
+\section{Background \& Related Work} \label{sec:bg}
+\input{background} %Diptyaroop
+% Add background on 5G architecture, UPF functions and decsription
+% related work: Common EPC designs, NF design on DPDK
+
+\input{hardwareOffload} %Rinku
+% General hardware offload literature/P4
+% Offload of 4G, 5G (general) : academia + industry (recent work on RAN offload)
+% Offloading of UPF: Industry white papers
+% General in-network compute
+
+\section{Design \& Implementation} \label{sec:design}
+\input{designImpl}
+% Design overview with a picture that shows the 5G components with their placement in each design
+% what is our design/implementation? what are challenges? what were the possible choices? what/why did we choose XYZ? 
+\input{desA}
+
+\input{desB}%Prateek
+
+\input{desCD}
+
+\input{desE}
+
+%\input{desMisc}
+\vspace{-5pt}
+\section{Evaluation} \label{sec:eval}
+
+\input{eval}
+% Experimental setup
+% Load generation parameters and metrics evaluated
+
+\input{AvsB}
+
+\input{AvsCD}
+
+\input{AvsE}
+
+\section{Conclusion and Future Work} \label{sec:future}
+
+\input{futureWork}
+% Discuss the promising ideas for the future 5G UPF (or more) design.
+
+\input{ack}
+
+% Abhik: Add or remove ~\\ (blank newline) here to overcome href out of boundery error
+~\\
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{reference}
+
+% Paper structure
+% 1. Intro
+% 
+% 2. Background & related work
+% 
+% 2.1 Basics of 4G/5G, industry, academia: Pure DPDK, steering packet forwarding : Diptyaroop
+% 
+% 2.2 Programmable data planes:  5G offload + general in-network compute
+% 
+% 3. Design & implementation
+% A:Diptyaroop, B:Prateek, C+D:Abhik, E:Rinku
+% 
+% 4. Evaluation
+% Avs.B:Diptyaroop+Prateek, Avs.C+ Avs.D:Abhik, Avs.E+Cost/power:Rinku 
+% 
+% 5. Discussion/Conclusion
+% Only GTP offload is not enough + signalling 
+%
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  18 JUN 2021 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  19 JUN 2021 11:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -295,7 +295,7 @@ LaTeX Info: Redefining \nameref on input line 48.
 \openout3 = `Main.out'.
 
  (/home/prateek/Github/Stage2_Report/FirstFewPages/MyTitle.tex
-<./fig/iitblogo.png, id=333, 227.85126pt x 222.8325pt>
+<./fig/iitblogo.png, id=337, 227.85126pt x 222.8325pt>
 File: ./fig/iitblogo.png Graphic file (type png)
 <use ./fig/iitblogo.png>
 Package pdftex.def Info: ./fig/iitblogo.png  used on input line 24.
@@ -338,33 +338,33 @@ Chapter 4.
 (/home/prateek/Github/Stage2_Report/Chap4a.tex [4
 
 ] [5]
-<./fig/Introduction/RANArchitecture.png, id=489, 963.6pt x 722.7pt>
+<./fig/Introduction/RANArchitecture.png, id=494, 963.6pt x 722.7pt>
 File: ./fig/Introduction/RANArchitecture.png Graphic file (type png)
 <use ./fig/Introduction/RANArchitecture.png>
 Package pdftex.def Info: ./fig/Introduction/RANArchitecture.png  used on input line 51.
 (pdftex.def)             Requested size: 341.43436pt x 256.06956pt.
- [6 <./fig/Introduction/RANArchitecture.png (PNG copy)>] [7]) [8]
+ [6 <./fig/Introduction/RANArchitecture.png (PNG copy)>] [7] [8] [9]) [10]
 Chapter 5.
-(/home/prateek/Github/Stage2_Report/Chap5a.tex) [9
+(/home/prateek/Github/Stage2_Report/Chap5a.tex) [11
 
 ]
 Chapter 6.
-(/home/prateek/Github/Stage2_Report/Chap1.tex [10
+(/home/prateek/Github/Stage2_Report/Chap1.tex [12
 
 ]
-<./fig/Introduction/5GSecond.png, id=518, 963.6pt x 722.7pt>
+<./fig/Introduction/5GSecond.png, id=532, 963.6pt x 722.7pt>
 File: ./fig/Introduction/5GSecond.png Graphic file (type png)
 <use ./fig/Introduction/5GSecond.png>
 Package pdftex.def Info: ./fig/Introduction/5GSecond.png  used on input line 29.
 (pdftex.def)             Requested size: 298.75262pt x 224.05673pt.
-<./fig/Introduction/PFCP.png, id=519, 963.6pt x 722.7pt>
+<./fig/Introduction/PFCP.png, id=533, 963.6pt x 722.7pt>
 File: ./fig/Introduction/PFCP.png Graphic file (type png)
 <use ./fig/Introduction/PFCP.png>
 Package pdftex.def Info: ./fig/Introduction/PFCP.png  used on input line 41.
 (pdftex.def)             Requested size: 298.75262pt x 224.05673pt.
- [11 <./fig/Introduction/5GSecond.png (PNG copy)>] [12 <./fig/Introduction/PFCP.png (PNG copy)>]) [13]
+ [13 <./fig/Introduction/5GSecond.png (PNG copy)>] [14 <./fig/Introduction/PFCP.png (PNG copy)>]) [15]
 Chapter 7.
-(/home/prateek/Github/Stage2_Report/Chap2.tex) [14
+(/home/prateek/Github/Stage2_Report/Chap2.tex) [16
 
 ]
 Chapter 8.
@@ -373,41 +373,41 @@ File: ./fig/Introduction/RANArchitecture.png Graphic file (type png)
 <use ./fig/Introduction/RANArchitecture.png>
 Package pdftex.def Info: ./fig/Introduction/RANArchitecture.png  used on input line 12.
 (pdftex.def)             Requested size: 341.43436pt x 256.06956pt.
- [15
+ [17
 
-] [16] [17]) [18]
+] [18] [19]) [20]
 Chapter 9.
-(/home/prateek/Github/Stage2_Report/Chap4.tex [19
+(/home/prateek/Github/Stage2_Report/Chap4.tex [21
 
-] [20]
+] [22]
 Overfull \hbox (6.878pt too wide) in paragraph at lines 53--57
 []\OT1/cmr/bx/n/12 CPLatencyCallback \OT1/cmr/m/n/12 Reg-is-tered on CORE[]RX[]POLL for in-spect-ing re-sponses
  []
 
-) [21]
+) [23]
 Chapter 10.
-(/home/prateek/Github/Stage2_Report/Chap6.tex [22
+(/home/prateek/Github/Stage2_Report/Chap6.tex [24
 
-]) [23]
+]) [25]
 Chapter 11.
-(/home/prateek/Github/Stage2_Report/Chap5.tex [24
+(/home/prateek/Github/Stage2_Report/Chap5.tex [26
 
 ]
 Overfull \hbox (26.76088pt too wide) in paragraph at lines 21--23
 []\OT1/cmr/bx/n/12 Misleading Com-ments \OT1/cmr/m/n/12 The com-ments were not up-dated with the change/removal
  []
 
-[25] [26] [27] [28]) [29]
+[27] [28] [29] [30]) [31]
 Chapter 12.
 (/home/prateek/Github/Stage2_Report/Chap7.tex
-<./fig/Results/Setup.png, id=610, 963.6pt x 722.7pt>
+<./fig/Results/Setup.png, id=624, 963.6pt x 722.7pt>
 File: ./fig/Results/Setup.png Graphic file (type png)
 <use ./fig/Results/Setup.png>
 Package pdftex.def Info: ./fig/Results/Setup.png  used on input line 5.
 (pdftex.def)             Requested size: 298.75262pt x 224.05673pt.
- [30
+ [32
 
- <./fig/Results/Setup.png (PNG copy)>] [31]
+ <./fig/Results/Setup.png (PNG copy)>] [33]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 52.
 
@@ -415,28 +415,28 @@ Underfull \hbox (badness 7186) in paragraph at lines 55--55
 []\OT1/cmr/bx/n/8 Throughput (mes-
  []
 
-<./fig/Results/SoftUPF.png, id=633, 462.528pt x 346.896pt>
+<./fig/Results/SoftUPF.png, id=646, 462.528pt x 346.896pt>
 File: ./fig/Results/SoftUPF.png Graphic file (type png)
 <use ./fig/Results/SoftUPF.png>
 Package pdftex.def Info: ./fig/Results/SoftUPF.png  used on input line 78.
 (pdftex.def)             Requested size: 298.75262pt x 224.07703pt.
-<./fig/Results/DPOffload.png, id=635, 462.528pt x 346.896pt>
+<./fig/Results/DPOffload.png, id=648, 462.528pt x 346.896pt>
 File: ./fig/Results/DPOffload.png Graphic file (type png)
 <use ./fig/Results/DPOffload.png>
 Package pdftex.def Info: ./fig/Results/DPOffload.png  used on input line 84.
 (pdftex.def)             Requested size: 298.75262pt x 224.07703pt.
-<./fig/Results/CPOffload.png, id=636, 462.528pt x 346.896pt>
+<./fig/Results/CPOffload.png, id=649, 462.528pt x 346.896pt>
 File: ./fig/Results/CPOffload.png Graphic file (type png)
 <use ./fig/Results/CPOffload.png>
 Package pdftex.def Info: ./fig/Results/CPOffload.png  used on input line 90.
 (pdftex.def)             Requested size: 298.75262pt x 224.07703pt.
-) (/home/prateek/Github/Stage2_Report/Main.bbl [32] [33 <./fig/Results/SoftUPF.png> <./fig/Results/DPOffload.png>] [34 <./fig/Results/CPOffload.png>]
+) (/home/prateek/Github/Stage2_Report/Main.bbl [34] [35 <./fig/Results/SoftUPF.png> <./fig/Results/DPOffload.png>] [36 <./fig/Results/CPOffload.png>]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
- [35
+ [37
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
@@ -444,7 +444,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: ABAF807A7651A6CC6078F6484C4DD9C0;5144.
+(rerunfilecheck)             Checksum: 25F4BF0129DFE8822414A466E6D461AA;5201.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -452,18 +452,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
  ) 
 Here is how much of TeX's memory you used:
- 6395 strings out of 481239
- 98122 string characters out of 5920377
- 357737 words of memory out of 5000000
- 21351 multiletter control sequences out of 15000+600000
+ 6399 strings out of 481239
+ 98166 string characters out of 5920377
+ 357738 words of memory out of 5000000
+ 21352 multiletter control sequences out of 15000+600000
  538196 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,45p,533b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,45p,618b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on /home/prateek/Github/Stage2_Report/Main.pdf (41 pages, 353297 bytes).
+Output written on /home/prateek/Github/Stage2_Report/Main.pdf (43 pages, 358143 bytes).
 PDF statistics:
- 729 PDF objects out of 1000 (max. 8388607)
- 658 compressed objects within 7 object streams
- 146 named destinations out of 1000 (max. 500000)
- 697 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 743 PDF objects out of 1000 (max. 8388607)
+ 670 compressed objects within 7 object streams
+ 149 named destinations out of 1000 (max. 500000)
+ 705 words of extra memory for PDF output out of 10000 (max. 10000000)
 

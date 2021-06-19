@@ -1,0 +1,12 @@
+\subsection{Other 5G Network Functions and emulators for load generation }
+{\textbf{XXX: Can go in the eval section?}}
+\noindent \textbf{RAN design:} 
+We use a multi-core DPDK application which acts as a RAN emulator. Normally, it acts as a standard complaint NF. However, during UPF load testing, the RAN acts as an open-loop load generator and other NFs are bypassed to avoid any bottlenecks and saturate the network bandwidth. For instance, during Control Plane load testing, SMF is not involved and RAN itself crafts and sends standard complaint PFCP packets to the UPF. Similary, in the Data Plane, the RAN creates multiple GTP packets beforehand (with different GTP TEID and different inner IP source addresses) to simulate load from multiple UEs and sends them to the UPF in a round robin fashion once the test starts.\\
+Our RAN implementation spans $~XX$ lines of code.
+
+\noindent \textbf{DNN design:}
+Our DNN is also a multi-core DPDK application which acts as a sink, mirror, or load generator depending on our experiments. For example, when we want to simulate only DL traffic, the DNN acts as an open-loop load generator capable of saturating the network bandwidth. Similar to our RAN, the DNN also manually crafts IP packets beforehand. The IP destination addresses are made different to simulate multiple UEs.\\
+Our DNN implementation spans $~XX$ lines of code.
+
+\noindent \textbf{AMF/SMF:}
+Not involved in CP/DP load test. Part of testbed. Should we include desc of these?

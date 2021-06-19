@@ -1,0 +1,108 @@
+% State-of-the-art 5G designs
+% Challenges
+% Motivation
+% Problem statement
+% Contribution
+% \vspace{-2pt}
+The growth in mobile services and subscribers has resulted in an exponential increase in mobile signaling and data traffic~\cite{stats-ericsson, stats-1, stats-2, 5g-stats}. The upcoming 5G standards aim to support applications with diverse traffic characteristics and requirements like enhanced mobile broadband, dense deployments of IoT devices, self-driving cars, and AR/VR~\cite{ngmn, 5g-iot-chk}. These applications require high throughput, very low processing latencies, and stringent Quality-of-Service (QoS) enforcement. The mobile packet core, which connects the radio access network to external networks, comprises of control plane components that process signaling messages and a dataplane that forwards user traffic. The User Plane Function (UPF) is the main entity in the dataplane of the future 5G mobile packet core, and has a significant impact on the performance that users are going to perceive with 5G. 
+
+\begin{table}[t]
+\begin{scriptsize}
+\begin{center}
+\def\arraystretch{1.5}%  1 is the default, change whatever you need
+\begin{tabular}{|p{1.7cm}|p{0.9cm}|p{0.7cm}|p{0.7cm}|p{0.7cm}|p{1.4cm}|}\hline 
+% {\bf{}} & {\bf{Server}} & {\bf{Agilio CX 2x10GbE}} & {\bf{Agilio CX 2x25GbE}} & {\bf{Agilio CX 2x40GbE}} & {\bf{Tofino switch ASIC}}  \\ 
+&  \multirow{2}{*}{\bf{Server}} & \multicolumn{3}{c|}{\bf{Agilio CX SmartNICs~\cite{netronome-cx-4000,netronome-cost}}} & \multirow{2}{*}{\bf{Tofino switch}}  \\ %\hline
+& {\bf{\cite{xeon-processor, 40G-nic-cost}}}  &  {\bf{\cite{netronome}}} &  {\bf{\cite{netronome-25G}}}   & {\bf{\cite{netronome-40G}}}  & {\bf{\cite{tofino-2}}}  \\ \hline 
+% & & {\textbf{10GbE}} & {\textbf{25GbE}} & {\textbf{40GbE}} & \\ \hline
+ 
+% {\bf{Mbps per USD}} & 50  & 23  & 47 & 65 & 544 \\ \hline
+% {\bf{Mbps per Watt}} & 222  & 200 & 500 & 800 & 11480 \\ \hline
+{\bf{Mpps per USD}} & 0.03 & 0.33  & 0.28 & 0.24  & 0.4  \\ \hline
+{\bf{Mpps per Watt}} & 0.14 & 2.96 & 2.96 & 2.96 & 8.52  \\ \hline
+\end{tabular}
+\setlength{\abovecaptionskip}{-12pt}
+\setlength{\belowcaptionskip}{0pt}
+\caption{Performance per unit cost and power.} 
+\label{tab:cost-power}
+\end{center}
+\end{scriptsize}
+\end{table}
+
+% \begin{table}[t]
+% \begin{scriptsize}
+% \begin{center}
+% \def\arraystretch{1.5}%  1 is the default, change whatever you need
+% \begin{tabular}{|p{1.7cm}|p{0.9cm}|p{1cm}|p{1cm}|p{0.9cm}|p{0.8cm}|}\hline 
+% {\bf{}} & {\bf{Intel Xeon CPU}} & {\bf{Agilio CX 2x10GbE}} & {\bf{Agilio CX 2x25GbE}} & {\bf{Agilio CX 2x40GbE}} & {\bf{Tofino switch ASIC}}  \\ 
+% 
+% {\bf{}} & {\bf{\cite{xeon-processor, 40G-nic-cost}}}  &  {\bf{\cite{netronome-cx-4000, netronome-cost}}} & {\bf{\cite{netronome-cx-4000, netronome-cost}}} & {\bf{\cite{netronome-cx-4000, netronome-cost}}} & {\bf{\cite{tofino-2}}}  \\ \hline 
+% 
+% % {\bf{Mbps per USD}} & 50  & 23  & 47 & 65 & 544 \\ \hline
+% % {\bf{Mbps per Watt}} & 222  & 200 & 500 & 800 & 11480 \\ \hline
+% {\bf{Mpps per USD}} & 0.03 & 0.33  & 0.28 & 0.24  & 0.4  \\ \hline
+% {\bf{Mpps per Watt}} & 0.14 & 2.96 & 2.96 & 2.96 & 8.52  \\ \hline
+% \end{tabular}
+% \setlength{\abovecaptionskip}{-12pt}
+% % \setlength{\belowcaptionskip}{-8pt}
+% \caption{Performance per unit cost and power.} 
+% \label{tab:cost-power}
+% \end{center}
+% \end{scriptsize}
+% \end{table}
+
+Most state-of-the-art UPFs are built as multicore-scalable software packet processing appliances running over commodity servers, and process traffic using a high performance packet I/O mechanism like the Data Plane Development Kit (DPDK)~\cite{dpdk_overview}. However, given the stringent performance requirements of 5G networks~\cite{ngmn, 5g-iot-chk}, and ever increasing network speeds running into hundreds of Gbps, offloading some UPF packet processing to programmable dataplane hardware can lead to improved performance, along with cost and power savings. We establish this benefit of offload in Table~\ref{tab:cost-power}, which shows the data forwarding capacity per unit cost/power for various programmable hardware platforms as well as a general purpose server CPU core that all run a UPF. We obtain this table as follows: the UPF throughput values for the first two columns (single core server and Agilio CX 2x10GbE) were measured using our standards-compliant UPF implementations (\S\ref{sec:design}), while we assumed that the other hardware platforms were capable of handling offloaded UPF processing at linerate (a reasonable assumption from our experience with one platform). The cost and power consumption were obtained from the hardware specifications. We see from the table that offloading UPF processing to programmable hardware can result in significant cost and power savings across a wide variety of programmable dataplane platforms. The idea of accelerating UPF using programmable hardware is not new---prior work  has proposed offloading the logic of steering packets to multiple CPU cores of the UPF~\cite{astri, intel_wp, mavenir, metaswitch}, as well as the dataplane forwarding itself~\cite{astri, mobile_5G_hw1, mobile_5G_hw2, mavenir, kaloom_wp}. However, to the best of our knowledge, none of the existing works systematically enumerates all the possible ways in which UPF functionality can be offloaded to programmable hardware, nor do they precisely quantify the costs and benefits of such offloads. 
+
+%there has been significant interest from both industry and academia in exploring the recent technological advances of programmable dataplane hardware to accelerate pure software-based UPFs~\cite{astri, mobile_5G_hw1, mobile_5G_hw2, mavenir, intel_wp, kaloom_wp, turboEPC, metaswitch}. The purported benefits of such an offload are widely accepted---hardware platforms can more easily perform complex processing at linerate, leading to lower cost, lower power consumption, and better processing latencies. 
+
+In this work, we begin with an industry-grade software based UPF built over DPDK, and progressively offload functions to programmable hardware, to come up with several different UPF prototypes (\S\ref{sec:design}). We then measure the throughput and latency characteristics of such UPFs to analyze the pros and cons of offloading UPF functionality to programmable hardware (\S\ref{sec:eval}). For example, we find that offloading the logic of steering packets to the multiple CPU cores reduces UPF processing latency by up to $37 \%$ and increases throughput by $45 \%$. However, performing packet steering in hardware is less flexible than doing so in software, and performs badly during scenarios involving dynamic scaling and skewed traffic distribution across users. Another interesting observation is that, while forwarding data directly from the programmable dataplane hardware (rather than via userspace) leads up to $24$\% lower latency in the dataplane as expected, it significantly worsens the control plane performance. This is because the UPF continues to process signaling messages (from the control plane that configures forwarding rules) within userspace itself, and in this split architecture, the communication between the UPF software and the programmable hardware becomes the bottleneck.\texttt{}
+% XXX: SteerOffload decreases latency by 40\% while PartialOffload decreases latency by 5-30\%. Will the create confusion? Should we mention about different setups upfront?
+
+In this paper, we posit that truly leveraging the performance of programmable hardware to accelerate the 5G dataplane requires the UPF to process and respond to signaling messages from the hardware itself, in order not be limited by the hardware configuring capacity of userspace software. This is challenging to do for several reasons, including the variable-sized message formats of UPF signaling messages. This paper provides a preliminary implementation that solves some of these challenges, and provides initial results that show the promise of offloading these complex UPF functions to programmable hardware. Our work paves the way towards a high-performance 5G UPF that fully leverages the power of programmable dataplanes. 
+
+
+% \begin{table}[ht]
+% \begin{scriptsize}
+% \begin{center}
+% \def\arraystretch{1.5}%  1 is the default, change whatever you need
+% \begin{tabular}{|p{1cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1cm}|p{1cm}|}\hline 
+% {\bf{}} & {\bf{10GbE NPU~\cite{netronome-cx-4000}}} & {\bf{25GbE NPU~\cite{netronome-cx-4000}}} & {\bf{40GbE NPU~\cite{netronome-cx-4000}}} & {\bf{Tofino switch ASIC~\cite{tofino-2}}} & {\bf{Intel Xeon CPU~\cite{xeon-processor}}} \\ \hline 
+% {\bf{Mbps per USD}} & 22.52  & 47.44 & 65.47 & 544.68  & 2.72 \\ \hline
+% {\bf{Mbps per Watt}} & 200 & 500 & 800 & 11480 & 83  \\ \hline
+% {\bf{Mpps per USD}} & 0.33  & 0.28 & 0.24  & 0.4 & 0.04  \\ \hline
+% {\bf{Mpps per Watt}} & 2.96 & 2.96 & 2.96 & 8.52 & 1.17 \\ \hline
+% \end{tabular}
+% % \setlength{\abovecaptionskip}{-5pt}
+% % \setlength{\belowcaptionskip}{ 8pt}
+% \caption{Hardware performance with respect to per unit cost and power. XXX: Needs fixing. Talk to me for comments.} 
+% \label{tab:cost-power}
+% \end{center}
+% \end{scriptsize}
+% \end{table}
+
+%Table~\ref{tab:cost-power} {\textbf {(XXX: keep Mbps or Mpps? Put this in intro to motivate hardware offload?)}} shows the performance per unit cost and the performance per unit power for a variety of programmable hardware and the server used in our experiment. We have derived these metrics using the device specifications~\cite{netronome-cx-4000, tofino-2, xeon-processor}.
+%We observe that all programmable hardware provide better performance per unit cost/power compared to the traditional commodity servers. Therefore, we should offload the processing to programmable hardware if we can express our computations.
+
+
+%\begin{table}[ht]
+%\begin{scriptsize}
+%\begin{center}
+%\def\arraystretch{1.5}%  1 is the default, change whatever you need
+%\begin{tabular}{|p{1cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1cm}|p{1cm}|}\hline 
+%{\bf{}} & {\bf{10GbE NPU~\cite{netronome-cx-4000}}} & {\bf{25GbE NPU~\cite{netronome-cx-4000}}} & {\bf{40GbE NPU~\cite{netronome-cx-4000}}} & {\bf{Tofino switch ASIC~\cite{tofino-2}}} & {\bf{Intel Xeon CPU~\cite{xeon-processor}}} \\ \hline 
+%{\bf{Mbps per USD}} & 22.52  & 47.44 & 65.47 & 544.68  & 2.72 \\ \hline
+%{\bf{Mbps per Watt}} & 200 & 500 & 800 & 11480 & 83  \\ \hline
+%{\bf{Mpps per USD}} & 0.33  & 0.28 & 0.24  & 0.4 & 0.04  \\ \hline
+%{\bf{Mpps per Watt}} & 2.96 & 2.96 & 2.96 & 8.52 & 1.17 \\ \hline
+%\end{tabular}
+%% \setlength{\abovecaptionskip}{-5pt}
+%% \setlength{\belowcaptionskip}{ 8pt}
+%\caption{Hardware performance with respect to per unit cost and power.} 
+%\label{tab:cost-power}
+%\end{center}
+%\end{scriptsize}
+%\end{table}
+%
+%Table~\ref{tab:cost-power} {\textbf {(XXX: keep Mbps or Mpps? Put this in intro to motivate hardware offload?)}} shows the performance per unit cost and the performance per unit power for a variety of programmable hardware and the server used in our experiment. We have derived these metrics using the device specifications~\cite{netronome-cx-4000, tofino-2, xeon-processor}.
+%We observe that all programmable hardware provide better performance per unit cost/power compared to the traditional commodity servers. Therefore, we should offload the processing to programmable hardware if we can express our computations.
+%
