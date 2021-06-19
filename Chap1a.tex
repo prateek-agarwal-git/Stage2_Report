@@ -14,3 +14,27 @@ DPDK runs in software and there is a single copy of packets from NIC buffer to t
   of superpages, lockless data structures and customized device drivers for
    various NICs are among some of the salient features of DPDK framework which
    enables high speed processing of data.
+
+   The main network functions in the data plane are 
+   \begin{itemize}
+	   \item \textbf{Radio Access Network (RAN)} RAN is the main point of contact for all the user equipments and is an entry point to Non Access Stratum in the 5G network.
+	   \item \textbf{User Plane Function (UPF)}
+	   UPF is responsible for forwarding the incoming packets from the RAN to the public internet. UPF ensures QoS guarantees, collects usage statistics useful for charging purpose, buffers packets (if required).
+	   
+	   \item \textbf{Data Network Name}
+	   DNN is the gateway to the public internet. DNN forwards the uplink packets from UEs to the public internet and all the incoming packets for the UEs (downlink) are received at the DNN.
+   \end{itemize}
+  
+\section{Problem Statement}
+\begin{itemize}
+	\item \textbf{User Plane Function} Implement the packet steering offload  mechanism in the UPF.  
+	\item \textbf{Radio Access Network}  Extend the existing  DPDK based RAN by adding new features and refactor, clean the code to make RAN extensible in the future. 
+\end{itemize}
+
+\section{Major Contributions}
+\begin{itemize}
+	\item UPF with RSS based redirection on the inner packet headers was implemented. 
+	\item Two new features were added in the RAN - measurement of control plane latency and simultaneous transfer of control plane and the data plane traffic.
+	\item The source code of the existing RAN was entirely refactored and restructured.
+	\item Conducted experiments for benchmarking different models of the UPF for measurement of throughput and latency metrics under different load conditions.
+\end{itemize}
