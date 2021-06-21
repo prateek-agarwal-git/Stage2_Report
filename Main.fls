@@ -177,6 +177,12 @@ INPUT ./fig/A.png
 INPUT /home/prateek/Github/Stage2_Report/./fig/B.png
 INPUT ./fig/B.png
 INPUT ./fig/B.png
+INPUT /home/prateek/Github/Stage2_Report/./fig/noDDPpacketHashFields.png
+INPUT ./fig/noDDPpacketHashFields.png
+INPUT ./fig/noDDPpacketHashFields.png
+INPUT /home/prateek/Github/Stage2_Report/./fig/DDPPacketHashfields.png
+INPUT ./fig/DDPPacketHashfields.png
+INPUT ./fig/DDPPacketHashfields.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /home/prateek/Github/Stage2_Report/fig/dynScaling_SteerOffload.eps
 INPUT /home/prateek/Github/Stage2_Report/fig/dynScaling_SteerOffload.eps

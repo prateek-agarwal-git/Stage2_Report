@@ -9,61 +9,61 @@
 \BOOKMARK [1][-]{section.22}{GTP Protocol}{chapter.8}% 9
 \BOOKMARK [0][-]{chapter.24}{Stage 1 Summary}{}% 10
 \BOOKMARK [1][-]{section.25}{DPDK based UPF designs}{chapter.24}% 11
-\BOOKMARK [1][-]{section.29}{Comparison of the two Models }{chapter.24}% 12
-\BOOKMARK [1][-]{section.30}{Evaluation}{chapter.24}% 13
-\BOOKMARK [2][-]{subsection.31}{Experimental Setup}{section.30}% 14
-\BOOKMARK [2][-]{subsection.32}{Performance}{section.30}% 15
-\BOOKMARK [2][-]{subsection.33}{Flexibility}{section.30}% 16
-\BOOKMARK [0][-]{chapter.37}{RAN Design and Implementation}{}% 17
-\BOOKMARK [1][-]{section.38}{Design Objectives }{chapter.37}% 18
-\BOOKMARK [1][-]{section.39}{Prior Work}{chapter.37}% 19
-\BOOKMARK [2][-]{subsection.40}{Kernel-Based RAN}{section.39}% 20
-\BOOKMARK [2][-]{subsection.41}{DPDK-based RAN}{section.39}% 21
-\BOOKMARK [1][-]{section.42}{RAN Architecture}{chapter.37}% 22
-\BOOKMARK [2][-]{subsection.43}{Threading Model}{section.42}% 23
-\BOOKMARK [2][-]{subsection.44}{Core Layout}{section.42}% 24
-\BOOKMARK [1][-]{section.46}{Latency Calculation Mechanisms}{chapter.37}% 25
-\BOOKMARK [2][-]{subsection.47}{Key Idea }{section.46}% 26
-\BOOKMARK [2][-]{subsection.48}{Defintion of Control Plane Latency}{section.46}% 27
-\BOOKMARK [2][-]{subsection.49}{Implementation Issues}{section.46}% 28
-\BOOKMARK [2][-]{subsection.52}{Details}{section.46}% 29
-\BOOKMARK [1][-]{section.53}{Control Plane + Data Plane Traffic}{chapter.37}% 30
-\BOOKMARK [2][-]{subsection.54}{Issues}{section.53}% 31
-\BOOKMARK [0][-]{chapter.55}{Evaluation}{}% 32
-\BOOKMARK [1][-]{section.56}{Experimental Setup}{chapter.55}% 33
-\BOOKMARK [1][-]{section.65}{UPF}{chapter.55}% 34
-\BOOKMARK [1][-]{section.67}{Results}{chapter.55}% 35
-\BOOKMARK [2][-]{subsection.68}{Control Plane Performance}{section.67}% 36
-\BOOKMARK [0][-]{chapter.72}{Introduction }{}% 37
-\BOOKMARK [0][-]{chapter.73}{Clean Code}{}% 38
-\BOOKMARK [1][-]{section.74}{Naming of Variables}{chapter.73}% 39
-\BOOKMARK [2][-]{subsection.75}{Issues}{section.74}% 40
-\BOOKMARK [2][-]{subsection.76}{Resolution}{section.74}% 41
-\BOOKMARK [1][-]{section.77}{Stale Comments}{chapter.73}% 42
-\BOOKMARK [2][-]{subsection.78}{Issues}{section.77}% 43
-\BOOKMARK [2][-]{subsection.79}{Resolution}{section.77}% 44
-\BOOKMARK [1][-]{section.80}{Dead Code}{chapter.73}% 45
-\BOOKMARK [2][-]{subsection.81}{Issue}{section.80}% 46
-\BOOKMARK [2][-]{subsection.82}{Resolution}{section.80}% 47
-\BOOKMARK [1][-]{section.83}{Deprecated Options}{chapter.73}% 48
-\BOOKMARK [2][-]{subsection.84}{Issue}{section.83}% 49
-\BOOKMARK [2][-]{subsection.85}{Resolution}{section.83}% 50
-\BOOKMARK [1][-]{section.86}{Reused Code}{chapter.73}% 51
-\BOOKMARK [2][-]{subsection.87}{Issues}{section.86}% 52
-\BOOKMARK [2][-]{subsection.88}{Resolution}{section.86}% 53
-\BOOKMARK [1][-]{section.89}{Global Variables}{chapter.73}% 54
-\BOOKMARK [2][-]{subsection.90}{Issue}{section.89}% 55
-\BOOKMARK [2][-]{subsection.91}{Resolution}{section.89}% 56
-\BOOKMARK [1][-]{section.92}{Directory Structure}{chapter.73}% 57
-\BOOKMARK [2][-]{subsection.93}{Issues}{section.92}% 58
-\BOOKMARK [2][-]{subsection.94}{Resolution}{section.92}% 59
-\BOOKMARK [1][-]{section.95}{Poor Refactoring}{chapter.73}% 60
-\BOOKMARK [2][-]{subsection.96}{Issues}{section.95}% 61
-\BOOKMARK [2][-]{subsection.97}{Resolution}{section.95}% 62
-\BOOKMARK [1][-]{section.98}{Unnecessary Offloads}{chapter.73}% 63
-\BOOKMARK [2][-]{subsection.99}{Issues}{section.98}% 64
-\BOOKMARK [2][-]{subsection.100}{Resolution}{section.98}% 65
-\BOOKMARK [1][-]{section.101}{Technical Improvements}{chapter.73}% 66
-\BOOKMARK [2][-]{subsection.102}{Issues}{section.101}% 67
-\BOOKMARK [2][-]{subsection.103}{Resolution}{section.101}% 68
-\BOOKMARK [0][-]{section*.105}{Bibliography}{}% 69
+\BOOKMARK [1][-]{section.32}{Comparison of the two Models }{chapter.24}% 12
+\BOOKMARK [1][-]{section.33}{Evaluation}{chapter.24}% 13
+\BOOKMARK [2][-]{subsection.34}{Experimental Setup}{section.33}% 14
+\BOOKMARK [2][-]{subsection.35}{Performance}{section.33}% 15
+\BOOKMARK [2][-]{subsection.36}{Flexibility}{section.33}% 16
+\BOOKMARK [0][-]{chapter.40}{RAN Design and Implementation}{}% 17
+\BOOKMARK [1][-]{section.41}{Design Objectives }{chapter.40}% 18
+\BOOKMARK [1][-]{section.42}{Prior Work}{chapter.40}% 19
+\BOOKMARK [2][-]{subsection.43}{Kernel-Based RAN}{section.42}% 20
+\BOOKMARK [2][-]{subsection.44}{DPDK-based RAN}{section.42}% 21
+\BOOKMARK [1][-]{section.45}{RAN Architecture}{chapter.40}% 22
+\BOOKMARK [2][-]{subsection.46}{Threading Model}{section.45}% 23
+\BOOKMARK [2][-]{subsection.47}{Core Layout}{section.45}% 24
+\BOOKMARK [1][-]{section.49}{Latency Calculation Mechanisms}{chapter.40}% 25
+\BOOKMARK [2][-]{subsection.50}{Key Idea }{section.49}% 26
+\BOOKMARK [2][-]{subsection.51}{Defintion of Control Plane Latency}{section.49}% 27
+\BOOKMARK [2][-]{subsection.52}{Implementation Issues}{section.49}% 28
+\BOOKMARK [2][-]{subsection.55}{Details}{section.49}% 29
+\BOOKMARK [1][-]{section.56}{Control Plane + Data Plane Traffic}{chapter.40}% 30
+\BOOKMARK [2][-]{subsection.57}{Issues}{section.56}% 31
+\BOOKMARK [0][-]{chapter.58}{Evaluation}{}% 32
+\BOOKMARK [1][-]{section.59}{Experimental Setup}{chapter.58}% 33
+\BOOKMARK [1][-]{section.68}{UPF}{chapter.58}% 34
+\BOOKMARK [1][-]{section.70}{Results}{chapter.58}% 35
+\BOOKMARK [2][-]{subsection.71}{Control Plane Performance}{section.70}% 36
+\BOOKMARK [0][-]{chapter.75}{Introduction }{}% 37
+\BOOKMARK [0][-]{chapter.76}{Clean Code}{}% 38
+\BOOKMARK [1][-]{section.77}{Naming of Variables}{chapter.76}% 39
+\BOOKMARK [2][-]{subsection.78}{Issues}{section.77}% 40
+\BOOKMARK [2][-]{subsection.79}{Resolution}{section.77}% 41
+\BOOKMARK [1][-]{section.80}{Stale Comments}{chapter.76}% 42
+\BOOKMARK [2][-]{subsection.81}{Issues}{section.80}% 43
+\BOOKMARK [2][-]{subsection.82}{Resolution}{section.80}% 44
+\BOOKMARK [1][-]{section.83}{Dead Code}{chapter.76}% 45
+\BOOKMARK [2][-]{subsection.84}{Issue}{section.83}% 46
+\BOOKMARK [2][-]{subsection.85}{Resolution}{section.83}% 47
+\BOOKMARK [1][-]{section.86}{Deprecated Options}{chapter.76}% 48
+\BOOKMARK [2][-]{subsection.87}{Issue}{section.86}% 49
+\BOOKMARK [2][-]{subsection.88}{Resolution}{section.86}% 50
+\BOOKMARK [1][-]{section.89}{Reused Code}{chapter.76}% 51
+\BOOKMARK [2][-]{subsection.90}{Issues}{section.89}% 52
+\BOOKMARK [2][-]{subsection.91}{Resolution}{section.89}% 53
+\BOOKMARK [1][-]{section.92}{Global Variables}{chapter.76}% 54
+\BOOKMARK [2][-]{subsection.93}{Issue}{section.92}% 55
+\BOOKMARK [2][-]{subsection.94}{Resolution}{section.92}% 56
+\BOOKMARK [1][-]{section.95}{Directory Structure}{chapter.76}% 57
+\BOOKMARK [2][-]{subsection.96}{Issues}{section.95}% 58
+\BOOKMARK [2][-]{subsection.97}{Resolution}{section.95}% 59
+\BOOKMARK [1][-]{section.98}{Poor Refactoring}{chapter.76}% 60
+\BOOKMARK [2][-]{subsection.99}{Issues}{section.98}% 61
+\BOOKMARK [2][-]{subsection.100}{Resolution}{section.98}% 62
+\BOOKMARK [1][-]{section.101}{Unnecessary Offloads}{chapter.76}% 63
+\BOOKMARK [2][-]{subsection.102}{Issues}{section.101}% 64
+\BOOKMARK [2][-]{subsection.103}{Resolution}{section.101}% 65
+\BOOKMARK [1][-]{section.104}{Technical Improvements}{chapter.76}% 66
+\BOOKMARK [2][-]{subsection.105}{Issues}{section.104}% 67
+\BOOKMARK [2][-]{subsection.106}{Resolution}{section.104}% 68
+\BOOKMARK [0][-]{section*.108}{Bibliography}{}% 69
