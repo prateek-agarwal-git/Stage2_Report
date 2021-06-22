@@ -1,21 +1,37 @@
 \section{5G Data Plane \label{sec:5GDataPlane}}
 5G technology aims to satisfy the increasing requirements of the customers of mobile service 
-
-in terms of higher throughput and low processing latency. 
-The major difference in  the processing of data and signalling packets in the core network between 5G and earlier standards is control-user plane 
-separation and the use of network function virtualization. Forwarding of packets , 
+in terms of higher throughput and lower processing latency. 
+The major difference in  the processing of data and signalling packets between 5G and earlier standards is control-user plane 
+separation and the use of network function virtualization. Forwarding of packets, 
 authentication of mobile devices, session establishment and management  are some of the network functions required in the core of a telecommunication network. 
 These network functions run on different or same physical machines as 
 virtual machines for easier migration/scaling. 
+\begin{figure}[htbp]
+	\centering
+       \includegraphics[width=0.7\textwidth]{fig/dpdkOverview.png}
+       %  \setlength{\abovecaptionskip}{-2pt}
+       \setlength{\belowcaptionskip}{-12pt}
+	\caption{DPDK kernel bypass}
+	\label{fig:dpdkOverview}
+       \end{figure}
 
-This project is mainly concerned with the data forwarding plane. The network functions in our setup ran as separate processes.
+This project is mainly concerned with the data forwarding plane. The network functions in our setup run as separate processes.
 The high speed data plane is required to meet the ever increasing demands of higher bandwidth and lower latency. The Linux kernel stack cannot meet this demand as it is a general purpose stack catering to different protocols and there is a packet copy overhead from kernel space to the user space for reading the packet payload. The technqiues used to overcome this limitation of the Linux stack is the use of kernel bypass frameworks like Data Plane Development Kit (DPDK), and the use of programmable NICs to offload processing functions in the hardware. 
-
 DPDK runs in software and there is a single copy of packets from NIC buffer to the
  user space. DPDK libraries are optimized for high speed data processing. The use
-  of superpages, lockless data structures and customized device drivers for
+  of superpages, lockless data structures, better memory management and customized device drivers for
    various NICs are among some of the salient features of DPDK framework which
-   enables high speed processing of data.
+   enables high speed processing of data. 
+\begin{figure}[htbp]
+	\centering
+       \includegraphics[width=0.7\textwidth]{fig/5Goverview.png}
+       %  \setlength{\abovecaptionskip}{-2pt}
+       \setlength{\belowcaptionskip}{-12pt}
+	\caption{5G Forwarding Plane.}
+	\label{fig:5gForwardingPlane}
+       \end{figure}
+
+
 
    The main network functions in the data plane are 
    \begin{itemize}

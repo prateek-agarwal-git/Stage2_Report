@@ -150,6 +150,12 @@ OUTPUT /home/prateek/Github/Stage2_Report/Main.lof
 INPUT /home/prateek/Github/Stage2_Report/Chap1a.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap1a.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /home/prateek/Github/Stage2_Report/fig/dpdkOverview.png
+INPUT /home/prateek/Github/Stage2_Report/fig/dpdkOverview.png
+INPUT /home/prateek/Github/Stage2_Report/fig/dpdkOverview.png
+INPUT /home/prateek/Github/Stage2_Report/fig/5Goverview.png
+INPUT /home/prateek/Github/Stage2_Report/fig/5Goverview.png
+INPUT /home/prateek/Github/Stage2_Report/fig/5Goverview.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
 INPUT /home/prateek/Github/Stage2_Report/Chap2a.tex
@@ -216,6 +222,12 @@ INPUT /home/prateek/Github/Stage2_Report/Chap4a.tex
 INPUT /home/prateek/Github/Stage2_Report/./fig/Introduction/RANArchitecture.png
 INPUT ./fig/Introduction/RANArchitecture.png
 INPUT ./fig/Introduction/RANArchitecture.png
+INPUT /home/prateek/Github/Stage2_Report/./fig/prevRANDir.png
+INPUT ./fig/prevRANDir.png
+INPUT ./fig/prevRANDir.png
+INPUT /home/prateek/Github/Stage2_Report/./fig/currentRANDir.png
+INPUT ./fig/currentRANDir.png
+INPUT ./fig/currentRANDir.png
 INPUT /home/prateek/Github/Stage2_Report/Chap5a.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap5a.tex
 INPUT /home/prateek/Github/Stage2_Report/./fig/Results/Setup.png
@@ -231,10 +243,6 @@ INPUT ./fig/Results/DPOffload.png
 INPUT /home/prateek/Github/Stage2_Report/./fig/Results/CPOffload.png
 INPUT ./fig/Results/CPOffload.png
 INPUT ./fig/Results/CPOffload.png
-INPUT /home/prateek/Github/Stage2_Report/Chap1.tex
-INPUT /home/prateek/Github/Stage2_Report/Chap1.tex
-INPUT /home/prateek/Github/Stage2_Report/Chap5.tex
-INPUT /home/prateek/Github/Stage2_Report/Chap5.tex
 INPUT /home/prateek/Github/Stage2_Report/Main.bbl
 INPUT /home/prateek/Github/Stage2_Report/Main.bbl
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm

@@ -1,24 +1,27 @@
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces DPDK kernel bypass}}{2}{figure.6}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces 5G Forwarding Plane.}}{3}{figure.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 5G Architecture.}}{5}{figure.19}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces PFCP Session Messages}}{5}{figure.21}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces GTP-U header \cite {gtpwiki}}}{7}{figure.23}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 5G Architecture.}}{4}{figure.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces PFCP Session Messages}}{5}{figure.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces GTP-U header \cite {gtpwiki}}}{7}{figure.25}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \ref {sub@fig:DesignA} Software UPF \ref {sub@fig:DesignB} SteerOffloaded Design}}{8}{figure.28}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{8}{figure.28}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{8}{figure.28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \ref {sub@fig:noDDP} Standard RSS \ref {sub@fig:DDP} DDP RSS}}{9}{figure.31}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{9}{figure.31}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{9}{figure.31}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces SoftUPF vs. SteerOffload: Dynamic Scaling}}{11}{figure.37}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces SoftUPF vs. SteerOffload: Performance}}{11}{figure.38}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces SoftUPF vs. SteerOffload: Heavy Hitters}}{11}{figure.39}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \ref {sub@fig:DesignA} Software UPF \ref {sub@fig:DesignB} SteerOffloaded Design}}{8}{figure.30}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{8}{figure.30}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{8}{figure.30}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \ref {sub@fig:noDDP} Standard RSS \ref {sub@fig:DDP} DDP RSS}}{9}{figure.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{9}{figure.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{9}{figure.33}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces SoftUPF vs. SteerOffload: Dynamic Scaling}}{11}{figure.39}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces SoftUPF vs. SteerOffload: Performance}}{11}{figure.40}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces SoftUPF vs. SteerOffload: Heavy Hitters}}{11}{figure.41}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces RAN Architecture}}{14}{figure.48}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces RAN Architecture}}{14}{figure.50}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \ref {sub@fig:prevRANDir} Previous Directory Layout \ref {sub@fig:currRANDir} Current Layout}}{18}{figure.62}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}{figure.62}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}{figure.62}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental Setup}}{19}{figure.60}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Control Plane Performance for Software UPF}}{22}{figure.72}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Control Plane Performance for Offloaded Data Plane}}{22}{figure.73}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Control Plane Performance for Offloaded Control Plane}}{23}{figure.74}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental Setup}}{19}{figure.65}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Control Plane Performance for Software UPF}}{22}{figure.77}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Control Plane Performance for Offloaded Data Plane}}{22}{figure.78}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Control Plane Performance for Offloaded Control Plane}}{23}{figure.79}%

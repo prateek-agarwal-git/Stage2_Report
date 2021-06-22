@@ -40,19 +40,20 @@ There are two main alternatives for DPDK based UPFs -
 \end{figure}
 
 \section{Comparison of the two Models \label{sec:compAB}}
-Packet Steering offload has the benefit of hardware acceleration. The hash computation is offloaded to the hardware. The amount of processing on the CPUs is reduced. Elimination of inter core communication between the primary and the secondary core in the case of Software UPF is also a great advantage. This makes the steering offload design better performant and provides higher throughput and lower latency for the same number of forwarding cores.
+Packet Steering offload has the benefit of hardware acceleration. The hash computation is offloaded to the hardware. The amount of processing on the CPUs is reduced. Elimination of inter-core communication between the primary and the secondary core in the case of Software UPF is also a great advantage. This makes the steering offload design better performant and provides higher throughput and lower latency for the same number of forwarding cores.
 
-The main advantage of Software UPF lies in its flexibility. The steering offload cannot move the packets of a specific flow/session from one core to another easily. This requires reconfiguration of the queue-to core mapping.
+The main advantage of Software UPF lies in its flexibility. The steering offload cannot move the packets of a specific flow/session from one core to another easily. This requires reconfiguration of the queue-to-core mapping.
 This movement of the session among cores may be required in the case of skewed load from few sessions. This sessions may be from heavy hitter UEs overloading the same core. This will lead to packet drops on the heavily loaded core in the offloaded steering design.
-When the load on the UPF is highly variable across the time, it may be a good idea to switch off some cores under low load conditions and to increase the data
+When the load on the UPF is highly variable across the time, it may be a good idea to switch off some cores under low load conditions and to increase the number of  data
 forwarding cores when the load is high. This dynamic scaling can be easily
 achieved in software UPF without appreciable loss of performance. Steering Offload design requires the shutting down of port and reconfiguring the registered number of queues at the NIC for receiving the data. This leads to a loss of performance in terms of the number of packets dropped during reconfiguration.
 
 \section{Evaluation}
 \subsection{Experimental Setup}
+Refer to Figure \ref{fig:ExperimentalSetup}. UPF and DNN run on a different physical machine. RAN and other Network functions run on the a single machine. For these experiment, Intel XL710 40 Gbps NICs were used.
 \subsection{Performance}
 Figure \ref{fig:UPFABperformance} shows the latency and throughput performance of the two designs.
-Offloaded packet steering has 45\% higher throughput and 37\% lower latency when compared to Software UPF. This is expected due to the reasons mentioned in \ref{sec:compAB}.
+Offloaded packet steering has 45\% higher throughput and 37\% lower latency when compared to Software UPF. This is expected due to the reasons mentioned in Section \ref{sec:compAB}.
 \subsection{Flexibility}
 Two experiments were conducted to show the flexibility of software UPF design over offloaded steering design.
 

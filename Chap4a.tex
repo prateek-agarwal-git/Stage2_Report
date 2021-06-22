@@ -32,7 +32,7 @@ This emulator had satisfied most of the objectives mentioned in \ref{sec:DesignO
 DPDK pins one thread to each core for avoiding the overhead of context switch.
 This is especially important for both the data forwarding cores and the polling
 cores to get the maximum throughput per core. The auxillary threads like ARP
-messages handler, heart beat messages, timers etc. can run on available free core. The cores which send data and control plane latency packets have to handle the callbacks associated with the storage of timestamps of outgoing packets. Running them on separate cores is preferred if the sufficient number of cores are available.
+messages handler, heart beat messages, timers etc. can run on available free cores. The cores which send data and control plane latency packets have to handle the callbacks associated with the storage of timestamps of outgoing packets. Running them on separate cores is preferred if the sufficient number of cores are available.
 
 The NIC queues/buffers for storing the outgoing (TX-queue) and the incoming
 (Rx-queue) packets are one-to one mapped to the data forwarding/polling cores.
@@ -71,9 +71,9 @@ To increase this number, the functions running on CORE\_MISC and CORE\_STAT can 
 The sample packets that are used to measure latency are sent from a specific core.
 When these packets are copied into a NIC buffer, a callback function is called.
 This callback function stores the timestamp of the outgoing packet in an array.
-The location at which the timestamp is stored is identified by anentifier
+The location at which the timestamp is stored is identified by an identifier
 present in the outgoing packet. When the  response to a sample packet arrives
-at the receiving core, a call back function is called to measure the end to
+at the receiving core, a callback function is called to measure the end to
 end latency or response time of the UPF. This callback function extracts the
 timestamp stored previously and subtracts it from the current time to get the latency measure.
 
@@ -125,19 +125,37 @@ The duration $t1$ for which all the static sessions $n1$ and the dynamic session
 Data forwarding starts from the $n1$ sessions at the start. After sleeping for a time (currently 5
 seconds), $n2$ threads are started. The role of each thread is to sleep for a random amount of time
 $t3$ ($<t2$), establish and modify the session, and then sleep for some time $t4$ and release the
-session. The invariant is $t3+t4= t2$.   The session is available for data forwarding in the period $t4$.  The threads with new session Ids are started once all the previous threads have joined i.e. have finished their task.
+session. The invariant is $t3+t4= t2$.   The session is available for data forwarding in the period $t4$.  The threads with new session ids are started once all the previous threads have joined i.e. have finished their task.
 Each of the data packet forwarding cores use all the existing established sessions/UEs to forward the data. Note that this is different from the case when sessions were partitioned among cores.
 
-\subsection{Issues}
-\begin{itemize}
-	\item \textbf{Pthreads, Lthreads}
-	There are two kind of threading APIs available. - Posix-threads and lthreads. Lthreads is a user level api which comes with dpdk.
-	\begin{itemize}
-		\item \textbf{Pthreads} This completely implemented and works correctly when locks are used in both data plane and control plane functions. 
-		\item \textbf{Lthreads} DPDK has lthread API available for spawning threads on the 
-		same core. This is a user space threading API with a user space scheduler. This is not preemptive and is based on cooperative scheduling -threads yield control for 
-		scheduler to schedule another thread. The yielding occurs on certain points when functions like \textbf{lthread\_sleep} are called. An alternate set of control plane procedures for defining the dynamic session functionality is defined on an experimental basis. This may be used if there are performance hits in pthread implementation.
-	\end{itemize}
-	\item Data plane latency packets are currently sent only from first $n1$ sessions. The dynamically created sessions ($n2$) are used to send data but not the latency packets. This is not difficult to modify and technique that is used to send normal data packets can be used here as well. 
 
-\end{itemize}
+
+\section{Summary}
+The control plane latency calculation and simultaneous transfer of the control and data plane messages 
+were added in the code. The inherited code had various issues which were also addressed -
+\begin{itemize}
+\item \textbf{Refactoring} The main routine was 2000 lines long and had no function calls for various modes. Repeated snippets of code were also refactored for 
+better understanding of the code.
+\item \textbf{Data Plane Latency} 100 Mbps of traffic (64 B payload) was sent for sampling data plane latency alone. This number was reduced to 0.4 Mbps as the numbers become quite stable even for lower values. 
+This also reduces the callback pressure on the core.
+\item \textbf{Redundant  and Dead Code} The same data forwaring mode code  supported through kernel
+ functions were removed. The functions which were never called , the branches which were never taken were also removed. 
+\item \textbf{Directory Structure} The RAN function was defined earlier inside AMF to avoid writing CMake file. 
+The logs were also produced in the parent folder itself. These issues were also addressed (see Figure \ref{figure:RANDir}).
+\item Deprecated forwarding modes,  stale comments, TODOs, functions declared but not used were also removed. Global variables were defined
+in a separate namespace.  
+\end{itemize} 
+\begin{figure}[htbp]
+	\centering
+	\subfigure[]{
+		\fbox{\includegraphics[width=60mm,height=40mm]{./fig/prevRANDir.png}}
+		\label{fig:prevRANDir}
+	}
+	\subfigure[]{
+		\fbox{\includegraphics[width=60mm,height=40mm]{./fig/currentRANDir.png}}
+		\label{fig:currRANDir}
+	}
+
+	\caption{\subref{fig:prevRANDir} Previous Directory Layout  \subref{fig:currRANDir} Current Layout}
+	\label{figure:RANDir}
+\end{figure}
