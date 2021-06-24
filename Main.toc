@@ -2,36 +2,36 @@
 \contentsline {chapter}{\numberline {1}Introduction }{1}{chapter.4}%
 \contentsline {section}{\numberline {1.1}5G Data Plane }{1}{section.5}%
 \contentsline {section}{\numberline {1.2}Problem Statement}{3}{section.8}%
-\contentsline {section}{\numberline {1.3}Major Contributions}{3}{section.9}%
-\contentsline {chapter}{\numberline {2}Background }{4}{chapter.10}%
-\contentsline {section}{\numberline {2.1}Interaction of Network Functions}{4}{section.11}%
-\contentsline {section}{\numberline {2.2}PFCP Protocol}{5}{section.22}%
-\contentsline {section}{\numberline {2.3}GTP Protocol}{6}{section.24}%
-\contentsline {chapter}{\numberline {3}Stage 1 Summary}{8}{chapter.26}%
-\contentsline {section}{\numberline {3.1}DPDK based UPF designs}{8}{section.27}%
-\contentsline {section}{\numberline {3.2}Comparison of the two Models }{9}{section.34}%
-\contentsline {section}{\numberline {3.3}Evaluation}{10}{section.35}%
-\contentsline {subsection}{\numberline {3.3.1}Experimental Setup}{10}{subsection.36}%
-\contentsline {subsection}{\numberline {3.3.2}Performance}{10}{subsection.37}%
-\contentsline {subsection}{\numberline {3.3.3}Flexibility}{10}{subsection.38}%
-\contentsline {chapter}{\numberline {4}RAN Design and Implementation}{12}{chapter.42}%
-\contentsline {section}{\numberline {4.1}Design Objectives }{12}{section.43}%
-\contentsline {section}{\numberline {4.2}Prior Work}{13}{section.44}%
-\contentsline {subsection}{\numberline {4.2.1}Kernel-Based RAN}{13}{subsection.45}%
-\contentsline {subsection}{\numberline {4.2.2}DPDK-based RAN}{13}{subsection.46}%
-\contentsline {section}{\numberline {4.3}RAN Architecture}{13}{section.47}%
-\contentsline {subsection}{\numberline {4.3.1}Threading Model}{13}{subsection.48}%
-\contentsline {subsection}{\numberline {4.3.2}Core Layout}{14}{subsection.49}%
-\contentsline {section}{\numberline {4.4}Latency Calculation Mechanisms}{15}{section.51}%
-\contentsline {subsection}{\numberline {4.4.1}Key Idea }{15}{subsection.52}%
-\contentsline {subsection}{\numberline {4.4.2}Defintion of Control Plane Latency}{15}{subsection.53}%
-\contentsline {subsection}{\numberline {4.4.3}Implementation Issues}{16}{subsection.54}%
-\contentsline {subsection}{\numberline {4.4.4}Details}{16}{subsection.57}%
-\contentsline {section}{\numberline {4.5}Control Plane + Data Plane Traffic}{17}{section.58}%
-\contentsline {section}{\numberline {4.6}Summary}{17}{section.59}%
-\contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.63}%
-\contentsline {section}{\numberline {5.1}Experimental Setup}{19}{section.64}%
-\contentsline {section}{\numberline {5.2}UPF}{20}{section.73}%
-\contentsline {section}{\numberline {5.3}Results}{21}{section.75}%
-\contentsline {subsection}{\numberline {5.3.1}Control Plane Performance}{21}{subsection.76}%
-\contentsline {chapter}{Bibliography}{24}{section*.81}%
+\contentsline {section}{\numberline {1.3}Major Contributions}{4}{section.9}%
+\contentsline {chapter}{\numberline {2}Background }{5}{chapter.10}%
+\contentsline {section}{\numberline {2.1}Interaction of Network Functions}{5}{section.11}%
+\contentsline {section}{\numberline {2.2}PFCP Protocol}{6}{section.22}%
+\contentsline {section}{\numberline {2.3}GTP Protocol}{7}{section.24}%
+\contentsline {chapter}{\numberline {3}Stage 1 Summary}{9}{chapter.26}%
+\contentsline {section}{\numberline {3.1}DPDK based UPF designs }{9}{section.27}%
+\contentsline {section}{\numberline {3.2}Comparison of the two Models }{10}{section.34}%
+\contentsline {section}{\numberline {3.3}Evaluation}{11}{section.35}%
+\contentsline {subsection}{\numberline {3.3.1}Experimental Setup}{11}{subsection.36}%
+\contentsline {subsection}{\numberline {3.3.2}Performance}{11}{subsection.37}%
+\contentsline {subsection}{\numberline {3.3.3}Flexibility}{11}{subsection.38}%
+\contentsline {chapter}{\numberline {4}RAN Design and Implementation}{13}{chapter.42}%
+\contentsline {section}{\numberline {4.1}Design Objectives }{13}{section.43}%
+\contentsline {section}{\numberline {4.2}Prior Work}{14}{section.44}%
+\contentsline {subsection}{\numberline {4.2.1}Kernel-Based RAN}{14}{subsection.45}%
+\contentsline {subsection}{\numberline {4.2.2}DPDK-based RAN}{14}{subsection.46}%
+\contentsline {section}{\numberline {4.3}RAN Architecture}{14}{section.47}%
+\contentsline {subsection}{\numberline {4.3.1}Threading Model}{14}{subsection.48}%
+\contentsline {subsection}{\numberline {4.3.2}Core Layout}{15}{subsection.49}%
+\contentsline {section}{\numberline {4.4}Latency Calculation Mechanisms}{16}{section.51}%
+\contentsline {subsection}{\numberline {4.4.1}Key Idea }{16}{subsection.52}%
+\contentsline {subsection}{\numberline {4.4.2}Defintion of Control Plane Latency}{16}{subsection.53}%
+\contentsline {subsection}{\numberline {4.4.3}Implementation Issues}{17}{subsection.54}%
+\contentsline {subsection}{\numberline {4.4.4}Details}{17}{subsection.57}%
+\contentsline {section}{\numberline {4.5}Control Plane + Data Plane Traffic}{18}{section.58}%
+\contentsline {section}{\numberline {4.6}Summary}{18}{section.59}%
+\contentsline {chapter}{\numberline {5}Evaluation}{20}{chapter.63}%
+\contentsline {section}{\numberline {5.1}Experimental Setup}{20}{section.64}%
+\contentsline {section}{\numberline {5.2}UPF}{21}{section.73}%
+\contentsline {section}{\numberline {5.3}Results}{23}{section.76}%
+\contentsline {subsection}{\numberline {5.3.1}Control Plane Performance}{23}{subsection.77}%
+\contentsline {chapter}{Bibliography}{25}{section*.82}%

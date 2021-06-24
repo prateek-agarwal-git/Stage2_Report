@@ -16,7 +16,7 @@ virtual machines for easier migration/scaling.
        \end{figure}
 
 This project is mainly concerned with the data forwarding plane. The network functions in our setup run as separate processes.
-The high speed data plane is required to meet the ever increasing demands of higher bandwidth and lower latency. The Linux kernel stack cannot meet this demand as it is a general purpose stack catering to different protocols and there is a packet copy overhead from kernel space to the user space for reading the packet payload. The technqiues used to overcome this limitation of the Linux stack is the use of kernel bypass frameworks like Data Plane Development Kit (DPDK), and the use of programmable NICs to offload processing functions in the hardware. 
+The high speed data plane is required to meet the ever increasing demands of higher bandwidth and lower latency. The Linux kernel stack cannot meet this demand as it is a general purpose stack catering to different protocols and there is a packet copy overhead from kernel space to the user space for reading the packet payload. The technqiues used to overcome this limitation of the Linux stack is the use of kernel bypass frameworks like Data Plane Development Kit (DPDK) \cite{dpdk}, and the use of programmable NICs to offload processing functions in the hardware. 
 DPDK runs in software and there is a single copy of packets from NIC buffer to the
  user space. DPDK libraries are optimized for high speed data processing. The use
   of superpages, lockless data structures, better memory management and customized device drivers for
@@ -45,13 +45,22 @@ DPDK runs in software and there is a single copy of packets from NIC buffer to t
   
 \section{Problem Statement}
 \begin{itemize}
-	\item \textbf{User Plane Function} Implement the packet steering offload  mechanism in the UPF.  
-	\item \textbf{Radio Access Network}  Extend the existing  DPDK based RAN by adding new features and refactor, clean the code to make RAN extensible in the future. 
+	\item \textbf{User Plane Function: Implement the packet steering offload  mechanism in the UPF.} 
+	
+	The packets coming from RAN are tunneled in the application layer of an outer 
+	packet.The tunneled application level header  contains the information 
+	associating the data packet to a corresponding user. The outer IP/UDP headers
+ 	are same for all the packets between a set of network functions. The key for
+	the standard hash computation in the hardware  are the outer packet headers.
+	The goal here is to implement the UPF design in which the packets are
+	redirected in the hardware to the multiple cores for parallel processing
+	based on the inner packet and application level headers. The redirection based on inner packet fields ensure that packets of the same flow are directed to the same core resulting in better spatial locality.
+	\item \textbf{Radio Access Network}  Extend the existing DPDK based RAN by adding new features and refactor, clean the code to make RAN extensible in the future.  The new features are aimed at emulating the real-time traffic and to benchmark various designs of UPF.  
 \end{itemize}
 
 \section{Major Contributions}
 \begin{itemize}
-	\item UPF with RSS based redirection on the inner packet headers was implemented. 
+	\item The UPF design which with the hardware based redirection on the inner packet headers was implemented. 
 	\item Two new features were added in the RAN - measurement of control plane latency and simultaneous transfer of control plane and the data plane traffic.
 	\item The source code of the existing RAN was entirely refactored and restructured.
 	\item Conducted experiments for benchmarking different models of the UPF for measurement of throughput and latency metrics under different load conditions.

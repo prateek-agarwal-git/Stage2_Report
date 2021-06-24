@@ -41,7 +41,7 @@ Following steps describe the interaction between various network functions durin
     \label{fig:PFCP}
 \end{figure}
 
-PFCP stands for Packet Forwarding Control Protocol. 
+PFCP stands for Packet Forwarding Control Protocol (\cite{5g29244}). 
  There are two types of messages sent using PFCP - node related and session related.
  The discussion here describes session related messages.
 
@@ -64,8 +64,8 @@ There are three kinds of messages sent from SMF to the UPF in PFCP session relat
 UPF gives response to each of the three messages. 
 \section {GTP Protocol\label{sec:GTP}}
 The raw packets meant for communicating outside the network are encapsulated within GTP  application level 
-header. GTP runs over UDP/IP stack. This GTP header  (shown in \ref{figGTPheader})contains various fields for regulating the
- session parameters. The relevant fields are
+header. GTP (\cite{gtp_ref}) runs over UDP/IP stack. This GTP header (shown in \ref{figGTPheader})contains 
+various fields for regulating the session parameters. The relevant fields are
  \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/gtp.png}

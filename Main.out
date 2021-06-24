@@ -8,7 +8,7 @@
 \BOOKMARK [1][-]{section.22}{PFCP Protocol}{chapter.10}% 8
 \BOOKMARK [1][-]{section.24}{GTP Protocol}{chapter.10}% 9
 \BOOKMARK [0][-]{chapter.26}{Stage 1 Summary}{}% 10
-\BOOKMARK [1][-]{section.27}{DPDK based UPF designs}{chapter.26}% 11
+\BOOKMARK [1][-]{section.27}{DPDK based UPF designs }{chapter.26}% 11
 \BOOKMARK [1][-]{section.34}{Comparison of the two Models }{chapter.26}% 12
 \BOOKMARK [1][-]{section.35}{Evaluation}{chapter.26}% 13
 \BOOKMARK [2][-]{subsection.36}{Experimental Setup}{section.35}% 14
@@ -32,6 +32,6 @@
 \BOOKMARK [0][-]{chapter.63}{Evaluation}{}% 32
 \BOOKMARK [1][-]{section.64}{Experimental Setup}{chapter.63}% 33
 \BOOKMARK [1][-]{section.73}{UPF}{chapter.63}% 34
-\BOOKMARK [1][-]{section.75}{Results}{chapter.63}% 35
-\BOOKMARK [2][-]{subsection.76}{Control Plane Performance}{section.75}% 36
-\BOOKMARK [0][-]{section*.81}{Bibliography}{}% 37
+\BOOKMARK [1][-]{section.76}{Results}{chapter.63}% 35
+\BOOKMARK [2][-]{subsection.77}{Control Plane Performance}{section.76}% 36
+\BOOKMARK [0][-]{section*.82}{Bibliography}{}% 37

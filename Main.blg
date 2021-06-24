@@ -3,37 +3,43 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Main.aux
 The style file: ieeetr.bst
 Database file #1: conf.bib
+Warning--entry type for "netronome" isn't style-file defined
+--line 72 of file conf.bib
+Warning--entry type for "5g29244" isn't style-file defined
+--line 78 of file conf.bib
+Warning--entry type for "gtp_ref" isn't style-file defined
+--line 84 of file conf.bib
 Warning--I didn't find a database entry for ""
-You've used 1 entry,
+You've used 6 entries,
             1876 wiz_defined-function locations,
-            479 strings with 3529 characters,
-and the built_in function-call counts, 107 in all, are:
-= -- 9
-> -- 1
+            495 strings with 4001 characters,
+and the built_in function-call counts, 620 in all, are:
+= -- 56
+> -- 12
 < -- 0
-+ -- 1
-- -- 0
-* -- 2
-:= -- 17
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 0
++ -- 8
+- -- 2
+* -- 13
+:= -- 72
+add.period$ -- 6
+call.type$ -- 6
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 4
-empty$ -- 16
-format.name$ -- 0
-if$ -- 26
+cite$ -- 6
+duplicate$ -- 24
+empty$ -- 100
+format.name$ -- 2
+if$ -- 167
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 6
 missing$ -- 0
-newline$ -- 6
-num.names$ -- 0
-pop$ -- 5
+newline$ -- 21
+num.names$ -- 2
+pop$ -- 37
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 6
+skip$ -- 30
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -42,7 +48,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 2
-write$ -- 7
-(There was 1 warning)
+while$ -- 2
+width$ -- 7
+write$ -- 37
+(There were 4 warnings)

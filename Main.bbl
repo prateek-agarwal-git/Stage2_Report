@@ -3,4 +3,21 @@
 \bibitem{gtpwiki}
 \url{https://en.wikipedia.org/wiki/GPRS_Tunnelling_Protocol}.
 
+\bibitem{dpdk}
+\url{https://www.dpdk.org/}.
+
+\bibitem{5g29244}
+``3gpp ref \#: 29.244. 2017. {S}ystem architecture for the 5{G} {S}ystem
+  (5gs),'' 2017.
+
+\bibitem{gtp_ref}
+G.~29.060, ``General {P}acket {R}adio {S}ervice ({GPRS}); {GPRS} {T}unnelling
+  {P}rotocol ({GTP}) across the {G}n and {G}p interface,'' 2015.
+
+\bibitem{ddpGuide}
+\url{https://builders.intel.com/docs/networkbuilders/intel-ethernet-controller-700-series-gtpv1-dynamic-device-personalization.pdf/}.
+
+\bibitem{netronome}
+N.~systems, ``Agilio {CX} 2x10{G}b{E} {S}mart{NIC},'' 2020.
+
 \end{thebibliography}

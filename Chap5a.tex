@@ -25,7 +25,7 @@ The setup is illustrated in Figure \ref{fig:ExperimentalSetup}.
                 \item \textbf{CPU} Intel Xeon Core i5 @2.20GHz. 12 cores on every NUMA node. Only a single NUMA node is used in the experiments. Hyperthreading is kept off to facilitate repeatability of results.
                 \item \textbf{Memory} 8192 superpages of size 2MB are reserved initially for the whole run.
                 \item \textbf{Cache} 32 KB L1i-cache, 32 KB L1d-cache, 256 KB L2 cache per core. 30 MB L3 cache per NUMA node. 
-                \item \textbf{NIC} Netronome Agilio CX 2x10GbE smartNIC.
+                \item \textbf{NIC} Netronome Agilio CX 2x10GbE smartNIC \cite{netronome}.
 	       \end{enumerate}
         
 \end{itemize}
@@ -34,17 +34,21 @@ The setup is illustrated in Figure \ref{fig:ExperimentalSetup}.
 The primary role of user plane function is described in \ref{sec:5GDataPlane}. UPF is the main network function which takes the centre stage in the core network. The RAN load generator is used to test the processing capability of UPF. The metrics used are throughput and latency of data plane and control plane traffic. 
 
 Different designs of the UPF are studied:
-
 \begin{itemize}
-	\item \textbf{Software UPF}
-
-	This design uses kernel bypass framework DPDK for userspace processing of the incoming packets. All the control plane and data plane packets are received on the master core which redirects these packets into different worker cores.
+	\item \textbf{Software UPF} This design uses kernel bypass framework DPDK for userspace processing of the incoming packets. All the control plane and data plane packets are received on the master core which redirects these packets into different worker cores 
+	(discussed in  \ref{sec:UPFSoftDesigns}).
 	\item \textbf{Offloaded Data Plane}
-	The complete data plane processing is offloaded on the smartNIC. The control plane messages are still processed in the software. Once a session is established (released), the rules are inserted (removed) in the smartNIC.
-	
+	The complete data plane processing is offloaded on the smartNIC. The control plane messages are still processed in the software. Once a session is established (released), the rules are inserted (removed) in the smartNIC (see Figure \ref{fig:DPOffloadArchitecture}).
 	\item \textbf{Offloaded Control Plane}
-	In this design, the control plane handling is offloaded to the NIC. 
+	In this design, the control plane handling is also offloaded to the NIC. 
 \end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth, keepaspectratio]{./fig/DPOffload.png}
+    \caption{Data Plane Offload Design}
+    \label{fig:DPOffloadArchitecture}
+\end{figure}
+
 The detailed description of these designs are available in \cite{}.
 \begin{table}[htbp]
 \begin{scriptsize}

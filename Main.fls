@@ -219,9 +219,9 @@ INPUT /home/prateek/Github/Stage2_Report/fig/heavyHitter-eps-converted-to.pdf
 INPUT /home/prateek/Github/Stage2_Report/fig/heavyHitter-eps-converted-to.pdf
 INPUT /home/prateek/Github/Stage2_Report/Chap4a.tex
 INPUT /home/prateek/Github/Stage2_Report/Chap4a.tex
-INPUT /home/prateek/Github/Stage2_Report/./fig/Introduction/RANArchitecture.png
-INPUT ./fig/Introduction/RANArchitecture.png
-INPUT ./fig/Introduction/RANArchitecture.png
+INPUT /home/prateek/Github/Stage2_Report/./fig/RANArchitecture.png
+INPUT ./fig/RANArchitecture.png
+INPUT ./fig/RANArchitecture.png
 INPUT /home/prateek/Github/Stage2_Report/./fig/prevRANDir.png
 INPUT ./fig/prevRANDir.png
 INPUT ./fig/prevRANDir.png
@@ -233,6 +233,9 @@ INPUT /home/prateek/Github/Stage2_Report/Chap5a.tex
 INPUT /home/prateek/Github/Stage2_Report/./fig/Results/Setup.png
 INPUT ./fig/Results/Setup.png
 INPUT ./fig/Results/Setup.png
+INPUT /home/prateek/Github/Stage2_Report/./fig/DPOffload.png
+INPUT ./fig/DPOffload.png
+INPUT ./fig/DPOffload.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /home/prateek/Github/Stage2_Report/./fig/Results/SoftUPF.png
 INPUT ./fig/Results/SoftUPF.png
